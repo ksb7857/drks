@@ -1,34 +1,187 @@
-shot1<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr Ketaki Sharma - Pediatrician</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+<style>
+body {
+    font-family: 'Inter', sans-serif; /* This will apply the Inter font to the entire body */
+    line-height: 1.6; /* Increases readability */
+    font-weight: 300; /* Lighter body text */    
+    color: #333; /* Dark gray text for softer contrast */
+    background-color: #f4f4f4; /* Light background color for a cleaner look */
+    margin: 0;
+    padding: 0;
+    }
+    
+ .site-header {
+    position: sticky;
+    top: 0;
+    color: #000000;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: none;
+    }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end; /* Aligns the nav links to the right */;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+  .logo {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;}
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Aligns the nav links to the right */;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    transition: color 0.3s;
+    }
+
+  .nav-links li a:hover {
+    color: #4292c6; /*soft highlight on hover */
+    }
+        
+ .content-wrapper {
+    width: 100%; /* Ensures the container spans the full width */
+    max-width: 800px; /* Controls the maximum width of the page */
+    margin: 0 auto; /* Centers the content horizontally */
+    padding: 40px 20px; /* Adds space inside the container */
+    }
+
+    .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px
+    }
+
+    .container img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a more modern look */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    }
+
+    .container p {
+    line-height: 1.6;
+    margin-bottom: 0px; /* Room below paragraphs */
+    }
+    
+    h1, h2, h3 {
+    font-weight: 500; /* Lighter font weight for headings */
+    color: #444; /* Slightly softer heading color */
+    margin-top: 30px; /* More space above headings */
+    }
+
+    h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    }
+
+    h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    }
+
+    h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    }
+    
+    ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: none;
+    }
+
+    ul li {
+    margin-bottom: 0px; /* Space between list items */
+    }
+   
+
+  @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center; /* Centers items on small screens */
+    }
+
+    .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f4f4f4;
+    padding: 15px 0;
+    }
+
+    .container img {
+    width: 80% 
+    max-width: 300px;
+    margin-bottom: 20px
+    }
+  }
+   
+  </style>
 </head>
+
 <body>
-  <header>
-    <h1>Specialist Paediatrician – North Shore Private Hospital</h1>
-    <img src="headshot1.jpg" alt="Doctor profile photo" style="max-width: 250px; border-radius: 8px;">
-  </header>
-  <main>
-    <p>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</p>
-    </p>Ket provides consultations for:</p>
-    <ul>
-      <li>Newborn and infant health concerns</li>
-      <li>Reflux</li>
-      <li>Concerns about growth or weight</li>
-      <li>Suspected cow’s milk protein intolerance</li>
-      <li>Food allergies (skin prick testing available on-site, if clinically required)</li>
-      <li>Eczema</li>
-      <li>Hayfever</li>
-      <li>Constipation, and other common childhood concerns</li>
+<header class="site-header">
+<nav class="navbar">
+
+<ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Appointment Enquiries</a></li>
+    <li><a href="faqs.html">FAQs & Resources</a></li>
     </ul>
+    
+</nav>
+</header>
+
+  <main class="content-wrapper">
+  <h1>Dr Ketaki Sharma MBBS, MPH, FRACP</h1>
+  <h2>Specialist Paediatrician – North Shore Private Hospital</h2>
+
+  <div class="container">
+    <img src="assets/img/headshot1.jpg" alt="Profile photo">
+    <div>
+      <p>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</p>
+      <p>Ket provides consultations for:</p>
+      <ul>
+        <li>Newborn and infant health concerns;</li>
+        <li>Reflux;</li>
+        <li>Concerns about growth or weight;</li>
+        <li>Suspected cow’s milk protein intolerance;</li>
+        <li>Food allergies (skin prick testing available on-site, if clinically required);</li>
+        <li>Eczema;</li>
+        <li>Hayfever;</li>
+        <li>Constipation, and other common childhood concerns.</li>
+      </ul>
+    </div>
+  </div>
+
+
     <h2>Professional Background</h2>
 
     <h3>General Paediatrics</h3>
 
-<main>
 <p>Ket studied medicine at the University of New South Wales, then undertook specialist paediatric training through the Sydney Children’s Hospital Network to become a Fellow of the Royal Australasian College of Physicians (FRACP). Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the Australasian Society for Clinical Immunology and Allergy (ASCIA) and a member of the Australian Paediatric Society. Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.
 </p>
 <h3>Vaccinology & Public Health</h3>
@@ -40,16 +193,15 @@ Ket is also a Staff Specialist Paediatrician at:
 
 She has a Masters of Public Health and is passionate about promoting the evidence-based use of vaccines in Australia and globally. Her work includes:
 
-      <ul></hl>
+      <ul>
 <li>Developing national immunisation guidelines;
-<li>Contributing to research (📄 view her research profile); and</li>
+<li>Contributing to research (view her [research profile](https://www.researchgate.net/profile/Ketaki-Sharma); and</li>
 <li>Contributing to global health initiatives, including collaborations with the World Health Organization.</li> 
     </ul>
 
 <h2>Teaching</h2> 
-    </main>
 <p>Ket enjoys teaching and holds a Conjoint Appointment as Clinical Lecturer in the Discipline of Child and Adolescent Health at the University of Sydney. She also regularly delivers educational updates for GPs and other specialists.</p>
-    
-  </main>
+    </main>
+  </div>
 </body>
 </html>
