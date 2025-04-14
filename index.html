@@ -8,6 +8,47 @@
         font-family: 'Montserrat', sans-serif;
       }
 
+    .site-header {
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #0077cc;
+    }
     .content-wrapper {
       width: 50%; /* Ensures the container spans the full width */
       max-width: 900px; /* Controls the maximum width of the page */
