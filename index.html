@@ -67,15 +67,27 @@ body {
 .container { /*Container for the photo and text*/
     display: flex;
     align-items: stretch; /*Ensures photo height matches text section height*/
+    justify-content: center;
     gap: 30px;
-    margin-top: 40px;}
+    margin-top: 40px;
+    flex-wrap: wrap; /* Helps on smaller screens */
+}
+    .container > .text-pane {
+  flex: 1; /* Fills remaining space */
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+}
 
 .container img {
     width: 280px;
     border-radius: 8px;
+    flex-shrink: 0;
     object-fit: cover;
-    background-color: transparent;}
-
+    background-color: transparent;
+}
     .container > div {
     background-color: rgba(255, 255, 255, 0.6); /* subtle background for the text */
     padding: 20px;
