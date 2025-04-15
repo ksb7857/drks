@@ -8,7 +8,7 @@
 
 <style>
 body {
-        font-family: 'Inter', sans-serif; /* This will apply font to the entire body */
+        font-family: 'Roboto', sans-serif; /* This will apply font to the entire body */
         line-height: 1.6; /* Increases readability */
         font-weight: 300; /* Lighter body text */    
         color: #333; /* Dark gray text for softer contrast */
@@ -19,106 +19,93 @@ body {
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
         /*background-color: #f4f4f4; /*Light background color for a cleaner look */
         margin: 0;
-        padding: 0;
-    }
+        padding: 0;}
     
 .site-header {
-  width: 100%;
-  background-color: transparent; 
-  padding: 20px 30px;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-  position: relative; /* This ensures the header scrolls normally */
-}
+      width: 100%;
+      background-color: transparent; 
+      padding: 20px 30px;
+      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+      position: relative; /* This ensures the header scrolls normally */}
     
 .vertical-buttons {
-  position: fixed;
+    position: fixed;
     font-family: 'Anton';
-  top: 120px; /* Adjust based on where you want them to appear */
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  z-index: 1000; /* Ensure it's above other content */
-}
+    top: 120px; /* Adjust based on where you want them to appear */
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000; /* Ensure it's above other content */}
 
 .vertical-buttons li a {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.6); /* white with 30% opacity */
-  padding: 10px 15px;
-  border-radius: 6px;
-font-family: 'Anton'
-  text-decoration: none;
-  color: #006d77;
-  font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.3s, color 0.3s;
-}
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.6); /* white with 30% opacity */
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-family: 'Anton'
+    text-decoration: none !important;
+    color: #006d77;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;}
 
 .vertical-buttons li a:hover {
-  color: #0f5862;
-    transform: translateY(-2px);
-}
+    font-weight: bold;
+    transform: translateY(-2px);}
  
 .content-wrapper {
     width: 100%; /* Ensures the container spans the full width */
-     /*max-width: 900px; Controls the maximum width of the page */
+    max-width: 900px; /*Controls the maximum width of the page */
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 120px; /* adjust as needed depending on heading height */
     padding-top: 120px;
-    padding: 40px 20px; /* Adds space inside the container */
-    }
+    padding: 40px 20px; /* Adds space inside the container */}
 
-    .container {
+.container { /*Container for the photo and text*/
     display: flex;
-    align-items: stretch;
+    align-items: stretch; /*Ensures photo height matches text section height*/
     gap: 30px;
-    margin-top: 40px;
-    }
+    margin-top: 40px;}
 
-    .container img {
+.container img {
     width: 280px;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow = lifted feel */
     object-fit: cover;
-    background-color: rgba(255, 255, 255, 0.6);
-    }
+    background-color: rgba(255, 255, 255, 0.6);}
 
     .container > div {
-  background-color: rgba(255, 255, 255, 0.6); /* subtle background for the text */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+    background-color: rgba(255, 255, 255, 0.6); /* subtle background for the text */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+    
     .container p {
     line-height: 1.6;
-    margin-bottom: 0px; /* Room below paragraphs */
-    }
+    margin-bottom: 0px; /* Room below paragraphs */}
 
     h1, h2, h3 {
-  font-family: 'Anton';
-        color: #f4f4f4;
-}
+    font-family: 'Anton';
+    color: #f4f4f4;}
     
     h1 {
         font-size: 3em;
         margin-bottom: 15px;
         font-weight: 700;
-        /*text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);*/
-    }
+        /*text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);*/}
 
     h2 {
     font-size: 2em;
-        font-weight: 300;
-    margin-bottom: 10px;
-    }
+    font-weight: 300;
+    margin-bottom: 10px;}
 
     h3 {
         font-size: 1.5em;
-        margin-bottom: 10px;   
-    }
+        margin-bottom: 10px; }
     
     ul {
     margin-top: 10px;
@@ -142,19 +129,12 @@ font-family: 'Anton'
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-    
-.full-width-section {
-  width: 100%;
-  background-color: #2b5952; /* solid color background */
-  padding: 60px 0; /* space above and below */
-}
 
-.section-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  color: #333;
+.text-pane ul {
+     list-style-type: disc;
+  padding-left: 20px;
 }
+    
   @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -214,20 +194,24 @@ font-family: 'Anton'
     </div>
   </div>
 
-        <div class="full-width-section">
-  <div class="section-inner">
+  
+
     <h2>Professional Background</h2>
     <h3>General Paediatrics</h3>
 
+        <div class = text-pane>
     <div><p>Ket studied medicine at the University of New South Wales, then undertook specialist paediatric training through the Sydney Children’s Hospital Network to become a Fellow of the Royal Australasian College of Physicians (FRACP). Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the Australasian Society for Clinical Immunology and Allergy (ASCIA) and a member of the Australian Paediatric Society. Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.
-</p></div>
+</p>
+    </div>
 
+            
 <h3>Vaccinology & Public Health</h3>
-Ket is also a Staff Specialist Paediatrician at:
+            <div>Ket is also a Staff Specialist Paediatrician at:
       <ul>
 <li>The Children’s Hospital at Westmead  (Specialist Immunisation Service)</li>
 <li>The National Centre for Immunisation Research and Surveillance (NCIRS)</li>
-      </ul>
+      </ul><
+
 
 She has a Masters of Public Health and is passionate about promoting the evidence-based use of vaccines in Australia and globally. Her work includes:
       <ul>
@@ -238,7 +222,8 @@ She has a Masters of Public Health and is passionate about promoting the evidenc
 
 <h2>Teaching</h2> 
 <p>Ket enjoys teaching and holds a Conjoint Appointment as Clinical Lecturer in the Discipline of Child and Adolescent Health at the University of Sydney. She also regularly delivers educational updates for GPs and other specialists.</p>
-    </main>
+            </div>
+      </main>
   
 </body>
 </html>
