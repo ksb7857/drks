@@ -81,17 +81,25 @@ body {
     .container {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
-    margin-top: 20px
+    gap: 30px;
+    margin-top: 40px
     }
 
     .container img {
-    width: 250px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a more modern look */
-    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    width: 280px;
+    border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow = lifted feel */
+  object-fit: cover;
+  background-color: white;
+  padding: 6px; /* Optional: gives a border effect */
     }
+
+    .container > div {
+  background-color: rgba(255, 255, 255, 0.8); /* subtle background for the text */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
     .container p {
     line-height: 1.6;
