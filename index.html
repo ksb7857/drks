@@ -23,27 +23,17 @@ body {
         padding: 0;
     }
     
-.fixed-name-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
+.site-header {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* white with 30% opacity */
-  z-index: 1001; /* Higher than nav bar */
+  background-color: rgba(255, 255, 255, 0.6); 
   padding: 20px 30px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.fixed-name-bar h1 {
-  margin: 0;
-  font-family: 'Yeseva One', cursive; /* Or whatever font you prefer */
-  font-size: 2rem;
-  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* This ensures the header scrolls normally */
 }
     
 .vertical-buttons {
-  position: absolute;
-  top: 120px;
+  position: fixed;
+  top: 120px; /* Adjust based on where you want them to appear */
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -51,6 +41,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  z-index: 1000; /* Ensure it's above other content */
 }
 
 .vertical-buttons li a {
