@@ -23,15 +23,22 @@ body {
     padding: 0;
     }
     
- .site-header {
-    position: sticky;
-    top: 0;
-    color: #000000;
-    padding: 20px 0;
-    z-index: 1000;
-    box-shadow: none;
-    }
 
+
+.fixed-heading {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  font-family: 'Yeseva One', cursive;
+  font-size: 2.5em;
+  color: #2F4F4F; /* adjust to your palette */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* soft shadow */
+  z-index: 999; /* keeps it above other content */
+  background-color: rgba(255, 255, 255, 0.7); /* optional: soft background to improve readability */
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+    
     .vertical-buttons {
   position: absolute;
   top: 20px;
@@ -167,7 +174,7 @@ body {
 <main class="content-wrapper">
 
     <div class="intro-heading">
-    <h1>Dr Ketaki Sharma MBBS, MPH, FRACP</h1>
+   <h1 class="fixed-heading">Dr Ketaki Sharma MBBS, MPH, FRACP</h1>
     <h2>Specialist Paediatrician – North Shore Private Hospital</h2>
     </div>
 
