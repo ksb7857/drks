@@ -23,17 +23,22 @@ body {
     padding: 0;
     }
     
-.scroll-heading {
-  top: 20px;
-  left: 30px;
-  font-family: 'Yeseva One', cursive;
-  font-size: 2.5em;
-  color: #2F4F4F; /* adjust to your palette */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* soft shadow */
-  z-index: 999; /* keeps it above other content */
-  background-color: rgba(255, 255, 255, 0.7); /* optional: soft background to improve readability */
-  padding: 10px 20px;
-  border-radius: 10px;
+.fixed-name-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4; /* Or any background you prefer */
+  z-index: 1001; /* Higher than nav bar */
+  padding: 20px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.fixed-name-bar h1 {
+  margin: 0;
+  font-family: 'Yeseva One', serif; /* Or whatever font you prefer */
+  font-size: 2rem;
+  color: #333;
 }
     
     .vertical-buttons {
