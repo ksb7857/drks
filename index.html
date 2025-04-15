@@ -142,7 +142,19 @@ font-family: 'Anton'
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+    
+.full-width-section {
+  width: 100%;
+  background-color: #2b5952; /* solid color background */
+  padding: 60px 0; /* space above and below */
+}
 
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: #333;
+}
   @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -181,8 +193,8 @@ font-family: 'Anton'
 </nav>
     
 <main class="content-wrapper">
-<div class="content-pane">
-
+<div class="full-width-section">
+  <div class="section-inner">
     
 <div class="container">
     <img src="assets/img/headshot1.jpg" alt="Profile photo">
