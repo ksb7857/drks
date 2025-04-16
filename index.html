@@ -66,27 +66,6 @@ body {
     margin-top: 10px; /* adjust as needed depending on heading height */
     padding: 40px 40px; /* Adds space inside the container */}
 
-.container { /*Container for the photo and text*/
-    display: flex;
-    align-items: stretch; /*Ensures photo height matches text section height*/
-      max-width: 700px;
-  margin: auto;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.container img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    object-fit: cover;
-    margin-top: 0px;
-}   
-    .container p {
-    line-height: 1.6;
-    margin-bottom: 0px; /* Room below paragraphs */}
-
     h1, h2, h3 {
     font-family: 'Anton';
     color:  #eb7378;}
@@ -100,11 +79,13 @@ body {
     h2 {
     font-size: 2em;
     font-weight: 300;
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+    }
 
     h3 {
         font-size: 1.5em;
-        margin-bottom: 10px; }
+        margin-bottom: 10px; 
+    }
     
     ul {
     margin-top: 10px;
@@ -115,18 +96,6 @@ body {
     ul li {
     margin-bottom: 0px; /* Space between list items */
     }
-
-.image-pane {
-  padding: 0px;
-  /* remove border-radius or keep it depending on style */
-}
-
-.text-pane {
-  background-color: transparent;
-  padding: 20px;
-  margin: 0 auto; /* Centers the pane itself within the screen */
-  box-sizing: border-box;
-}
     
   @media (max-width: 768px) {
   .container {
@@ -154,7 +123,7 @@ body {
 }
 
 .block-pink {
-  background-color: #ffe9ec4D;
+  background-color: #f0cfba4D;
 }
 
 .block-cream {
@@ -171,6 +140,14 @@ body {
   padding: 20px;
 }
 
+.circular-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 .align-left {
   display: flex;
   justify-content: flex-start;
@@ -181,14 +158,19 @@ body {
   justify-content: flex-end;
 }
 
-.container,
-.text-pane {
-  width: 100%;
-  max-width: 700px;
-  box-sizing: border-box;
+@media (max-width: 768px) {
+  .align-left,
+  .align-right {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .circular-photo {
+    width: 60%;
+    max-width: 200px;
+  }
 }
 
-   
   </style>
 </head>
 
@@ -208,63 +190,61 @@ body {
 
 <main class="content-wrapper">
     
-<!-- Top section: photo + intro text -->
-    <section class="block block-cream">
-    <div class="section-wrapper align-left">
-        <!--<div class="container">-->
-        <img src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
-    </div>
-    </section>
-    
+<!-- Photo - Right Aligned -->
+
+<section class="block block-cream">
     <div class="section-wrapper align-right">
-        <div class="text-pane">
-            <h3>Specialist Paediatrician – North Shore Private Hospital</h3>  
-              <p>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</p>
-              <p>Ket provides consultations for:</p>
-              <ul>
-                <li>Newborn and infant health concerns;</li>
-                <li>Reflux;</li>
-                <li>Growth or weight concerns;</li>
-                <li>Suspected cow’s milk protein intolerance;</li>
-                <li>Food allergies (skin prick testing available on-site, if clinically required);</li>
-                <li>Eczema;</li>
-                <li>Hayfever;</li>
-                <li>Constipation, and other common childhood concerns.</li>
-              </ul>
-      </div>
+            <img src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
+    </div>
 </section>
 
+<!-- Intro Text Block - Left Aligned -->
+
+    <section class="block block-pink"> 
+        <div class="section-wrapper align-right">
+            <div class="text-pane">
+                <h3>Specialist Paediatrician – North Shore Private Hospital</h3>  
+                  <p>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</p>
+                  <p>Ket provides consultations for:</p>
+                  <ul>
+                    <li>Newborn and infant health concerns;</li>
+                    <li>Reflux;</li>
+                    <li>Growth or weight concerns;</li>
+                    <li>Suspected cow’s milk protein intolerance;</li>
+                    <li>Food allergies (skin prick testing available on-site, if clinically required);</li>
+                    <li>Eczema;</li>
+                    <li>Hayfever;</li>
+                    <li>Constipation, and other common childhood concerns.</li>
+                  </ul>
+              </div>
+            </section>
+
+<!-- Professional Background Block - Right Aligned -->
     
     <section class="block block-earth">
-    <div class="text-pane">
-    <div class="section-wrapper align-right">
-    <h2>Professional Background</h2>
-    <h3>General Paediatrics</h3>
-
-<p>Ket studied medicine at the University of New South Wales, then undertook specialist paediatric training through the Sydney Children’s Hospital Network to become a Fellow of the Royal Australasian College of Physicians (FRACP). Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the Australasian Society for Clinical Immunology and Allergy (ASCIA) and a member of the Australian Paediatric Society. Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.
-</p>
-
-<h3>Vaccinology & Public Health</h3>
+        <div class="section-wrapper align-right">
+         <div class="text-pane">
+            <h2>Professional Background</h2>
+            
+                <p>Ket studied medicine at the University of New South Wales, then undertook specialist paediatric training through the Sydney Children’s Hospital Network to become a Fellow of the Royal Australasian College of Physicians (FRACP). Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the Australasian Society for Clinical Immunology and Allergy (ASCIA) and a member of the Australian Paediatric Society. Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.</p>
            
-Ket is also a Staff Specialist Paediatrician at:
-<ul>
-<li>The Children’s Hospital at Westmead  (Specialist Immunisation Service)</li>
-<li>The National Centre for Immunisation Research and Surveillance (NCIRS)</li>
-</ul>
-
-She has a Masters of Public Health and is passionate about promoting the evidence-based use of vaccines in Australia and globally. Her work includes:
-<ul>
-<li>Developing national immunisation guidelines;</li>
-<li>Contributing to research (<a href="https://www.researchgate.net/profile/Ketaki-Sharma" target="_blank">view her research profile</a>); and</li>
-<li>Contributing to global health initiatives, including collaborations with the World Health Organization.</li> 
-</ul>
+        <p>Ket is also a Staff Specialist Paediatrician at:</p>
+        <ul>
+        <li>The Children’s Hospital at Westmead  (Specialist Immunisation Service)</li>
+        <li>The National Centre for Immunisation Research and Surveillance (NCIRS)</li>
+        </ul>
+        She has a Masters of Public Health and is passionate about promoting the evidence-based use of vaccines in Australia and globally. Her work includes:
+        <ul>
+        <li>Developing national immunisation guidelines;</li>
+        <li>Contributing to research (<a href="https://www.researchgate.net/profile/Ketaki-Sharma" target="_blank">view her research profile</a>); and</li>
+        <li>Contributing to global health initiatives, including collaborations with the World Health Organization.</li> 
+        </ul>
         
-<h2>Teaching</h2> 
-<p>Ket enjoys teaching and holds a Conjoint Appointment as Clinical Lecturer in the Discipline of Child and Adolescent Health at the University of Sydney. She also regularly delivers educational updates for GPs and other specialists.</p>
-</div>
+    <h2>Teaching</h2> 
+    <p>Ket enjoys teaching and holds a Conjoint Appointment as Clinical Lecturer in the Discipline of Child and Adolescent Health at the University of Sydney. She also regularly delivers educational updates for GPs and other specialists.</p>
+    </div>
     </div>
     </section>
-      </main>
+    </main>
   
-</body>
-</html>
+
