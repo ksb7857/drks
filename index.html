@@ -62,6 +62,7 @@ body {
  
 .content-wrapper {
     width: 100%; /* Ensures the container spans the full width */
+    max-width: 900px;
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 10px; /* adjust as needed depending on heading height */
     padding: 40px 40px; /* Adds space inside the container */}
@@ -96,6 +97,43 @@ body {
     ul li {
     margin-bottom: 0px; /* Space between list items */
     }
+
+    .floating-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; /* spacing between the two */
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 20px;
+  flex-wrap: wrap; /* responsive stacking on small screens */
+}
+
+.floating-image {
+  flex-shrink: 0;
+  background-color: #f0cfba4D; /* optional background */
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.circular-photo {
+  width: 180px;
+  height: 180px;
+  background-color: #d8cfc44D;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.floating-text {
+  max-width: 600px;
+  background-color: #fef9f44D;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: justify;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
 .block {
   padding: 30px;
@@ -170,17 +208,13 @@ body {
         </nav>
 
 <main class="content-wrapper">
-    
-<!-- Photo - Right Aligned -->
 
-
+    <section class="floating-row">
+  <div class="floating-image">
     <img class="circular-photo" src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
-
-
-<!-- Intro Text Block - Left Aligned -->
-
-    <section class="block block-pink"> 
-                <h3>Specialist Paediatrician – North Shore Private Hospital</h3>  
+  </div>
+  <div class="floating-text">
+    <h3>Specialist Paediatrician – North Shore Private Hospital</h3>  
                   <p>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</p>
                   <p>Ket provides consultations for:</p>
                   <ul>
@@ -193,6 +227,7 @@ body {
                     <li>Hayfever;</li>
                     <li>Constipation, and other common childhood concerns.</li>
                   </ul>
+  </div>
             </section>
 
 <!-- Professional Background Block - Right Aligned -->
