@@ -48,7 +48,9 @@ body {
     z-index: 1000; /* Ensure it's above other content */}
 
 .vertical-buttons li a {
-    display: inline-block;
+    text-align: right;
+    display: block; /* Ensures text-align works */
+    /*display: inline-block;*/
     padding: 10px 15px;
     border-radius: 6px;
     font-size: 1.7em;
@@ -67,7 +69,7 @@ body {
     max-width: 1400px;
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 10px; /* adjust as needed depending on heading height */
-    padding: 30px 100px; /* Adds space inside the container */}
+    padding: 30px 50px; /* Adds space inside the container */}
 
     h1, h2, h3 {
     font-family: 'Anton';
@@ -77,7 +79,7 @@ body {
         font-size: 3em;
         margin-bottom: 15px;
         font-weight: 400;
-        padding: 40px 40px;
+        padding: 10px 40px;
         /*text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);*/}
 
     h2 {
