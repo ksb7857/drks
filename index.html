@@ -33,16 +33,7 @@ body {
       padding: 20px 60px;
       position: relative; /* This ensures the header scrolls normally */}
 
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end; /* pushes nav to the right */
-  padding: 20px 40px;
-  position: fixed;  /* optional if you want it to stick */
-  top: 0;
-  background: transparent; /* or a background color */
-  z-index: 1000;
-}
+
 .vertical-buttons {
     position: fixed;
     font-family: 'Anton';
@@ -76,7 +67,7 @@ body {
     max-width: 1400px;
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 10px; /* adjust as needed depending on heading height */
-    padding: 50px 100px; /* Adds space inside the container */}
+    padding: 30px 100px; /* Adds space inside the container */}
 
     h1, h2, h3 {
     font-family: 'Anton';
@@ -134,6 +125,7 @@ body {
   background-color: #d8cfc44D;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top; /* shifts image upward to keep head in frame */
   display: block;
 }
 
