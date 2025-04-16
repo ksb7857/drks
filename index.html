@@ -11,8 +11,9 @@
     
 body {
         font-family: 'Roboto', sans-serif; /* This will apply font to the entire body */
-        font-size: 18px;
-        line-height: 2.5; /* Increases readability */
+        font-size: 17px;
+        line-height: 1.75; /* Increases readability */
+        letter-spacing: 0.2px;
         font-weight: 400; /* Lighter body text */    
         color: #5d4e49; /* Dark gray text for softer contrast */
         background-repeat: no-repeat;
@@ -68,6 +69,8 @@ body {
 .container { /*Container for the photo and text*/
     display: flex;
     align-items: stretch; /*Ensures photo height matches text section height*/
+      max-width: 700px;
+  margin: auto;
     gap: 30px;
     margin-top: 40px;
 }
