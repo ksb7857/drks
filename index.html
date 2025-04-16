@@ -105,56 +105,32 @@ body {
 }
 
 .block-pink {
-  background-color: #f0cfba4D;
-    margin-left: 10%; /* Left shifted pane */
-  margin-right: auto;
+    background-color: #f0cfba4D;
+    margin-left: auto; /* Right shifted pane */
+    margin-right: 25%;
 }
 
 .block-cream {
-  background-color: #fef9f44D;
-    margin-left: auto;
-  margin-right: 10%; /* Right shifted pane */
+    background-color: #fef9f44D;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-right: auto; /* Left shifted pane */
 }
 
 .block-earth {
-  background-color: #d8cfc44D; /* muted earthy tone */
-     margin-left: 10%; /* Left shifted pane */
-  margin-right: auto;
-}
-
-
-.circular-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.image-row {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-max-width: 700px;
-    margin-left: 25%;
+    background-color: #d8cfc44D; /* muted earthy tone */
+    margin-left: 25; /* Left shifted pane */
     margin-right: auto;
 }
 
-.text-right {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: 25%;
-    text-align: justify;
-}
-
-.text-left {
-  max-width: 800px;
-  margin-left: 25%;
-  margin-right: auto;
-    text-align: justify;
-}
-
-
-    
+.circular-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}   
   @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -172,7 +148,6 @@ max-width: 700px;
     max-width: 200px;
   }
 }
-
   </style>
 </head>
 
@@ -195,8 +170,8 @@ max-width: 700px;
 <!-- Photo - Right Aligned -->
 
 <section class="block block-cream">
-            <img class="circular-photo" src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
-</section>
+    <img class="circular-photo" src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
+    </section>
 
 <!-- Intro Text Block - Left Aligned -->
 
