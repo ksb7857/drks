@@ -68,7 +68,7 @@ body {
     max-width: 1400px;
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 10px; /* adjust as needed depending on heading height */
-    padding: 30px 50px; /* Adds space inside the container */}
+    padding: 30px 30px; /* Adds space inside the container */}
 
     h1, h2, h3 {
     font-family: 'Anton';
@@ -103,6 +103,16 @@ body {
     margin-bottom: 10px; /* Space between list items */
     }
 
+    .circular-photo {
+  width: 100%;
+  height: auto;
+        aspect-ratio: 1 / 1;
+  background-color: rgba(235, 115, 120, 0.12);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top; /* shifts image upward to keep head in frame */
+  display: block;
+}
 .floating-row {
   display: flex;
   justify-content: center;
@@ -115,23 +125,18 @@ body {
 }
 
 .floating-image {
+  width: 40%;
+  max-width: 450px;
   flex-shrink: 0;
   background-color: #d8cfc44D; /* optional background */
   border-radius: 50%;
 }
 
-.circular-photo {
-  width: 450px;
-  height: 450px;
-  background-color: rgba(235, 115, 120, 0.12);
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top; /* shifts image upward to keep head in frame */
-  display: block;
-}
+
 
 .floating-text {
-  max-width: 700px;
+  width: 55%;
+  max-width: none;
   background-color: rgba(208, 186, 157, 0.2);
   padding: 80px;
   border-radius: 8px;
@@ -170,15 +175,21 @@ body {
     margin-left: 50%; /* Left shifted pane */
     margin-right: auto;
 }   
-  @media (max-width: 768px) {
-      .content-wrapper {
-    padding: 40px 20px;
-      }
-  .container {
+  @media(max-width: 768px) {
+  .floating-row {
     flex-direction: column;
-    align-items: center; /* Centers items on small screens */
-    }
+    align-items: center;
+    text-align: center;
+  }
 
+  .floating-text {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .floating-image {
+    width: auto;
+  }
     .nav-links {
     flex-direction: column;
     gap: 10px;
