@@ -10,9 +10,10 @@
 <style>
     
 body {
+        max-width: 1400px;    
         font-family: 'Roboto', sans-serif; /* This will apply font to the entire body */
-        font-size: 17px;
-        line-height: 1.75; /* Increases readability */
+        font-size: 18px;
+        line-height: 1.8; /* Increases readability */
         letter-spacing: 0.2px;
         font-weight: 400; /* Lighter body text */    
         color: #5d4e49; /* Dark gray text for softer contrast */
@@ -23,7 +24,7 @@ body {
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
         background-color: #F2E9D9; /*Light background color for a cleaner look */
         margin: 0;
-        padding: 0;}
+        padding: 0 30px;}
     
 .site-header {
       width: 100%;
@@ -49,7 +50,7 @@ body {
     display: inline-block;
     padding: 10px 15px;
     border-radius: 6px;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-family: 'Anton';
     text-decoration: none;
     color: #eb7378;
@@ -65,27 +66,27 @@ body {
     /*max-width: 1000px;*/
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 10px; /* adjust as needed depending on heading height */
-    padding: 80px 80px; /* Adds space inside the container */}
+    padding: 100px 100px; /* Adds space inside the container */}
 
     h1, h2, h3 {
     font-family: 'Anton';
     color:  #eb7378;}
     
     h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         margin-bottom: 15px;
         font-weight: 400;
         padding: 40px 40px;
         /*text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);*/}
 
     h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 300;
     margin-bottom: 10px;
     }
 
     h3 {
-        font-size: 1.5em;
+        font-size: 1.8em;
         margin-bottom: 10px; 
     }
     
@@ -136,7 +137,7 @@ body {
 
 .block {
   padding: 30px;
-  margin: 40px auto; /* space above/below, centering */
+  margin: 80px auto; /* space above/below, centering */
   max-width: 750px;  /* controls the width of the pane */
   border-radius: 20px;
   position: relative;  /* Allows the box-shadow to create the floating effect */
@@ -163,6 +164,9 @@ body {
     margin-right: auto;
 }   
   @media (max-width: 768px) {
+      .content-wrapper {
+    padding: 40px 20px;
+      }
   .container {
     flex-direction: column;
     align-items: center; /* Centers items on small screens */
