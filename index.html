@@ -24,15 +24,25 @@ body {
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
         background-color: #F2E9D9; /*Light background color for a cleaner look */
         margin: 0;
-        padding: 0 30px;}
+        padding: 20px;}
     
 .site-header {
       width: 100%;
-      max-width: 800px;
+      max-width: 1400px;
       background-color: transparent; 
       padding: 20px 60px;
       position: relative; /* This ensures the header scrolls normally */}
-    
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* pushes nav to the right */
+  padding: 20px 40px;
+  position: fixed;  /* optional if you want it to stick */
+  top: 0;
+  background: transparent; /* or a background color */
+  z-index: 1000;
+}
 .vertical-buttons {
     position: fixed;
     font-family: 'Anton';
@@ -66,7 +76,7 @@ body {
     /*max-width: 1000px;*/
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 10px; /* adjust as needed depending on heading height */
-    padding: 100px 100px; /* Adds space inside the container */}
+    padding: 50px 100px; /* Adds space inside the container */}
 
     h1, h2, h3 {
     font-family: 'Anton';
