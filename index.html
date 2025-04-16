@@ -146,15 +146,17 @@ body {
   margin: 80px auto; /* space above/below, centering */
   max-width: 900px;  /* controls the width of the pane */
   position: relative;  /* Allows the box-shadow to create the floating effect */
+  width: 90%;
 }
 
 .block-pink {
     background-color: #f0cfba4D;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-    border-radius: 8px;
-    margin-left: auto; /* Right shifted pane */
-    margin-right: 50%;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  border-radius: 8px;
+  margin-left: 20%;
+  margin-right: auto;
+  transform: translateX(10%);
 }
 
 .block-cream {
@@ -168,10 +170,11 @@ body {
 
 .block-earth {
     background-color: rgba(255, 255, 255, 0.3); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-    margin-left: 50%; /* Left shifted pane */
-    margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  margin-right: 20%;
+  margin-left: auto;
+  transform: translateX(-10%);
 }   
   @media(max-width: 768px) {
   .floating-row {
@@ -217,7 +220,7 @@ body {
         </nav>
 
 <main class="content-wrapper">
-
+<section class="block block-pink">
     <section class="floating-row">
   <div class="floating-image">
     <img class="circular-photo" src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
@@ -239,6 +242,7 @@ body {
                   </ul>
   </div>
             </section>
+</section>
 
 <!-- Professional Background Block - Right Aligned -->
     
