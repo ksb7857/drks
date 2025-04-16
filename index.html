@@ -129,6 +129,7 @@ body {
   flex-shrink: 0;
   background-color: #d8cfc44D; /* optional background */
   border-radius: 50%;
+  transition: transform 0.3s ease-out;
 }
 
 .floating-text {
@@ -138,6 +139,7 @@ body {
   padding: 40px 80px;
   border-radius: 8px;
   text-align: justify;
+  transition: transform 0.3s ease-out;
 }
 
 .block {
@@ -146,10 +148,11 @@ body {
   max-width: 900px;  /* controls the width of the pane */
   position: relative;  /* Allows the box-shadow to create the floating effect */
   width: 90%;
+  transition: transform 0.3s ease-out;
 }
 
 .block-pink {
-    background-color: #f0cfba4D;
+  background-color: #f0cfba4D;
   border: 1px solid #eee;
   box-shadow: 0 2px 4px rgba(0,0,0,0.03);
   border-radius: 8px;
@@ -168,10 +171,10 @@ body {
 }
 
 .block-earth {
-    background-color: rgba(255, 255, 255, 0.3); 
+  background-color: rgba(255, 255, 255, 0.3); 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
-  margin-right: 20%;
+  margin-right: 60%;
   margin-left: auto;
   transform: translateX(-10%);
 }   
@@ -227,9 +230,9 @@ body {
   <div class="floating-text">
     <h3>Specialist Paediatrician</h3>
       <h3>North Shore Private Hospital</h3>  
-                  <p>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</p>
-                  <p>Ket provides consultations for:</p>
-                  <ul>
+                  <p><em>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</em></p>
+                  <p><em>Ket provides consultations for:</em></p>
+                  <ul><em>
                     <li>Newborn and infant health concerns;</li>
                     <li>Reflux;</li>
                     <li>Growth or weight concerns;</li>
@@ -238,7 +241,7 @@ body {
                     <li>Eczema;</li>
                     <li>Hayfever;</li>
                     <li>Constipation, and other common childhood concerns.</li>
-                  </ul>
+                 </em></ul>
   </div>
 </section>
 
