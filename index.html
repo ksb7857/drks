@@ -61,7 +61,6 @@ body {
  
 .content-wrapper {
     width: 100%; /* Ensures the container spans the full width */
-    max-width: 800px; /*Controls the maximum width of the page */
     margin: 0 auto; /* Centers the content horizontally */
     margin-top: 10px; /* adjust as needed depending on heading height */
     padding: 40px 40px; /* Adds space inside the container */}
@@ -110,13 +109,6 @@ body {
     padding: 15px 0;
     }
 
-    .container img {
-    width: 80%; 
-    max-width: 250px;
-    margin-bottom: 20px;
-    }
-  }
-
     .block {
   padding: 10px 20px; /* Spacing inside each block */
   color: #333; /* Default text color */
@@ -135,8 +127,6 @@ body {
 }
 
 .section-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
 }
 
@@ -151,15 +141,24 @@ body {
 .image-row {
   display: flex;
   justify-content: flex-end;
-  padding: 10px;
-}
-
-.text-left {
-  text-align: left;
+  padding: 20px;
+max-width: 700px;
+    margin-left: 25%;
+    margin-right: auto;
 }
 
 .text-right {
-  text-align: right;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: 25%;
+    text-align: justify;
+}
+
+.text-left {
+  max-width: 800px;
+  margin-left: 25%;
+  margin-right: auto;
+    text-align: justify;
 }
 
 
@@ -206,7 +205,7 @@ body {
 <!-- Intro Text Block - Left Aligned -->
 
     <section class="block block-pink"> 
-         <div class="section-wrapper text-left">
+         <div class="section-wrapper text-right">
                 <h3>Specialist Paediatrician – North Shore Private Hospital</h3>  
                   <p>Dr Ketaki Sharma (Ket) is a compassionate and experienced paediatrician who prioritises listening to families and delivering tailored, family-centred support.</p>
                   <p>Ket provides consultations for:</p>
@@ -226,7 +225,7 @@ body {
 <!-- Professional Background Block - Right Aligned -->
     
     <section class="block block-earth">
-        <div class="section-wrapper text-right">
+        <div class="section-wrapper text-left">
             <h2>Professional Background</h2>
             
                 <p>Ket studied medicine at the University of New South Wales, then undertook specialist paediatric training through the Sydney Children’s Hospital Network to become a Fellow of the Royal Australasian College of Physicians (FRACP). Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the Australasian Society for Clinical Immunology and Allergy (ASCIA) and a member of the Australian Paediatric Society. Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.</p>
