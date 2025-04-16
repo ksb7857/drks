@@ -33,7 +33,6 @@ body {
       padding: 20px 60px;
       position: relative; /* This ensures the header scrolls normally */}
 
-
 .vertical-buttons {
     position: fixed;
     font-family: 'Anton';
@@ -80,7 +79,8 @@ body {
         margin-bottom: 15px;
         font-weight: 400;
         padding: 10px 40px;
-        /*text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);*/}
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
 
     h2 {
     font-size: 2.2em;
@@ -101,7 +101,7 @@ body {
     }
 
     ul li {
-    margin-bottom: 0px; /* Space between list items */
+    margin-bottom: 10px; /* Space between list items */
     }
 
     .floating-row {
@@ -132,9 +132,9 @@ body {
 }
 
 .floating-text {
-  max-width: 600px;
+  max-width: 800px;
   background-color: #fef9f44D;
-  padding: 30px;
+  padding: 50px;
   border-radius: 20px;
   text-align: justify;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -144,12 +144,14 @@ body {
   padding: 30px;
   margin: 80px auto; /* space above/below, centering */
   max-width: 750px;  /* controls the width of the pane */
-  border-radius: 20px;
   position: relative;  /* Allows the box-shadow to create the floating effect */
 }
 
 .block-pink {
     background-color: #f0cfba4D;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    border-radius: 8px;
     margin-left: auto; /* Right shifted pane */
     margin-right: 50%;
 }
@@ -165,7 +167,10 @@ body {
 
 .block-earth {
     background-color: #d8cfc44D; /* muted earthy tone */
-    margin-left: 25%; /* Left shifted pane */
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    border-radius: 8px;
+    margin-left: 50%; /* Left shifted pane */
     margin-right: auto;
 }   
   @media (max-width: 768px) {
