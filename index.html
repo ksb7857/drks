@@ -21,7 +21,7 @@ body {
         background-size: cover;       
         background-position: center;  
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
-        background-color: #F2E9D9; 
+        background-color: #F9F9F9 /*#F2E9D9*/; 
         margin: 0;
         padding: 20px;
     }
@@ -119,6 +119,7 @@ ul.custom-bullets li::before {
   color: #e05c62;
   font-size: 2em;
   line-height: 1;
+  translateY(-50%)
     }
 
 .circular-photo {
@@ -126,6 +127,7 @@ ul.custom-bullets li::before {
     height: auto;
     aspect-ratio: 1 / 1;
     background-color: #EFBD9D66; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     border-radius: 50%;
     object-fit: cover;
     object-position: top; /* shifts image upward to keep head in frame */   
@@ -174,7 +176,7 @@ ul.custom-bullets li::before {
   width: 900px;
   background-color: rgba(255, 255, 255, 0.3); 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
+  border-radius: 20px;
   margin-left: auto;
   margin-right: 25%;
   transform: translateX(-10%);
@@ -183,7 +185,7 @@ ul.custom-bullets li::before {
 .block-training{
   background-color: rgba(255, 255, 255, 0.3); 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
+  border-radius: 20px;
   margin-left: 25%;
   margin-right: auto;
   transform: translateX(10%);
