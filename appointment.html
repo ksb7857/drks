@@ -200,31 +200,38 @@ a:hover {
 a:active {
   color: #9a0e2a; /* Color when clicked */
 }
-  @media(max-width: 768px) {
-  .floating-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+
+@media (max-width: 768px) {
+  .block-header,
+  .block-pane {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
   }
 
-  .floating-text {
-    width: 100%;
-    padding: 0px;
+  .content-wrapper {
+    padding: 20px 10px;
   }
 
-  .floating-image {
-    width: auto;
+  h1 {
+    font-size: 2em;
+    padding: 10px 20px;
   }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
     .nav-links {
     flex-direction: column;
     gap: 10px;
     padding: 15px 0;
     }
 
-  .circular-photo {
-    width: 60%;
-    max-width: 200px;
-  }
 }
   </style>
 </head>
