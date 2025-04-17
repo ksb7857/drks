@@ -136,6 +136,17 @@ summary:hover {
     color: white;                      /* Text color */
 }
 
+summary.section-subheading::after, /* add a "+" on all summary lines */
+summary.qa-question::after {
+  content: "+";
+  font-weight: 700;
+}
+
+details[open] > summary.section-subheading::after, /* when the parent <details> is open, change "+" to "–" */
+details[open] > summary.qa-question::after {
+  content: "–";
+}
+
     
 .section-subheading {
     font-size: 1.4em;     
