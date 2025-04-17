@@ -60,7 +60,7 @@ body {
     transition: background-color 0.3s, color 0.3s;}
 
 .vertical-buttons li a:hover {
-    color: #e0705c;
+    text-decoration: underline;
     transform: translateY(-2px);}
  
 .content-wrapper {
@@ -170,16 +170,7 @@ ul.custom-bullets li::before {
   transition: transform 0.3s ease-out;
 }
 
-.block-pink {
-  background-color: rgba(255, 255, 255, 0.3); 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
-  margin-left: 25%;
-  margin-right: auto;
-  transform: translateX(10%);
-}
-
-.block-earth {
+.block-concurrent {
   width: 900px;
   background-color: rgba(255, 255, 255, 0.3); 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
@@ -188,6 +179,15 @@ ul.custom-bullets li::before {
   margin-right: 25%;
   transform: translateX(-10%);
 }   
+    
+.block-training{
+  background-color: rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  margin-left: 25%;
+  margin-right: auto;
+  transform: translateX(10%);
+}
 
 a {
   color: #e05c62; /* Change to your desired color */
@@ -195,38 +195,47 @@ a {
 }
 
 a:hover {
-  color: #f34950; /* Hover color */
+ text-decoration: underline;
 }
 
-a:active {
-  color: #9a0e2a; /* Color when clicked */
-}
-  @media(max-width: 768px) {
-  .floating-row {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+  .floating-row,
+  .block,
+  .block-concurrent,
+  .block-training {
+    all: unset;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto 40px auto;
+    background-color: rgba(255,255,255,0.85); /* or your preferred background */
+    box-shadow: none;
+    border-radius: 0;
+    text-align: left;
+  }
+
+  .circular-photo {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+  .full-pane {
+    padding: 10px;
+    background: rgba(255,255,255,0.9); 
+  }
+
+  h1, h2, h3 {
     text-align: center;
   }
 
-  .floating-text {
-    width: 100%;
-    padding: 0px;
-  }
-
-  .floating-image {
-    width: auto;
-  }
-    .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 0;
-    }
-
-  .circular-photo {
-    width: 60%;
-    max-width: 200px;
+  .floating-text, .floating-image {
+    all: unset;
   }
 }
+  
+
   </style>
 </head>
 
