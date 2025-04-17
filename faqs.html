@@ -119,9 +119,24 @@ ul.custom-bullets li::before {
     }
 
 summary {
-    font-family: 'Merriweather Sans', sans-serif;
-    }
+  display: flex;                    /* Use flex to align the contents */
+  justify-content: space-between;    /* Place the text on the left and the toggle on the right */
+  align-items: center;               /* Vertically align the text */  
+  padding: 10px 20px;                 /* Padding for the bar appearance */
+  border: none;                      /* Remove default border */
+  border-radius: 5px;                /* Optional rounded corners */
+  cursor: pointer;                  /* Make it clear it's clickable */
+  font-size: 1.2em;                  /* Increase the font size */
+  font-weight: 500;                  /* Weight of the font */
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
 
+summary:hover {
+    background-color: #eb7378;         /* Background color for the bar */
+    color: white;                      /* Text color */
+}
+
+    
 .section-subheading {
     font-size: 1.4em;     
     font-weight: 600;
