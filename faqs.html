@@ -103,6 +103,22 @@ body {
     margin-bottom: 10px; /* Space between list items */
     }
 
+    ul.custom-bullets li {
+      list-style-type: none;
+      position: relative;
+      padding-left: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    ul.custom-bullets li::before {
+        content: "•"; /* You can use Unicode or emojis like ✓, →, etc. */
+        position: absolute;
+        left: 0;
+        color: #eb7378; /* Match your accent color */
+        font-size: 1.2em;
+        line-height: 1;
+}
+
 summary {
   font-family: 'Merriweather Sans', sans-serif;
 
