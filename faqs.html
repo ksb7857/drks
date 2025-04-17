@@ -23,12 +23,12 @@ body {
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
         background-color: #F2E9D9; /*Light background color for a cleaner look */
         margin: 0;
-        padding: 20px;}
+        padding: 0px;}
     
 .site-header {
       width: 100%;
       max-width: 1200px;
-      padding: 20px 60px;
+      padding: 0px 60px;
       position: relative; /* This ensures the header scrolls normally */}
 
 .vertical-buttons {
@@ -149,36 +149,6 @@ summary {
   color: #333;
 }
 
-    
-.floating-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 80px; /* spacing between the two */
-  margin: 60px auto;
-  max-width: 1300px;
-  padding: 20px;
-}
-
-.floating-image {
-  width: 40%;
-  max-width: 450px;
-  flex-shrink: 0;
-  background-color: #d8cfc44D; /* optional background */
-  border-radius: 50%;
-  transition: transform 0.3s ease-out;
-}
-
-.floating-text {
-  width: 55%;
-  max-width: none;
-  background-color: rgba(208, 186, 157, 0.2);
-  padding: 40px 80px;
-  border-radius: 8px;
-  text-align: right;
-  transition: transform 0.3s ease-out;
-}
-
 .block {
   padding: 30px;
   margin: 80px auto; /* space above/below, centering */
@@ -188,30 +158,22 @@ summary {
   transition: transform 0.3s ease-out;
 }
 
-.block-pink {
+.block-header {
   max-width: 800px;
   background-color: #fffbf780;
   box-shadow: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  margin-left: 20%;
+  margin-left: 0;
   margin-right: auto;
   transform: translateX(10%);
 }
 
-.block-cream {
-    background-color: #fef9f44D;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    margin-left: 50%;
-    margin-right: auto; /* Left shifted pane */
-}
-
-.block-earth {
+.block-pane {
   max-width: 900px;
   background-color: #fffbf780; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
+  padding: 20px 20px;
   transform: translateX(-10%);
 }   
 
@@ -225,32 +187,13 @@ a:active {color: #9a0e2a; /* Color when clicked */
 }
   
   @media(max-width: 768px) {
-  .floating-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .floating-text {
-    width: 100%;
-    padding: 0px;
-  }
-
-  .floating-image {
-    width: auto;
-  }
-
     .nav-links {
     flex-direction: column;
     gap: 10px;
     padding: 15px 0;
     }
-
-  .circular-photo {
-    width: 60%;
-    max-width: 200px;
-  }
 }
+    
   </style>
 </head>
 
@@ -259,7 +202,7 @@ a:active {color: #9a0e2a; /* Color when clicked */
     <h1>FAQs and Resources</h1>
 </header>
 
-    <section class="block block-pink">
+    <section class="block-header">
         <p>Caring for a child can come with many questions, especially when they’re unwell or you're navigating something new. This page addresses some common questions and provides links to detailed information from trusted sources.</p>
         <p>Please note: this content is general in nature and is not a substitute for professional medical advice. Always speak to your child’s healthcare provider for guidance tailored to your individual situation.</p>
         <p>This information is valid as of April 2025. If any links are broken please feel free to let us know at info@drketsharma.com.au.</p>
@@ -274,7 +217,7 @@ a:active {color: #9a0e2a; /* Color when clicked */
     </ul>  
         </nav>
 
-<section class="block block-earth">
+<section class="block block-pane">
 <main class="content-wrapper">
   
 <details open>
