@@ -28,8 +28,9 @@ body {
 .site-header {
       width: 100%;
       max-width: 1200px;
-      padding: 0px 60px;
-      position: relative; /* This ensures the header scrolls normally */}
+      padding: 40px;
+      position: relative; /* This ensures the header scrolls normally */
+    }
 
 .vertical-buttons {
     position: fixed;
@@ -53,12 +54,12 @@ body {
     font-size: 1.7em;
     font-family: 'Anton';
     text-decoration: none;
-    color: #eb7378;
+    color: #e05c62;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;}
 
 .vertical-buttons li a:hover {
-    color: #e32636;
+    text-decoration: underline;
     transform: translateY(-2px);}
  
 .content-wrapper {
@@ -69,7 +70,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Anton';
-    color:  #eb7378;
+    color:  #e05c62;
     }
     
 h1 {
@@ -113,8 +114,8 @@ ul.custom-bullets li::before {
     content: "•"; /* You can use Unicode or emojis like ✓, →, etc. */
     position: absolute;
     left: 0;
-    color: #eb7378; /* Match your accent color */
-    font-size: 1.2em;
+    color: #e05c62; /* Match your accent color */
+    font-size: 2em;
     line-height: 1;
     }
 
@@ -122,7 +123,7 @@ summary {
   display: flex;                    /* Use flex to align the contents */
   justify-content: space-between;    /* Place the text on the left and the toggle on the right */
   align-items: center;               /* Vertically align the text */  
-  padding: 10px 20px;                 /* Padding for the bar appearance */
+  padding: 20px 20px;                 /* Padding for the bar appearance */
   border: none;                      /* Remove default border */
   border-radius: 5px;                /* Optional rounded corners */
   cursor: pointer;                  /* Make it clear it's clickable */
@@ -132,9 +133,32 @@ summary {
 }
 
 summary:hover {
-    background-color: #eb7378;         /* Background color for the bar */
-    color: white;                      /* Text color */
+  text-decoration: underline;
 }
+
+.section-subheading {
+    font-family: 'Anton';
+    font-size: 1.4em;
+    font-weight: 600;
+    color:  #e05c62;
+    margin-top: 1.5em;
+    cursor: pointer;
+    }
+
+.qa-question {
+    font-size: 1.2em;
+    font-weight: 500;
+    color:  #e05c62;
+    margin-top: 1em;
+    cursor: pointer;
+    }
+
+.qa-answer {
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+    }
 
 summary.section-subheading::after, /* add a "+" on all summary lines */
 summary.qa-question::after {
@@ -147,37 +171,13 @@ details[open] > summary.qa-question::after {
   content: "–";
 }
 
-    
-.section-subheading {
-    font-size: 1.4em;     
-    font-weight: 600;
-    color:  #eb7378;
-    margin-top: 1.5em;
-    cursor: pointer;
-    }
-
-.qa-question {
-    font-size: 1.2em;
-    font-weight: 500;
-    color:  #eb7378;
-    margin-top: 1em;
-    cursor: pointer;
-    }
-
-.qa-answer {
-    padding-left: 1em;
-    font-size: 1em;
-    font-weight: 400;
-    color: #333;
-    }
-
 .block-header {
   max-width: 800px;
   background-color: #fffbf780;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   position: relative;  /* Allows the box-shadow to create the floating effect */
   border-radius: 8px;
-  margin-left: 0;
+  margin-left: auto;
   margin-right: auto;
   padding: 40px;
 }
@@ -186,28 +186,45 @@ details[open] > summary.qa-question::after {
   max-width: 900px;
   background-color: #fffbf780; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
+  border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;  
   padding: 20px 20px;
 }   
 
-a { color: #C0504D; /* Change to your desired color */
+a {color: #e05c62; /* Change to your desired color */
 }
 
-a:hover {color: #df7583; /* Hover color */
+a:hover {text-decoration: underline;
 }
 
 a:active {color: #9a0e2a; /* Color when clicked */
 }
-  
-  @media(max-width: 768px) {
-    .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 0;
-    }
+
+@media (max-width: 768px) {
+  .block,
+  .block-header,
+  .block-pane {
+    all: unset;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto 40px auto;
+    background-color: rgba(255,255,255,0.85); /* or your preferred background */
+    box-shadow: none;
+    border-radius: 0;
+    text-align: left;
+  }
+
+  .full-pane {
+    padding: 10px;
+    background: rgba(255,255,255,0.9); 
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
 }
     
   </style>
@@ -228,7 +245,7 @@ a:active {color: #9a0e2a; /* Color when clicked */
 <nav class="navbar">
 <ul class="nav-links vertical-buttons">
     <li><a href="index.html">About</a></li>
-    <li><a href="appointment.html">Appointments</a></li>
+    <li><a href="appointment.html">Contact</a></li>
     <li><a href="faqs.html">FAQs</a></li>
     </ul>  
         </nav>
