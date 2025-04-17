@@ -104,7 +104,23 @@ body {
     margin-bottom: 10px; /* Space between list items */
     }
 
-    .circular-photo {
+    ul.custom-bullets li {
+      list-style-type: none;
+      position: relative;
+      padding-left: 1.5em;
+      margin-bottom: 10px;
+    }
+
+ul.custom-bullets li::before {
+  content: "•"; /* You can change this to ✓, →, etc. */
+  position: absolute;
+  left: 0;
+  color: #eb7378;
+  font-size: 1.2em;
+  line-height: 1;
+    }
+
+.circular-photo {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -248,7 +264,7 @@ a:active {
       <h3>North Shore Private Hospital</h3>  
                   <p>Dr Ketaki Sharma (Ket) is an experienced paediatrician committed to listening to caregivers and providing tailored, family-centred support.</p>
                   <p>Ket's clinical interests include:</p>
-                  <ul>
+                  <ul class="custom-bullets">
                     <li>Newborn and infant health concerns;</li>
                     <li>Infant reflux;</li>
                     <li>Growth or weight concerns;</li>
@@ -268,10 +284,10 @@ a:active {
     <section class="block block-earth">
         <h2>Concurrent Appointments</h2>
         <p>Ket is also a Staff Specialist Paediatrician at:
-            <ul><li><strong>The Children’s Hospital at Westmead</strong> (Specialist Immunisation Service)</li> 
+             <ul class="custom-bullets"><li><strong>The Children’s Hospital at Westmead</strong> (Specialist Immunisation Service)</li> 
                 <li>The <strong>National Centre for Immunisation Research and Surveillance</strong> (NCIRS)</li></ul>
         <p>She is passionate about promoting the evidence-based use of vaccines in Australia and globally. Her work involves:
-            <ul><li>developing national clinical guidelines;</li>
+             <ul class="custom-bullets"><li>developing national clinical guidelines;</li>
                 <li>immunisation research (<a href="https://www.researchgate.net/profile/Ketaki-Sharma" target="_blank">view research profile here</a>); and</li>
                 <li>contributing to global health projects including collaborations with the World Health Organization</li>
                     </ul>
