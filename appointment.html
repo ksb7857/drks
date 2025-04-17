@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dr Ketaki Sharma Paediatrician</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    
+body { 
+        font-family: 'Merriweather Sans', sans-serif; /* This will apply font to the entire body */
+        font-size: 16px;
+        line-height: 1.6; /* Increases readability */
+        letter-spacing: 0.2px;
+        font-weight: 400; /* Lighter body text */    
+        color: #40332F ; /* Dark brown*/
+        background-repeat: no-repeat;
+        background-image: url('assets/img/shapes.svg');
+        background-size: cover;       /* Cover the whole page */
+        background-position: center;  /* Center it */
+        background-attachment: fixed; /*Optional: makes it stay when scrolling */
+        background-color: #F2E9D9; /*Light background color for a cleaner look */
+        margin: 0;
+        padding: 20px;}
+    
+.site-header {
+      width: 100%;
+      max-width: 1400px;
+      background-color: transparent; 
+      padding: 20px 60px;
+      position: relative; /* This ensures the header scrolls normally */}
+
+.vertical-buttons {
+    position: fixed;
+    font-family: 'Anton';
+    top: 20px; /* Adjust based on where you want them to appear */
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000; /* Ensure it's above other content */}
+
+.vertical-buttons li a {
+    text-align: right;
+    display: block; /* Ensures text-align works */
+    /*display: inline-block;*/
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1.7em;
+    font-family: 'Anton';
+    text-decoration: none;
+    color: #eb7378;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;}
+
+.vertical-buttons li a:hover {
+    color: #e32636;
+    transform: translateY(-2px);}
+ 
+.content-wrapper {
+    width: 100%; /* Ensures the container spans the full width */
+    margin: 0 auto; /* Centers the content horizontally */
+    margin-top: 10px; /* adjust as needed depending on heading height */
+    padding: 30px 30px; /* Adds space inside the container */}
+
+    h1, h2, h3 {
+    font-family: 'Anton';
+    color:  #eb7378;}
+    
+    h1 {
+        font-size: 3em;
+        line-height: 1.1;
+        margin-bottom: 15px;
+        font-weight: 400;
+        padding: 0px 40px;
+    }
+
+    h2 {
+    font-size: 2.2em;
+    line-height: 1.1;
+    font-weight: 300;
+    margin-bottom: 0px;
+    }
+
+    h3 {
+        font-size: 1.8em;
+        line-height: 1.1; /* Increases readability */
+        font-weight:300;
+        margin-bottom: 10px; 
+    }
+    
+    ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+    }
+
+    ul li {
+    margin-bottom: 10px; /* Space between list items */
+    }
+
+    ul.custom-bullets li {
+      list-style-type: none;
+      position: relative;
+      padding-left: 1.5em;
+      margin-bottom: 10px;
+    }
+
+ul.custom-bullets li::before {
+  content: "•"; /* You can change this to ✓, →, etc. */
+  position: absolute;
+  left: 0;
+  color: #eb7378;
+  font-size: 1.2em;
+  line-height: 1;
+    }
+
+.circular-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(235, 115, 120, 0.12);
+    border-radius: 50%;
+    background-color: #e7b2a44D; /* optional background */
+    object-fit: cover;
+    object-position: top; /* shifts image upward to keep head in frame */   
+    display: block;
+}
+    
+.floating-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px; /* spacing between the two */
+  margin: 60px auto;
+  max-width: 1300px;
+  padding: 20px;
+}
+
+.floating-image {
+  width: 40%;
+  max-width: 450px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: transform 0.3s ease-out;
+}
+
+.floating-text {
+  width: 55%;
+  max-width: none;
+  background-color: rgba(208, 186, 157, 0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  padding: 40px 80px;
+  border-radius: 8px;
+  text-align: justify;
+  transition: transform 0.3s ease-out;
+}
+
+.block {
+  padding: 30px;
+  margin: 80px auto; /* space above/below, centering */
+  max-width: 900px;  /* controls the width of the pane */
+  position: relative;  /* Allows the box-shadow to create the floating effect */
+  width: 90%;
+  transition: transform 0.3s ease-out;
+}
+
+.block-pink {
+  background-color: #f0cfba4D;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  border-radius: 8px;
+  margin-left: 25%;
+  margin-right: auto;
+  transform: translateX(10%);
+}
+
+.block-cream {
+    background-color: #fef9f44D;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 25%;
+    margin-right: auto; /* Left shifted pane */
+}
+
+.block-earth {
+  width: 900px;
+  background-color: rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: 25%;
+  transform: translateX(-10%);
+}   
+
+a {
+  color: #f87472; /* Change to your desired color */
+    text-decoration: none;
+}
+
+a:hover {
+  color: #df7583; /* Hover color */
+}
+
+a:active {
+  color: #9a0e2a; /* Color when clicked */
+}
+  @media(max-width: 768px) {
+  .floating-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .floating-text {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .floating-image {
+    width: auto;
+  }
+    .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+    }
+
+  .circular-photo {
+    width: 60%;
+    max-width: 200px;
+  }
+}
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+<h1>Dr Ketaki Sharma MBBS, MPH, FRACP</h1>
+    
+</header>
+
+<nav class="navbar">
+<ul class="nav-links vertical-buttons">
+    <li><a href="index.html">About</a></li>
+    <li><a href="#services">Appointments</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    </ul>  
+        </nav>
+
+<main class="content-wrapper">
+
+    <section class="floating-row">
+  <div class="floating-image">
+    <img class="circular-photo" src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
+  </div>
+  <div class="floating-text">
+    <h2>Specialist Paediatrician</h2>
+      <h3>North Shore Private Hospital</h3>  
+                  <p>Dr Ketaki Sharma (Ket) is an experienced paediatrician committed to listening to caregivers and providing tailored, family-centred support.</p>
+                  <p>Ket's clinical interests include:</p>
+                  <ul class="custom-bullets">
+                    <li>Newborn and infant health concerns;</li>
+                    <li>Infant reflux;</li>
+                    <li>Growth or weight concerns;</li>
+                    <li>Suspected cow’s milk protein intolerance;</li>
+                    <li>Food allergies (skin prick testing available on-site, if clinically required);</li>
+                    <li>Eczema;</li>
+                    <li>Hayfever;</li>
+                    <li>Immunisation (clinical vaccinology);</li>
+                    <li>Constipation, and other common childhood concerns.</li>
+                 </ul>
+    
+  </div>
+</section>
+
+<!-- Professional Background Block - Right Aligned -->
+    
+    <section class="block block-earth">
+        <h2>Concurrent Appointments</h2>
+        <p>Ket is also a Staff Specialist Paediatrician at:
+             <ul class="custom-bullets"><li><strong>The Children’s Hospital at Westmead</strong> (Specialist Immunisation Service)</li> 
+                <li>The <strong>National Centre for Immunisation Research and Surveillance</strong> (NCIRS)</li></ul>
+        <p>She is passionate about promoting the evidence-based use of vaccines in Australia and globally. Her work involves:
+             <ul class="custom-bullets"><li>developing national clinical guidelines;</li>
+                <li>immunisation research (<a href="https://www.researchgate.net/profile/Ketaki-Sharma" target="_blank">view research profile here</a>); and</li>
+                <li>contributing to global health projects including collaborations with the World Health Organization</li>
+                    </ul>
+        <p>Ket enjoys teaching and is a <strong>Conjoint Clinical Lecturer</strong> in the Discipline of Child and Adolescent Health at the University of Sydney. She also regularly delivers educational updates for GPs and other specialists.</p>
+        
+    </section>
+
+   <section class="block block-pink">
+<h2>Training and Professional Development</h2> 
+    <p>Ket obtained her medical degree and a <strong>Master of Public Health</strong> at the <strong>University of New South Wales</strong>. She undertook specialist paediatric training through the <strong>Sydney Children’s Hospital Network</strong> and is a Fellow of the Royal Australasian College of Physicians (FRACP). 
+    <p>Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the Australasian Society for Clinical Immunology and Allergy (ASCIA) and the Australasian Society for Infectious Diseases and a member of the Australian Paediatric Society and Australasian Society for Developmental Paediatrics.</p>
+        <p>Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.</p>
+    </section>
+    </main>
+  
