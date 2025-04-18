@@ -121,17 +121,21 @@ ul.custom-bullets li::before {
 
 summary {
   display: flex;                    /* Use flex to align the contents */
-  align-items: center;               /* Vertically align the text */  
+  align-items: center;               /* Vertically align the text */ 
+  justify-content: space-between; 
   border: none;                      /* Remove default border */
   border-radius: 5px;                /* Optional rounded corners */
   cursor: pointer;                  /* Make it clear it's clickable */
   font-size: 1.2em;                  /* Increase the font size */
   font-weight: 500;                  /* Weight of the font */
   transition: background-color 0.3s ease; /* Smooth transition for color change */
+  padding-right: 1em;
 }
 
 summary:hover {
   text-decoration: underline;
+  background-color: rgba(224, 92, 98, 0.05); /* subtle tint */
+  cursor: pointer;
 }
 
 .section-subheading {
@@ -162,17 +166,27 @@ summary.section-subheading::after, /* add a "+" on all summary lines */
 summary.qa-question::after {
   content: "+";
   font-weight: 700;
-  margin-left: auto;
 }
 
 summary.section-subheading:hover,
 summary.qa-question:hover {
   text-decoration: underline;
+  background-color: rgba(224, 92, 98, 0.05); /* subtle tint */
+  cursor: pointer;
 }
 
 details[open] > summary.section-subheading::after, /* when the parent <details> is open, change "+" to "–" */
 details[open] > summary.qa-question::after {
   content: "–";
+}
+
+details[open] summary ~ * {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .block-header {
@@ -255,9 +269,9 @@ a:active {color: #9a0e2a; /* Color when clicked */
     </ul>  
         </nav>
 
-<section class="block block-pane">
 <main class="content-wrapper">
-  
+<section class="block block-pane">
+ 
 <details open>
 <summary class="section-subheading">Allergy</summary>
 
