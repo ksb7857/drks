@@ -10,32 +10,32 @@
 <style>
     
 body { 
-        font-family: 'Merriweather Sans', sans-serif; /* This will apply font to the entire body */
+        font-family: 'Merriweather Sans', sans-serif; 
         font-size: 16px;
-        line-height: 1.6; /* Increases readability */
+        line-height: 1.6; 
         letter-spacing: 0.2px;
-        font-weight: 400; /* Lighter body text */    
-        color: #40332F ; /* Dark brown*/
+        font-weight: 400;   
+        color: #40332F; 
         background-repeat: no-repeat;
         background-image: url('assets/img/corner.blobs.svg');
-        background-size: cover;       /* Cover the whole page */
-        background-position: center;  /* Center it */
-        background-attachment: fixed; /*Optional: makes it stay when scrolling */
-        background-color: #F2E9D9; /*Light background color for a cleaner look */
-        margin: 0;
-        padding: 0px;}
+        background-size: cover;      
+        background-position: center; 
+        background-attachment: fixed; 
+        background-color: #F2E9D9; 
+        margin:0;
+        padding: 20px;}
     
 .site-header {
       width: 900px;
       max-width: 90%;
-      padding: 40px;
-      position: relative; /* This ensures the header scrolls normally */
+      position: relative;
     }
 
 .vertical-buttons {
     position: fixed;
     font-family: 'Anton';
-    top: 20px; /* Adjust based on where you want them to appear */
+    color: #e05c62;
+    top: 20px; 
     right: 20px;
     display: flex;
     flex-direction: column;
@@ -43,18 +43,15 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: 1000; /* Ensure it's above other content */}
+    z-index: 1000; /* Ensures it's above other content */}
 
 .vertical-buttons li a {
     text-align: right;
-    display: block; /* Ensures text-align works */
-    /*display: inline-block;*/
+    display: block;
     padding: 10px 15px;
     border-radius: 6px;
     font-size: 1.7em;
-    font-family: 'Anton';
     text-decoration: none;
-    color: #e05c62;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;}
 
@@ -63,10 +60,10 @@ body {
     transform: translateY(-2px);}
  
 .content-wrapper {
-    width: 100%; /* Ensures the container spans the full width */
-    margin: 0 auto; /* Centers the content horizontally */
-    margin-top: 10px; /* adjust as needed depending on heading height */
-    padding: 30px 30px; /* Adds space inside the container */}
+    width: 100%; 
+    margin: 0 auto; 
+    margin-top: 0px; 
+    padding: 30px 30px; 
 
 h1, h2, h3 {
     font-family: 'Anton';
@@ -75,22 +72,7 @@ h1, h2, h3 {
     
 h1 {
     font-size: 3em;
-    margin-bottom: 15px;
     font-weight: 400;
-    padding: 10px 40px;
-    }
-
-h2 {
-    font-size: 2.2em;
-    font-weight: 300;
-    margin-bottom: 10px;
-    }
-
-h3 {
-    font-size: 1.8em;
-    line-height: 1.3; /* Increases readability */
-    font-weight:300;
-    margin-bottom: 10px; 
     }
     
 ul {
@@ -100,7 +82,7 @@ ul {
     }
 
 ul li {
-    margin-bottom: 10px; /* Space between list items */
+    margin-bottom: 10px;
     }
 
 ul.custom-bullets li {
@@ -111,10 +93,10 @@ ul.custom-bullets li {
     }
 
 ul.custom-bullets li::before {
-    content: "•"; /* You can use Unicode or emojis like ✓, →, etc. */
+    content: "•";
     position: absolute;
     left: 0;
-    color: #e05c62; /* Match your accent color */
+    color: #e05c62; 
     font-size: 2em;
     line-height: 1;
     }
@@ -134,7 +116,6 @@ summary {
 }
 
 summary:hover {
-  text-decoration: underline;
   background-color: rgba(224, 92, 98, 0.05); /* subtle tint */
   cursor: pointer;
 }
@@ -160,10 +141,11 @@ summary:hover {
     padding-left: 1em;
     font-size: 1em;
     font-weight: 400;
-    color: #333;
+    color: #40332F;
+    margin-bottom: 1em;
     }
 
-summary.section-subheading::after, /* add a "+" on all summary lines */
+summary.section-subheading::after, 
 summary.qa-question::after {
   content: "+";
   font-weight: 700;
@@ -171,11 +153,11 @@ summary.qa-question::after {
 
 summary.section-subheading:hover,
 summary.qa-question:hover {
-  background-color: rgba(224, 92, 98, 0.05); /* subtle tint */
+  background-color: rgba(224, 92, 98, 0.05); 
   cursor: pointer;
 }
 
-details[open] > summary.section-subheading::after, /* when the parent <details> is open, change "+" to "–" */
+details[open] > summary.section-subheading::after, 
 details[open] > summary.qa-question::after {
   content: "–";
 }
@@ -192,12 +174,11 @@ details[open] summary ~ * {
 .block-header {
   width: 900px;
   max-width: 90%;
-  padding: 40px;
+  padding: 0px;
   position: relative; 
   background-color: #fffbf780;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
-  padding: 40px;
 }
 
 .block-pane {
@@ -228,9 +209,10 @@ a:active {color: #9a0e2a; /* Color when clicked */
     all: unset;
     display: block;
     width: 100%;
+    max-width: 90%;
     padding: 10px;
     margin: 0 auto 0px auto;
-    background-color: rgba(255,255,255,0.85); /* or your preferred background */
+    background-color: rgba(255,255,255,0.6); 
     box-shadow: none;
     border-radius: 0;
     text-align: left;
@@ -240,11 +222,6 @@ a:active {color: #9a0e2a; /* Color when clicked */
     padding: 0px;
     background: rgba(255,255,255,0.9); 
   }
-
-  h1, h2, h3 {
-    text-align: left;
-  }
-}
     
   </style>
 </head>
@@ -257,7 +234,7 @@ a:active {color: #9a0e2a; /* Color when clicked */
     <section class="block-header">
         <p>This page addresses some common medical questions and provides links to detailed information from trusted sources.</p>
         <p>Please note this content is general in nature and is not a substitute for individualised medical advice.</p>
-        <p>This information is valid as of May 2025. If any links are broken please feel free to let me know at info@drketsharma.com.au.</p>
+        <p>This information is valid as of May 2025.</p>
     </section>
 
 
@@ -274,44 +251,142 @@ a:active {color: #9a0e2a; /* Color when clicked */
  
 <details open>
 <summary class="section-subheading">Allergy</summary>
+    <details>
+      <summary class="qa-question">What is the difference between a food allergy and an intolerance?</summary>
+      <div class="qa-answer">
+          <p>Terminology about food reactions can be confusing, since there are different types of reactions that are often called "allergies":
+          <ul><li><strong>immediate</strong> allergic reactions occur within minutes-to-hours after eating a food and involve an immune molecule called "IgE". Symptoms vary and can include hives, vomiting, or lip swelling. Anaphylaxis is the most severe type of immediate reaction.
+              <li><strong>delayed</strong> allergic reactions beging hours-to-days after eating a food. They involve <em>other parts</em> of the immune system (non-IgE) and never cause immediate symptoms like hives or anaphylaxis. Examples include coeliac disease and "cow's milk protein intolerance/allergy" which can both cause delayed gastrointestinal symptoms.</li>
+              <li><strong>intolerances</strong> occur if there is a problem digesting a food, and do not involve the immune system at all. An example is lactose intolerance, which happens when there is not enough of a particular enzyme (lactase) in the gut. Allergy testing is therefore not useful for intolerances</li>
+          </ul>
+          <p>For more detail about different types of reactions to foods, refer to <a href="https://www.allergy.org.au/patients/food-other-adverse-reactions/food-intolerance">this ASCIA page</a>.</p>
+      </div>
+  </details>
 
-<details>
-    <summary class="qa-question">What is the difference between a food allergy and an intolerance?</summary>
-        <p>'Allergy' typically refers to reactions that occur soon (e.g. <1 hour) after ingesting a food which involve immune molecules called <strong>IgE</strong>. Symptoms vary but can include hives, lip swelling and vomiting. The most severe type of 'IgE allergy' is called anaphylaxis. 
-            <p>Other parts of the immune system can cause delayed reactions, sometimes called non-IgE allergies. Examples include coeliac disease and cow's milk protein "intolerance/allergy", both of which can cause delayed gastrointestinal symptoms. Non-IgE allergies do not cause immediate reactions like hives or anaphylaxis.</p>
-            <p>Reactions that don't involve the immune system at all are not allergies and are sometimes called intolerances e.g. lactose intolerance, which occurs when there is not enough of a particular enzyme (lactase) in the gut. </p>
-            For more detail about different types of reactions to foods, refer to this ASCIA page.
-</details>
-            
-<details>
+  <details>
     <summary class="qa-question">If my baby has mucus or blood in their nappies does that mean they have an allergy?</summary>
-        <p>Small amounts of mucus in the stool in a well infant is normal. This mucus may be produced by healthy gut bacteria and may play a role in helping stool pass smoothly. 
-            Large amounts of mucus and/or any blood in the nappies is not normal and other causes must be considered, such as infection. Mucusy stool with fresh blood in an otherwise thriving infant is commonly due to a delayed non-IgE reaction to a food protein (often cow's milk). Other less common causes should also be considered and a thorough assessment by a GP or paediatrician is always warranted.</p>
-        </details>
+    <div class="qa-answer">
+      <p>Small amounts of mucus in the stool in a well infant is normal. This mucus may be produced by healthy gut bacteria and may play a role in helping stool pass smoothly.</p> 
+            <p>Large amounts of mucus and/or any blood in the nappies is not normal and other causes must be considered, such as infection. Mucusy stool with fresh blood in an otherwise thriving infant is commonly due to a delayed non-IgE reaction to a food protein (often cow's milk). Other less common causes should also be considered and a thorough assessment by a GP or paediatrician is always warranted.</p>
+    </div>
+  </details>
 
 <details>
-    <summary class="qa-question">What is lactose intolerance and why does it occur?</summary>
+    <summary class="qa-question">What is lactose intolerance and do babies get it?</summary>
+    <div class="qa-answer">
       <p>Lactose is a sugar found in milk (including breastmilk and cow's milk), and its digestion involves an enzyme called lactase. Lactose intolerance occurs when there is not enough of the lactase enzyme in the gut, leading to symptoms such as tummy pain, bloating and diarrhoea. 
-In infants and young children, lactose intolerance is usually a temporary phenomenon seen after a viral illness like gastroenteritis, and usually resolves within weeks. Permanent lactose intolerance in infants is extremely rare. In adults and older children, lactose intolerance usually occurs when there is not enough lactase enzyme in the gut to handle the amount of lactose (from dairy) that is consumed. This can often be managed by cutting down on lactose intake. </p>
-        </details>
+In infants and young children, lactose intolerance is usually a <strong>temporary</strong>problem after a viral illness like gastroenteritis, and it resolves within weeks. It is extremely rare for babies to be born with lactose intolerance, and much more common for it to develop in older children and adults.</p>
+    </div>
+  </details>
+
+<details>
+    <summary class="qa-question">How are allergies diagnosed?</summary>
+      <div class="qa answer">
+          <p>The most important part of allergy diagnosis is the history, i.e. the description of symptoms and exposure to an allergy-causing substance (allergen). If an immediate-type allergy is suspected, a skin prick test, blood test or oral food challenge can help to confirm the diagnosis. These tests are <strong>not</strong> useful for delayed-type reactions or intolerances. The decision to carry out allergy testing requires careful thought, since interpretation of these tests is not straight-forward. Diagnosis of delayed-type reactions varies depending on the condition, but a useful way to investigate these is simply to carefully avoid the substance for a period of time and then re-introduce it and see if symptoms return</p>
+          </div>
+  </details>
+</details>
+
+<details open>
+<summary class="section-subheading">Bedwetting</summary>
+<details>
+<summary class="qa-question">Is bedwetting a concern in a school aged child?</summary>
+    <div class="qa-answer">
+      <p>Bedwetting is developmentally normal in young children. Our bodies produce a hormone (called ADH) that helps us retain fluids overnight, and young children often don't make enough of this hormone. Deep sleepers may also not be woken by the urge to urinate. In an otherwise healthy child, bedwetting often doesn't need any treatment until at least 6-7 years of age. A medical review should be considered at this age, particularly if the bedwetting is causing distress to the child or family.</p>
+<p>Rarely, bedwetting can be associated with another medical condition. A medical review should be sought if there are any concerning daytime symptoms such as unusual frequency of urination or daytime wetting in a child that was previously dry, or if a child who was previously dry at night for at least six months has started bedwetting again.</p> 
+<p>For more information read <a href="https://www.schn.health.nsw.gov.au/bedwetting-factsheet">this factsheet</a> from the Sydney Children's Hospital Network.</p>
+    </div>
+  </details>
+          
+<details>
+    <summary class="qa-question">How is bedwetting usuallytreated?</summary>
+    <div class="qa-answer">
+      <p>If bedwetting is associated with another medical condition, such as constipation, this should be treated first. Behavioural strategies like a bedwetting alarm are highly successful as treatment for bedwetting, but they must be used consistently for several weeks. It is rare to require further treatment such as medication for uncomplicated bedwetting.</p>
+    </div>
+  </details>
+</details>
+
+
+<details open>
+<summary class="section-subheading">Constipation</summary>
+<details>
+    <summary class="qa-question">Why do young children get constipated?</summary>
+    <div class="qa-answer">
+      <p>The most common cause of constipation in young children is 'functional' constipation, which happens in toddlers and young children who may ignore the urge to defecate and then develop anxiety after having a painful bowel movement. Continued avoidance leads to stool building up in the rectum and large bowel.</p>
+<p>Investigations (e.g. blood test, X-ray) are not needed to diagnose functional constipation, but may be required if other less common medical causes of constipation are suspected. For this reason, a careful medical assessment is always recommended.</p>
+    </div>
+</details>
+
+<details>
+    <summary class="qa-question">How is constipation treated?</summary>
+    <div class="qa-answer">
+      <p>Functional constipation is usually treated with a combination of strategies which may include diet and behaviour modification and medications such as stool softeners and laxatives. A common reason for treatment failure is stopping laxatives too early. It can take many months for the bowel to fully heal and resume normal functioning, so treatment often needs to be prolonged and tapered down gradually.</p> <p>For further information, read <a href="https://https://www.schn.health.nsw.gov.au/constipation-factsheet">this factsheet</a> from the Sydney Children's Hospital Network.</p>
+    </div>
+  </details>
+
+<details open>
+<summary class="section-subheading">Eczema</summary>
+<details>
+<summary class="qa-question">Tips on managing eczema</summary>
+<div class="qa-answer">
+    <p>For children with eczema, a good rule of thumb is to keep the skin 'cool, clean and moisturised', i.e.:
+<ul><li>Cool: Avoid hot baths or showers or hot itchy clothing</li>
+<li>Clean: Wash daily to remove bacteria from the skin; bleach baths can be considered if needed</li>
+<li>Moisturised: To prevent flares, apply moisturiser twice daily, even when skin appears healthy. Avoid products which contain:
+<li>Fragrances, which may irritate the skin</Moisturised:>li>
+<li>Food substances (e.g. almond oil, coconut oil, milk, etc.), as this can increase the risk of developing of allergy to those foods, especially in infants with eczema.</li></ul></p>
+</div>
+</details>
+
+<details>
+    <summary class="qa-question">Can food or vaccines trigger an eczema flare?
+</summary>
+    <div class="qa-answer">
+      <p>Eczema can flare in reaction to many different substances, including allergens like foods or dustmites, chemicals like chlorine or soap, and after a viral illness. Although rare, some people have reported a flare of eczema after a vaccine.</p> 
+<p>It can be impractical (or impossible) to avoid certain triggers, and in some cases there are potential harms in strictly avoiding a trigger. For example, a strict restrictive diet may lead to nutritional imbalances, while avoiding vaccination increases the risk of serious infections.</p>
+<p>Maintaining excellent baseline care of eczema can help to minimise flares while allowing more flexibility in diet and lifestyle</p>
+    </div>
+  </details>
+    
+<details>
+    <summary class="qa-question">Is it safe to use steroids in eczema?</summary>
+    <div class="qa-answer">
+      <p>Topical steroids (i.e. ointments or creams) are safe to use in children with eczema and should not be applied "sparingly" but in ample amounts to the affected areas. They can be stopped when the skin has healed, and regular moisturisers should be continued.
+Side effects are rare but are more likely with long term use of very strong steroids over large areas of skin.</p> 
+<p>In recent years concerns have increased about 'topical steroid withdrawal', a condition that is not very well understood. A British dermatology expert group has released <a href="https://eczema.org/wp-content/uploads/Topical_Steroid_Topical_Withdrawal_Joint_Statement_Feb_2024.pdf">this statement</a> acknowledging that more needs to be learnt about this condition, but emphasising that topical steroids should still be used as needed.</p>
+    </div>
+  </details>
+
+<details open>
+<summary class="section-subheading">Hayfever</summary>
+<details>
+    <summary class="qa-question">Is hayfever a significant problem in children?</summary>
+    <div class="qa-answer">
+      <p>Hayfever is an allergic reaction to environmental substances such as house dust mite, pollens, grasses and moulds. Symptoms include sneezing, runny nose and itchy eyes. It is also called 'allergic rhinitis'. Hayfever is uncommon under 2 years of age and gradually becomes more common, affecting about 1 in 3 adolescents. 
+The impacts of hayfever are often underrecognised. It can cause troublesome daytime symptoms, and can significantly impact sleep quality which in turn can affect daytime function, including attention and behaviour.</p>
+    </div>
+  </details>
+
+<details>
+    <summary class="qa-question">How is hayfever diagnosed?</summary>
+    <div class="qa-answer">
+      <p>Hayfever can be diagnosed based on symptoms and examination findings. Testing is not needed to confirm the diagnosis, but can help to identify triggers, e.g. by skin prick testing.</p>
+    </div>
+</details>
 
 <details>
     <summary class="qa-question">Useful links</summary>
-   <p><a href="https://www.google.com/url?q=https%3A%2F%2Fwww.allergy.org.au%2Fpatients%2Ffast-facts&sa=D">Allergy fast facts</a>: A collection of fact sheets for caregivers from the Australasian Society of Clinical Immunology and Allergy (ASCIA)</p>
-        </details>
-</details>
-
-<details>
-    <summary class="section-subheading">Allergy testing</summary>
-      <details>
-       <summary class="qa-question">How are allergies diagnosed?</summary>
-<p>The most important part of allergy diagnosis is the history, i.e. the description of symptoms and their potential relationship to an allergy-causing substance (allergen). The most common test used to             confirm a suspected allergy is a skin prick test, which an be carried out during a consultation.</p> 
-        <p>Interpreting a skin prick test is not straightforward, since 'false positives' are common, e.g. the test may be positive to a food that the person regularly consumes without having any allergy symptoms and is         not actually "allergic to". It is generally not recommended to carry out skin prick tests for foods that have never been consumed, though there are exceptions to this rule. Blood tests can also be conducted for                 specific allergens. Both of these tests can only be used for immediate (IgE) allergies. Food challenges involve giving increasing quantities of a food under close medical supervision to observe for a reaction.                 These may be done for several reasons, including to confirm if a child has outgrown an allergy. Food challenges can be arranged if required at North Shore Private Hospital.</p>
-                <p>For detailed information on allergy testing, including specialised tests not mentioned above, read <a href="https://www.allergy.org.au/patients/allergy-testing/allergy-testing">this ASCIA page.</p> 
-        </details>   
-
+    <div class="qa-answer">
+<ul><li>A simple factsheet on house dust mite allergy from the Sydney Children's Hospital Network</li>
+<li></li></ul>
     
-            
+ <details>
+    <summary class="qa-question"></summary>
+    <div class="qa-answer">
+      <p>This is the answer to that question.</p>
+    </div>
+  </details>
+</details>           
 
     </main>
 <script>
