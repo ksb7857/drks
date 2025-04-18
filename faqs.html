@@ -14,7 +14,7 @@ body {
         font-size: 16px;
         line-height: 1.6; 
         letter-spacing: 0.2px;
-        font-weight: 400;   
+        font-weight: 300;   
         color: #40332F; 
         background-repeat: no-repeat;
         background-image: url('assets/img/corner.blobs.svg');
@@ -149,7 +149,7 @@ summary:hover {
 
 summary.section-subheading::after, 
 summary.qa-question::after {
-  content: "+";
+  content: "▲";
   font-weight: 700;
 }
 
@@ -161,7 +161,7 @@ summary.qa-question:hover {
 
 details[open] > summary.section-subheading::after, 
 details[open] > summary.qa-question::after {
-  content: "–";
+  content: "▼";
 }
 
 details[open] summary ~ * {
@@ -174,9 +174,9 @@ details[open] summary ~ * {
 }
 
 .block-header {
-  width: 900px;
+  width: 800px;
   max-width: 90%;
-  padding: 0px;
+  padding: 20px;
   position: relative; 
   background-color: #fffbf780;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
@@ -184,7 +184,7 @@ details[open] summary ~ * {
 }
 
 .block-pane {
-  width: 900px;
+  width: 800px;
   max-width: 90%;
   background-color: #fffbf780; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
@@ -192,7 +192,7 @@ details[open] summary ~ * {
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;  
-  padding: 20px 20px;
+  padding: 20px;
 }   
 
 a {color: #e05c62; /* Change to your desired color */
