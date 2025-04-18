@@ -129,7 +129,8 @@ summary {
   font-size: 1.2em;                  /* Increase the font size */
   font-weight: 500;                  /* Weight of the font */
   transition: background-color 0.3s ease; /* Smooth transition for color change */
-  padding-right: 1em;
+  padding-right: 1em
+  padding-left: 1em;
 }
 
 summary:hover {
@@ -170,7 +171,6 @@ summary.qa-question::after {
 
 summary.section-subheading:hover,
 summary.qa-question:hover {
-  text-decoration: underline;
   background-color: rgba(224, 92, 98, 0.05); /* subtle tint */
   cursor: pointer;
 }
@@ -314,5 +314,21 @@ In infants and young children, lactose intolerance is usually a temporary phenom
             
 
     </main>
+<script>
+  document.querySelectorAll("details").forEach(detail => {
+    detail.addEventListener("toggle", () => {
+      if (detail.open) {
+        const children = [...detail.children];
+        children.forEach(el => {
+          if (el !== detail.querySelector("summary")) {
+            el.style.animation = "none";
+            el.offsetHeight; // trigger reflow
+            el.style.animation = "fadeIn 0.4s ease-in";
+          }
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
