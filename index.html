@@ -208,15 +208,16 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .floating-row,
+  .floating-image,
+  .floating-text,
   .block,
   .block-concurrent,
   .block-training {
     all: unset;
     display: block;
-    width: 100%;
+    max-width: 90%;
     padding: 20px;
-    margin: 0 auto 40px auto;
+    margin: 20px; 
     background-color: rgba(255,255,255,0.85); /* or your preferred background */
     box-shadow: none;
     border-radius: 0;
