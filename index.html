@@ -208,18 +208,9 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .block,
-  .block-concurrent,
-  .block-training {
-    all: unset;
-    display: block;
-    max-width: 90%;
-    padding: 20px;
-    background-color: rgba(255,255,255,0.85); /* or your preferred background */
-    box-shadow: none;
-    border-radius: 0;
-    text-align: left;
-  }
+ .floating-row {
+     flex-wrap: wrap;
+ }
 
   .vertical-buttons li a {
     font-size: 1.2em;
@@ -247,7 +238,6 @@ a:hover {
     font-size: 1.2em
   }
 }
-  
 
   </style>
 </head>
