@@ -240,6 +240,23 @@ a:active {
 	box-sizing: border-box;
 }
 
+.mobile-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background; #f0f0f0;
+	padding; 5px;
+}
+
+.mobile-nav a, .mobile-nav button {
+	flex: 1;
+	text-align: right;
+	padding; 5px;
+	text-decoration; none;
+	border: none;
+	background; none;
+}
+	
 body, html { 
 	margin: 0 !important
 	padding: 5pm !important;
@@ -281,14 +298,6 @@ body, html {
 </head>
 
 <body>
-<header class="site-header">
-    <h1>FAQs and Resources</h1>
-</header>
-
-    <section class="block-header">
-        <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
-    </section>
-
 
 <nav class="navbar">
 <ul class="nav-links vertical-buttons">
@@ -298,6 +307,19 @@ body, html {
     </ul>  
         </nav>
 
+<nav class="mobile-nav">
+	<a href="index.html">About</a>
+	<a href="contact.html">Contact</a>
+	<a href="faqs.html">FAQs</a>
+</nav>
+	
+<header class="site-header">
+    <h1>FAQs and Resources</h1>
+</header>
+	<section class="block-header">
+        <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
+    </section>
+	
 <main class="content-wrapper">
 <section class="block block-pane">
 
