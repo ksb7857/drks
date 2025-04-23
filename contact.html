@@ -79,21 +79,18 @@ body {
     font-family: 'Anton';
     color:  #4c518a;
     padding: 0px 40px;
+    font-weight: 400;
+    line-height: 1.1;
     }
     
     h1 {
         font-size: 3em;
-        line-height: 1.1;
         margin-bottom: 15px;
-        font-weight: 400;
     }
 
     h2 {
         font-size: 1.8em;
-        line-height: 1.1; 
-        font-weight:400;
         margin-bottom: 10px;
-        padding: 0px 40px;
     }
 
 a {
@@ -112,7 +109,15 @@ a:active {
 @media (max-width: 768px) {
 
   body, .content-wrapper, .site-header, h1, h2 {
-    padding: 10px 0px;
+    display: block;
+    width: 100%;
+    max-width: 90%;
+    padding: 10px;
+    margin: 0 auto 0px auto;
+    background-color: rgba(255,255,255,0.6); 
+    box-shadow: none;
+    border-radius: 0;
+    text-align: left;
   }
 
   h1 {
