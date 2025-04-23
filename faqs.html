@@ -272,10 +272,10 @@ a:active {color: #9a0e2a; /* Color when clicked */
     <details>
       <summary class="qa-question">What is the difference between a food allergy and an intolerance?</summary>
       <div class="qa-answer">
-          <p>Terminology about food reactions can be confusing, since reactions with very different causes can be referred to using the same words. The most common types of reactions are:
-          <ul><li><strong>Immediate</strong> allergic reactions, which occur within minutes-to-hours after eating a food and involve an immune molecule called "IgE". Symptoms vary and can include hives, vomiting, or lip swelling. Anaphylaxis is the most severe type of immediate reaction. These IgE reactions are sometimes called "true allergy".
-              <li><strong>Delayed</strong> allergic reactions, which begin hours-to-days after eating a food and which involve other parts of the immune system, not IgE. An example is coeliac disease, which can cause gastrointestinal symptoms, however there are many types of delayed allergic reactions which can affect other parts of the body including skin and joints.</li>
-              <li><strong>Intolerances</strong>, which occur if there is a problem digesting a food, and which do not involve the immune system at all and are therefore not allergies. An example is lactose intolerance, which happens when there is not enough of a particular enzyme (lactase) in the gut. Allergy testing is not useful for intolerances</li>
+          <p>Terminology about food reactions can be confusing, since reactions with very different causes are often referred to using the same words. The main types of reactions are:
+          <ul><li><strong>Immediate allergic</strong> reactions, which occur within minutes-to-hours after eating a food and involve an immune molecule called "IgE". These are considered "true allergies". Symptoms vary and can include hives, vomiting, or lip swelling. Anaphylaxis is the most severe type of immediate reaction. 
+              <li><strong>Delayed reactions</strong> which begin hours-to-days after ingesting a food, and which are caused by the immune system, but not by IgE. Examples include coeliac disease and cow's milk protein 'intolerance/allergy', both of which cause delayed gastrointestinal symptoms. These are often called "non-IgE allergies" but they do not cause any immediate symptoms and cannot cause anaphylaxis.</li>
+              <li><strong>Intolerances</strong>, which occur if there is a problem digesting a food, and which do not involve the immune system at all. These are therefore not allergies. An example is lactose intolerance, which happens when there is not enough of a particular enzyme (lactase) in the gut. Allergy testing is not useful for intolerances</li>
           </ul>
           <p>For more detail about different types of reactions to foods, refer to <a href="https://www.allergy.org.au/patients/food-other-adverse-reactions/food-intolerance">this ASCIA page</a>.</p>
       </div>
@@ -285,7 +285,7 @@ a:active {color: #9a0e2a; /* Color when clicked */
     <summary class="qa-question">If my baby has mucus or blood in their nappies does that mean they have an allergy?</summary>
     <div class="qa-answer">
       <p>Small amounts of mucus in the stool in a well infant is normal. This mucus may be produced by healthy gut bacteria and may play a role in helping stool pass smoothly.</p> 
-            <p>Large amounts of mucus and/or any blood in the nappies is not normal and other causes must be considered, such as infection. Mucusy stool with fresh blood in an otherwise thriving infant is commonly due to a delayed reaction by the immune system to a food protein (often cow's milk). Although sometimes called cow's milk allergy, this condition does not cause immediate symptoms like hives, and belongs to the "non-IgE" group of conditions (see above). Other less common causes should also be considered and a thorough assessment by a GP or paediatrician is always warranted.</p>
+            <p>Large amounts of mucus and/or any blood in the nappies would make us think about other causes, such as infection. Mucusy stool with fresh blood in a healthy, thriving baby is commonly due to a delayed reaction by the immune system to a food protein (often cow's milk). Although sometimes called cow's milk protein allergy, this condition is not a 'true allergy' (see above), and does not cause immediate symptoms like hives, or anaphylaxis. Other less common causes of mucus or blood in nappies should also be considered and a thorough assessment by a GP or paediatrician is always warranted.</p>
     </div>
   </details>
 
@@ -300,7 +300,8 @@ a:active {color: #9a0e2a; /* Color when clicked */
 <details>
     <summary class="qa-question">How are allergies diagnosed?</summary>
     <div class="qa-answer">
-        <p>The most important part of allergy diagnosis is the history, i.e. the description of symptoms and exposure to an allergy-causing substance (allergen). If an immediate-type allergy is suspected, a skin prick test, blood test or oral food challenge can help to confirm the diagnosis. The decision to carry out allergy testing requires careful thought, since interpretation of these tests is not straight-forward.These tests are <strong>not</strong> useful for delayed-type reactions or intolerances.</p><p> Diagnosis of delayed-type reactions varies depending on the condition, but a useful way to investigate these is simply to carefully avoid the substance for a period of time and then re-introduce it and see if symptoms return</p>
+        <p>The most important part of allergy diagnosis is the history, i.e. the description of symptoms linked to exposure to an allergy-causing substance (allergen). If an immediate-type allergy is suspected, a skin prick test, blood test or oral food challenge can help to confirm the diagnosis. A skin prick test involves pricking the skin with food extracts and looking for a wheal (swelling). Blood tests measure an immune molecule (IgE) that is targetting the food(s) of interest. A food challenge involves eating small amounts of a food under close medical supervision. The decision to carry out allergy testing requires careful consideration, since interpreting these tests is not straight-forward.</p>
+        <p>For delayed reactions or food intolerances, skin prick testing will not be useful. Other tests may be helpful depending on the condition, such as trialling elimination and reintroduction of the food, a formal oral food challenge, or specific testing for coeliac disease.</p>
     </div>
   </details>
 
@@ -534,5 +535,23 @@ For more information see <a href="https://www.schn.health.nsw.gov.au/reflux-fact
     });
   });
 </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const allDetails = document.querySelectorAll('details');
+
+  allDetails.forEach((detail) => {
+    detail.addEventListener('toggle', function () {
+      if (detail.open) {
+        allDetails.forEach((otherDetail) => {
+          if (otherDetail !== detail) {
+            otherDetail.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
