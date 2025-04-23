@@ -126,7 +126,7 @@ summary:hover {
     font-family: 'Anton';
     font-size: 1.4em;
     font-weight: 500;
-    color:  #e05c62;
+    color:  #ab464b;
     margin-top: 1.5em;
     cursor: pointer;
     }
@@ -134,7 +134,7 @@ summary:hover {
 .qa-question {
     font-size: 16px;
     font-weight: 500;
-    color:  #e05c62;
+    color:  #ab464b;
     margin-top: 1em;
     cursor: pointer;
     }
@@ -147,12 +147,30 @@ summary:hover {
     margin-bottom: 1em;
     }
 
+summary.section-subheading,
+summary.qa-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 1em; /* Consistent padding around the text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0; /* Remove any default margin that might differ */
+  transition: background-color 0.3s ease;
+}
+
 summary.section-subheading::after, 
 summary.qa-question::after {
   content: "▲";
   font-family: 'Merriweather Sans';
   font-size: 16px;
   font-weight: 300;
+  display: inline-block;
+  min-width: 1em;
+  text-align: right;
+  margin-left: auto;
+  padding-left: 1em; /* Optional space between text and arrow */
 }
 
 summary.section-subheading:hover,
