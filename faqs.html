@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FAQs and Resources</title>
+    <title>Paediatric FAQs and Resources</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
@@ -18,7 +18,7 @@ body {
         font-size: 16px;
         line-height: 1.6; 
         letter-spacing: 0.2px;
-        font-weight: 300;   
+        font-weight: 400;   
         color: #40332F; 
         background-repeat: no-repeat;
         background-image: url('assets/img/blue_shapes.svg');
@@ -27,7 +27,7 @@ body {
         background-attachment: fixed; 
         background-color: #FAF9F6; 
         margin:0;
-        padding: 20px;}
+        padding: 20px 60px;}
     
 .site-header {
       width: 100%;
@@ -48,7 +48,8 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: 1000; /* Ensures it's above other content */}
+    z-index: 1000;
+    }
 
 .vertical-buttons li a {
     text-align: right;
@@ -56,6 +57,7 @@ body {
     padding: 10px 15px;
     border-radius: 6px;
     font-size: 1.7em;
+    font-family: 'Anton';
     text-decoration: none;
     font-weight: 500;
     color: #4c518a;
@@ -70,19 +72,26 @@ body {
     width: 100%; 
     margin: 0 auto; 
     margin-top: 0px; 
-    padding: 30px 30px; 
+    padding: 20px 100px; 
 }
 
 h1, h2 {
     font-family: 'Anton';
     color:  #4c518a;
-    padding: 30px;
+    padding: 0px 40px;
+    font-weight: 400;
+    line-height: 1.1;
     }
     
 h1 {
     font-size: 3em;
-    font-weight: 400;
+    margin-bottom: 15px;
     }
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px
+}
     
 ul {
     margin-top: 10px;
@@ -212,20 +221,22 @@ details[open] summary ~ * {
   padding: 20px;
 }   
 
-a {color: #0e20ed; /* Change to your desired color */
+a {color: #0e20ed;
+   text-decoration: none;
 }
 
-a:hover {text-decoration: underline;
+a:hover {
+    text-decoration: underline;
 }
 
-a:active {color: #9a0e2a; /* Color when clicked */
+a:active {
+    color:  #4f7874; /* Color when clicked */
 }
 
 @media (max-width: 768px) {
-  .block,
+  body, .block,
   .block-header,
-  .block-pane {
-    all: unset;
+  .block-pane,  {
     display: block;
     width: 100%;
     max-width: 90%;
@@ -241,7 +252,25 @@ a:active {color: #9a0e2a; /* Color when clicked */
     padding: 0px;
     background: rgba(255,255,255,0.9); 
   }
-    
+  h1 {
+    font-size: 1.5em;
+    padding: 10px 0px;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+    .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+    }
+
+.vertical-buttons {
+	position: relative;
+}
+}
   </style>
 </head>
 
