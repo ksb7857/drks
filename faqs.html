@@ -542,8 +542,11 @@ document.addEventListener('DOMContentLoaded', function () {
   allDetails.forEach((detail) => {
     detail.addEventListener('toggle', function () {
       if (detail.open) {
-        // Close only sibling <details> elements (same parent)
-        const siblings = Array.from(detail.parentElement.children).filter(
+        // Only close siblings at the same nesting level
+        const parent = detail.parentElement;
+
+        // Find sibling <details> in the same parent
+        const siblings = Array.from(parent.children).filter(
           el => el.tagName === 'DETAILS' && el !== detail
         );
 
@@ -553,6 +556,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
 
 
 </body>
