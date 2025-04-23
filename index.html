@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dr Ketaki Sharma Paediatrician</title>
+    <title>Sydney Paediatrician, Dr Ketaki Sharma</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
@@ -15,12 +15,12 @@
 }
     
 body { 
-        font-family: 'Work Sans', sans-serif; /* This will apply font to the entire body */
+        font-family: 'Work Sans', sans-serif;
         font-size: 16px;
-        line-height: 1.6; /* Increases readability */
+        line-height: 1.6; 
         letter-spacing: 0.2px;
-        font-weight: 400; /* Lighter body text */    
-        color: #40332F ; /* Dark brown*/
+        font-weight: 400; 
+        color: #40332F; 
         background-repeat: no-repeat;
         background-image: url('assets/img/blue_shapes.svg');
         background-size: cover;       
@@ -32,15 +32,17 @@ body {
 }
     
 .site-header {
+      width: 100%
+      max-width: 1400px;
       background-color: transparent; 
       padding: 20px 60px;
-      position: relative; /* This ensures the header scrolls normally */
+      position: relative; 
 }
 
 .vertical-buttons {
     position: fixed;
     font-family: 'Anton';
-    top: 20px; /* Adjust based on where you want them to appear */
+    top: 20px; 
     right: 20px;
     display: flex;
     flex-direction: column;
@@ -48,12 +50,12 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000; 
 }
 
 .vertical-buttons li a {
     text-align: right;
-    display: block; /* Ensures text-align works */
+    display: block; 
     padding: 10px 15px;
     border-radius: 6px;
     font-size: 1.7em;
@@ -70,15 +72,16 @@ body {
 }
  
 .content-wrapper {
-    width: 100%; /* Ensures the container spans the full width */
-    margin: 0 auto; /* Centers the content horizontally */
-    margin-top: 10px; /* adjust as needed depending on heading height */
-    padding: 20px 100px; /* Adds space inside the container */
+    width: 100%;
+    margin: 0 auto; 
+    margin-top: 10px; 
+    padding: 20px 100px; 
 }
 
     h1, h2 {
     font-family: 'Anton';
     color:  #4c518a;
+    padding: 0px 40px;
     }
     
     h1 {
@@ -90,8 +93,8 @@ body {
 
     h2 {
         font-size: 1.8em;
-        line-height: 1.1; /* Increases readability */
-        font-weight:300;
+        line-height: 1.1; 
+        font-weight:400;
         margin-bottom: 10px;
     }
 
@@ -111,7 +114,7 @@ body {
 .profile-section {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  gap: 0px;
   margin-bottom: 40px;
   flex-wrap: wrap; /* ensures it stacks on smaller screens */
 }
@@ -128,7 +131,7 @@ body {
 
 a {
   color: #0e20ed;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
@@ -147,12 +150,12 @@ height: auto;
 }
 
   .content-wrapper {
-    padding: 20px 10px;
+    padding: 20px 0px;
   }
 
   h1 {
     font-size: 2em;
-    padding: 10px 20px;
+    padding: 10px 0px;
   }
 	
   h2 {
@@ -164,6 +167,10 @@ height: auto;
     gap: 10px;
     padding: 15px 0;
     }
+
+.vertical-buttons {
+	position: relative;
+}
 }
 
 </style>
