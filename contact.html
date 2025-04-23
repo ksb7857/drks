@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -13,18 +13,18 @@
 }
     
 body { 
-        font-family: 'Merriweather Sans', sans-serif; /* This will apply font to the entire body */
+        font-family: 'Work Sans', sans-serif; /* This will apply font to the entire body */
         font-size: 16px;
         line-height: 1.6; /* Increases readability */
         letter-spacing: 0.2px;
         font-weight: 400; /* Lighter body text */    
         color: #40332F ; /* Dark brown*/
         background-repeat: no-repeat;
-        background-image: url('assets/img/shapes.svg');
+        background-image: url('assets/img/blue_shapes.svg');
         background-size: cover;       
         background-position: center;  
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
-        background-color: #F2E9D9; 
+        background-color: #FAF9F6; 
         margin: 0;
         padding: 20px 60px;}
     
@@ -51,18 +51,17 @@ body {
 .vertical-buttons li a {
     text-align: right;
     display: block; /* Ensures text-align works */
-    /*display: inline-block;*/
     padding: 10px 15px;
     border-radius: 6px;
     font-size: 1.7em;
     font-family: 'Anton';
     text-decoration: none;
-    color: #e05c62;
+    color: #4c518a;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;}
 
 .vertical-buttons li a:hover {
-    color: #e32636;
+    text-decoration: underline;
     transform: translateY(-2px);}
  
 .content-wrapper {
@@ -73,7 +72,7 @@ body {
 
     h1, h2 {
     font-family: 'Anton';
-    color:  #e05c62;
+    color:  #4c518a;
     padding: 0px 40px;
     }
     
@@ -92,22 +91,13 @@ body {
         padding: 0px 40px;
     }
 
-ul.custom-bullets li::before {
-  content: "•"; /* You can change this to ✓, →, etc. */
-  position: absolute;
-  left: 0;
-  color: #eb7378;
-  font-size: 1.2em;
-  line-height: 1;
-    }
-
 a {
-  color: #f87472; /* Change to your desired color */
+  color: #0e20ed; /* Change to your desired color */
     text-decoration: none;
 }
 
 a:hover {
-  color: #df7583; /* Hover color */
+  text-decoration: underline;
 }
 
 a:active {
@@ -115,29 +105,20 @@ a:active {
 }
 
 @media (max-width: 768px) {
-  .block-header,
-  .block-pane, .block-pink, .block-earth {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 20px;
-  }
 
   .content-wrapper {
-    padding: 20px 10px;
+    padding: 10px 5px;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 10px 20px;
   }
 
   h2 {
-    font-size: 1.6em;
+    font-size: 1.1em;
   }
 
-  h3 {
-    font-size: 1.3em;
-  }
 
     .nav-links {
     flex-direction: column;
