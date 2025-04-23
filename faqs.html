@@ -535,23 +535,25 @@ For more information see <a href="https://www.schn.health.nsw.gov.au/reflux-fact
     });
   });
 </script>
-    <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   const allDetails = document.querySelectorAll('details');
 
   allDetails.forEach((detail) => {
     detail.addEventListener('toggle', function () {
       if (detail.open) {
-        allDetails.forEach((otherDetail) => {
-          if (otherDetail !== detail) {
-            otherDetail.removeAttribute('open');
-          }
-        });
+        // Close only sibling <details> elements (same parent)
+        const siblings = Array.from(detail.parentElement.children).filter(
+          el => el.tagName === 'DETAILS' && el !== detail
+        );
+
+        siblings.forEach(sibling => sibling.removeAttribute('open'));
       }
     });
   });
 });
 </script>
+
 
 </body>
 </html>
