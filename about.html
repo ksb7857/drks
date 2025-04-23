@@ -96,7 +96,7 @@ body {
     }
 
 .circular-photo {
-    width: 100%;
+    width: 400px;
     height: auto;
     aspect-ratio: 1 / 1;
     background-color: #EFBD9D66; 
@@ -106,14 +106,6 @@ body {
     object-position: top; /* shifts image upward to keep head in frame */   
     display: block;
 }
-ul.custom-bullets li::before {
-  content: "•"; /* You can change this to ✓, →, etc. */
-  position: absolute;
-  left: 0;
-  color: #eb7378;
-  font-size: 1.2em;
-  line-height: 1;
-    }
 
 a {
   color: #f87472; /* Change to your desired color */
@@ -129,12 +121,10 @@ a:active {
 }
 
 @media (max-width: 768px) {
-  .block-header,
-  .block-pane, .block-pink, .block-earth {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 20px;
-  }
+
+.circular-photo {
+max-width: 50%;
+}
 
   .content-wrapper {
     padding: 20px 10px;
