@@ -121,46 +121,6 @@ ul.custom-bullets li::before {
   line-height: 1;
     }
 
-.circular-photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    background-color: #f0e6d94D;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top; /* shifts image upward to keep head in frame */   
-    display: block;
-}
-    
-.floating-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 80px; /* spacing between the two */
-  margin: 60px auto;
-  max-width: 1300px;
-  padding: 20px;
-}
-
-.floating-image {
-  width: 40%;
-  max-width: 450px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  transition: transform 0.3s ease-out;
-}
-
-.floating-text {
-  width: 55%;
-  max-width: none;
-  background-color: rgba(208, 186, 157, 0.2);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-  padding: 40px 80px;
-  border-radius: 8px;
-  text-align: justify;
-  transition: transform 0.3s ease-out;
-}
-
 .block {
   padding: 30px;
   margin: 80px auto; /* space above/below, centering */
@@ -255,49 +215,50 @@ a:active {
 
 <main class="content-wrapper">
 
-    <section class="floating-row">
-  <div class="floating-image">
-    <img class="circular-photo" src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
-  </div>
-  <div class="floating-text">
-                  <p>Dr Ketaki Sharma (Ket) is an experienced paediatrician committed to listening to caregivers and providing tailored, family-centred support.</p>
-                  <p>Ket's clinical interests include:</p>
-                  <ul class="custom-bullets">
-                    <li>Newborn and infant health concerns;</li>
-                    <li>Infant reflux;</li>
-                    <li>Growth or weight concerns;</li>
-                    <li>Suspected cow’s milk protein intolerance;</li>
-                    <li>Food allergies (skin prick testing available on-site, if clinically required);</li>
-                    <li>Eczema;</li>
-                    <li>Hayfever;</li>
-                    <li>Immunisation (clinical vaccinology);</li>
-                    <li>Constipation, and other common childhood concerns.</li>
-                 </ul>
-    
-  </div>
-</section>
+<p>To request an appointment, send your GP referral letter to info@drketsharma.com.au or call our team: </p>
+    <table>
+  <tr>
+    <td><strong>Phone:</strong></td>
+    <td>(02) 8052 4199</td>
+  </tr>
+  <tr>
+    <td><strong>Fax:</strong></td>
+    <td>(02) 8079 0664</td>
+  </tr>
+  <tr>
+    <td><strong>Email:</strong></td>
+    <td>info@drketsharma.com.au</td>
+  </tr>
+  <tr>
+    <td><strong>Address:</strong></td>
+    <td>Suite 3, Level 5
+			North Shore Private Hospital
+			3 Westbourne Street
+			St Leonards NSW 2065
+</td>
+  </tr>
+<tr>
+    <td><strong>Parking:</strong></td>
+    <td>Parking is available at the P2 multi-storey car park. <a href="https://www.northshoreprivate.com.au/For-Visitors/Parking">More information here</a></td>
+  </tr>
+  <tr>
+    <td><strong>Transport:</strong></td>
+    <td>North Shore Private Hospital is walking distance from St Leonards train station </td>
+  </tr>
+</table>
 
-<!-- Professional Background Block - Right Aligned -->
-    
-    <section class="block block-earth">
-        <h2>Concurrent Appointments</h2>
-        <p>Ket is also a Staff Specialist Paediatrician at:
-             <ul class="custom-bullets"><li><strong>The Children’s Hospital at Westmead</strong> (Specialist Immunisation Service)</li> 
-                <li>The <strong>National Centre for Immunisation Research and Surveillance</strong> (NCIRS)</li></ul>
-        <p>She is passionate about promoting the evidence-based use of vaccines in Australia and globally. Her work involves:
-             <ul class="custom-bullets"><li>developing national clinical guidelines;</li>
-                <li>immunisation research (<a href="https://www.researchgate.net/profile/Ketaki-Sharma" target="_blank">view research profile here</a>); and</li>
-                <li>contributing to global health projects including collaborations with the World Health Organization</li>
-                    </ul>
-        <p>Ket enjoys teaching and is a <strong>Conjoint Clinical Lecturer</strong> in the Discipline of Child and Adolescent Health at the University of Sydney. She also regularly delivers educational updates for GPs and other specialists.</p>
-        
-    </section>
 
-   <section class="block block-pink">
-<h2>Training and Professional Development</h2> 
-    <p>Ket obtained her medical degree and a <strong>Master of Public Health</strong> at the <strong>University of New South Wales</strong>. She undertook specialist paediatric training through the <strong>Sydney Children’s Hospital Network</strong> and is a Fellow of the Royal Australasian College of Physicians (FRACP). 
-    <p>Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the Australasian Society for Clinical Immunology and Allergy (ASCIA) and the Australasian Society for Infectious Diseases and a member of the Australian Paediatric Society and Australasian Society for Developmental Paediatrics.</p>
-        <p>Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.</p>
-    </section>
-    </main>
-  
+<!-- In your HTML file -->
+<div style="width:100%; max-width:600px;">
+  <iframe 
+    src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.693726950848!2d151.1866807765525!3d-33.820216016545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aedfe8bb7bf1%3A0x931f014d121613d9!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1745389227250!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+   
