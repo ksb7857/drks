@@ -121,11 +121,14 @@ table td, table th {
 	vertical-align: top;
 }
 
-@media (max-width: 768px) {
-.mobile-wrapper {
-	display: block;
-	width: 100%;
+.responsive-map {
+	width: 100%
+		max-width: 800px;
+	height: 500px;
+	border: 0;
 }
+
+@media (max-width: 768px) {
 
 .hamburger-menu {
     display: flex;
@@ -203,16 +206,17 @@ table td, table th {
     display: block;
 }
 .site-header-mobile {
-	/*padding: 5px*/
+	display: block;
 	width: 100%;
 	text-align: left;
+	background-color: transparent;
 }
 
 .site-header-desktop {
 	display: none;
 }
 
-*:not(.content-wrapper):not(.mobile-nav)/*:not(.hamburger-menu):not(.line)*/ {
+body, h1, h2, p, table, td, th {
 	margin: 0 !important;
 	padding: 5px !important;
 	box-sizing: border-box;
@@ -250,10 +254,8 @@ table td, table th {
 	position: fixed;
 }
 
-iframe {
-	width: 100%;
+.responsive-map {
 	height: 250px;
-	overflow: hidden;
 }
 	
 </style>
