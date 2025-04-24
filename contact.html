@@ -168,13 +168,23 @@ table td, table th {
 }
 
  @media (max-width: 768px) {
-*{
+*:not(.content-wrapper):not(.mobile-nav):not(.hamburger-menu):not(.line) {
 	margin: 0 !important;
 	padding: 5px !important;
 	box-sizing: border-box;
-	max-width: 100%;
-	overflow-x: hidden;
-}  
+}
+
+.content-wrapper, .mobile-nav {
+	padding: 0;
+}
+
+  body, h1, h2 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent; 
+    text-align: left;
+  }
 .vertical-buttons {
         display: none;
       }
@@ -239,7 +249,7 @@ iframe {
 
 <header class="site-header-mobile">
 	<h1>Dr Ketaki Sharma</h1>
-	<h2>Specialist Paediatrician, North Shore Private Hospital</h2>  
+	<h2>Paediatrician, North Shore Private Hospital</h2>  
 <div class="hamburger-menu" id="hamburgerMenu">
 	<div class="line"></div>
 	<div class="line"></div>
