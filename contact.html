@@ -139,6 +139,23 @@ a:active {
     transition: all 0.3s ease;
 }
 
+.hamburger-menu.open .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.hamburger-menu.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+
+
 .mobile-nav {
 	display: none;
 	background-color: #FAF9F6;
@@ -308,10 +325,24 @@ iframe {
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.693726950848!2d151.1866807765525!3d-33.820216016545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aedfe8bb7bf1%3A0x931f014d121613d9!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1745396578203!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </p>
+
 document.getElementById('hamburgerMenu').addEventListener('click', function() {
     const mobileNav = document.getElementById('mobileNav');
     mobileNav.classList.toggle('open'); // Toggles the visibility of the nav menu
 });
+
+document.getElementById('hamburgerMenu').addEventListener('click', function() {
+    const mobileNav = document.getElementById('mobileNav');
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    mobileNav.classList.toggle('open');
+    hamburgerMenu.classList.toggle('open');
+});
+
+</main>
+</body>
+</html>
+
+
 
 <!-- In your HTML file -->
 
