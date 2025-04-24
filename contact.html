@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
-	
 * {
   box-sizing: border-box;
-}
-    
+}    
 body { 
         font-family: 'Work Sans', sans-serif; 
         font-size: 16px;
@@ -36,11 +33,9 @@ body {
       background-color: transparent; y
       position: relative; 
 }
-
 .site-header-mobile {
 	display: none;
 }
-
 .vertical-buttons {
     position: fixed;
     top: 20px; 
@@ -53,7 +48,6 @@ body {
     padding: 0;
     z-index: 1000; 
 }
-
 .vertical-buttons li a {
     text-align: right;
     display: block; 
@@ -66,66 +60,53 @@ body {
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;
 }
-
 .vertical-buttons li a:hover {
     text-decoration: underline;
     transform: translateY(-2px);}
- 
 .content-wrapper {
     width: 100%; 
     margin: 0 auto; 
     margin-top: 10px;
-    /*padding: 20px 100px; /* Adds space inside the container */
+    padding: 20px 100px; 
 }
-
     h1, h2 {
     font-family: 'Anton';
     color:  #4c518a;
-    /*padding: 0px 40px;*/
     font-weight: 400;
     line-height: 1.1;
     }
-    
-    h1 {
+h1 {
         font-size: 3em;
         margin-bottom: 15px;
     }
-
-    h2 {
+h2 {
         font-size: 1.8em;
         margin-bottom: 10px;
     }
-
 a {
-  color: #0e20ed; 
-    text-decoration: none;
+  color: #5965b3; 
+  text-decoration: none;
 }
-
 a:hover {
+	color: #5965b3;
 	text-decoration: underline;
 }
-
 a:active {
-  color: #4f7874; /* Color when clicked */
+  color: #5965b3; /* Color when clicked */
 }
-
-.mobile-wrapper {
-	display: none;
-}
-	
 .hamburger-menu {
 	display: none
 }
-
+.mobile-nav {
+	display: none
+}
 table td, table th {
 	vertical-align: top;
 }
-
 .map-container {
 	width: 100%;
 	max-width: 600px;
 }
-	
 .responsive-map {
 	width: 100%;
 	height: 450px;
@@ -133,7 +114,9 @@ table td, table th {
 	display: block;
 }
 @media (max-width: 768px) {
-
+.vertical-buttons {
+	display: none;
+}
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -148,7 +131,6 @@ table td, table th {
     background-color: transparent;
     z-index: 1001; /* Make sure the hamburger is above other content */
 }
-
 .hamburger-menu .line {
     width: 28px;
     background-color: #4c518a;
@@ -157,23 +139,19 @@ table td, table th {
     margin: 4px 0;
     transition: all 0.3s ease;
 }
-
 .hamburger-menu.open .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
     position: relative;
     top: 8px;
 }
-
 .hamburger-menu.open .line:nth-child(2) {
     opacity: 0;
 }
-
 .hamburger-menu.open .line:nth-child(3) {
     transform: rotate(-45deg);
     position: relative;
     top: -8px;
 }
-
 .mobile-nav {
 	display: none;
 	background-color: #FAF9F6;
@@ -184,12 +162,7 @@ table td, table th {
 	z-index: 1000;
 	padding: 20px;
 	text-align: center;
-	}
-
-.vertical-buttons {
-	display: none;
 }
-	
 .mobile-nav a{
 	display: block;
 	color: #4c518a;
@@ -198,14 +171,11 @@ table td, table th {
 	font-size: 1.5em;
 	padding: 15px;
 }
-	
 .mobile-nav a:hover {
       background-color: #FAF9F6;
       text-decoration: underline;
       transform: translateY(-2px);
 }
-
-/* When the menu is open, display it */
 .mobile-nav.open {
     display: block;
 }
@@ -215,21 +185,17 @@ table td, table th {
 	text-align: left;
 	background-color: transparent;
 }
-
 .site-header-desktop {
 	display: none;
 }
-
 body, h1, h2, p, table, td, th {
 	margin: 0 !important;
 	padding: 5px !important;
 	box-sizing: border-box;
 }
-
-.content-wrapper, .mobile-nav {
+.content-wrapper{
 	padding: 0;
 }
-
   body, h1, h2 {
     display: block;
     width: 100%;
@@ -237,40 +203,27 @@ body, h1, h2, p, table, td, th {
     background-color: transparent; 
     text-align: left;
   }
-
-  h1 {
+h1 {
     font-size: 1.5em;
     padding: 5px;
   }
-
-  h2 {
+h2 {
     font-size: 1.1em;
     padding: 5px
   }
-    .nav-links {
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px;
-    }
-
-.vertical-buttons {
-	position: fixed;
-}
-
 .responsive-map{
 	height: 250px;
 }
-
 .map-container {
 	max-width: 100%;
 }
 }	
 </style>
-</head>
 
+</head>
 <body>
 <header class="site-header-desktop">
-<h1>Dr Ketaki Sharma MBBS MPH FRACP</h1>
+<h1>Dr Ketaki Sharma</h1>
 <h2>Paediatrician, North Shore Private Hospital</h2>   
 </header>
 
@@ -288,7 +241,7 @@ body, h1, h2, p, table, td, th {
 
 <header class="site-header-mobile">
 	<h1>Dr Ketaki Sharma</h1>
-	<h2>Specialist Paediatrician, North Shore Private Hospital</h2>  
+	<h2>Paediatrician, North Shore Private Hospital</h2>  
 </header>
 </div>
 	
@@ -302,16 +255,16 @@ body, h1, h2, p, table, td, th {
 
 <main class="content-wrapper">
 
-<p>To request an appointment, you can email the referral letter along with your contact details to <a href="mailto:info@drketsharma.com.au?subject=Appointment%20Enquiry&body=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.">
-  info@drketsharma.com.au</a> or contact reception at <a href="tel:+61280524199">(02) 8052 4199</a>.</p>
+<p>To request an appointment, please contact reception at <a href="tel:+61280524199">(02) 8052 4199</a>, or email a GP referral letter along with your contact details to <a href="mailto:info@drketsharma.com.au?subject=Appointment%20Enquiry&body=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.">
+  info@drketsharma.com.au</a> or contact reception at .</p>
     <table cellpadding="10">
   <tr>
     <td><strong>Phone:</strong></td>
-    <td>(02) 8052 4199</td>
+    <td><a href="tel:+61280524199">(02) 8052 4199</a></td>
   </tr>
   <tr>
     <td><strong>Fax:</strong></td>
-    <td><a href="tel:+61280524199">(02) 8052 4199</a></td>
+    <td>(02) 8079 0664</td>
   </tr>
   <tr>
     <td><strong>Email:</strong></td>
