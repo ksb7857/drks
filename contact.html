@@ -165,13 +165,19 @@ a:active {
 	padding: 5px !important;
 	box-sizing: border-box;
 }
-	
-  body, .content-wrapper, .site-header, h1, h2 {
+
+*:not(.content-wrapper) {
+	padding: 5px;
+}
+
+.content-wrapper {
+	padding: 0;
+}
+
+  body, h1, h2 {
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: 50px;
-    margin: 0;
     background-color: #fffbf780; 
     text-align: left;
   }
