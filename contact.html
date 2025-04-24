@@ -121,13 +121,17 @@ table td, table th {
 	vertical-align: top;
 }
 
-.responsive-map {
-	width: 100%
-		max-width: 800px;
-	height: 500px;
-	border: 0;
+.map-container {
+	width: 100%;
+	max-width: 600px;
 }
-
+	
+.responsive-map {
+	width: 100%;
+	height: 450px;
+	border: 0;
+	display: block;
+}
 @media (max-width: 768px) {
 
 .hamburger-menu {
@@ -243,7 +247,6 @@ body, h1, h2, p, table, td, th {
     font-size: 1.1em;
     padding: 5px
   }
-
     .nav-links {
     flex-direction: column;
     gap: 5px;
@@ -254,17 +257,21 @@ body, h1, h2, p, table, td, th {
 	position: fixed;
 }
 
-.responsive-map {
+.responsive-map{
 	height: 250px;
 }
-	
+
+.map-container {
+	max-width: 100%;
+}
+}	
 </style>
 </head>
 
 <body>
 <header class="site-header-desktop">
 <h1>Dr Ketaki Sharma MBBS MPH FRACP</h1>
-<h2>Specialist Paediatrician, North Shore Private Hospital</h2>   
+<h2>Paediatrician, North Shore Private Hospital</h2>   
 </header>
 
 <div class="hamburger-menu" id="hamburgerMenu">
@@ -329,10 +336,14 @@ body, h1, h2, p, table, td, th {
   </tr>
 </table>
 
-<p><div style="width:100%; max-width:600px;">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.693726950848!2d151.1866807765525!3d-33.820216016545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aedfe8bb7bf1%3A0x931f014d121613d9!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1745396578203!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="map-container">
+	<iframe class="responsive-map" 
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.693726950848!2d151.1866807765525!3d-33.820216016545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aedfe8bb7bf1%3A0x931f014d121613d9!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1745396578203!5m2!1sen!2sau"
+		allowfullscreen
+		loading="lazy"
+		referrerpolicy="no-referrer-when-downgrade">
+	</iframe>
 </div>
-</p>
 </main>
 
 <script>
