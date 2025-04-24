@@ -235,7 +235,6 @@ a:active {
 
 .mobile-wrapper {
   display: none;
-  flex-direction: column-reverse; /* default: header first */
 }
 
 .mobile-nav {
@@ -246,7 +245,6 @@ a:active {
 @media (max-width: 768px) {
 .mobile-wrapper {
 	display: flex;
-	flex-direction: column-reverse; /* nav appears above header */
 	width: 100%
   }
 
@@ -351,17 +349,18 @@ body, html {
 </header>
 </div>
 	
-<section class="block-header">
-        <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
-</section>
-
 <nav class="navbar">
 <ul class="nav-links vertical-buttons">
     <li><a href="index.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="faqs.html">FAQs</a></li>
     </ul>  
-        </nav>
+        </nav>	
+<section class="block-header">
+        <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
+</section>
+
+
 
 <main class="content-wrapper">
 <section class="block block-pane">
