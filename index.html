@@ -8,12 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-
 <style>
 * {
   box-sizing: border-box;
-}
-    
+} 
 body { 
         font-family: 'Work Sans', sans-serif;
         font-size: 16px;
@@ -28,20 +26,17 @@ body {
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
         background-color: #FAF9F6; 
         margin: 0;
-        padding: 20px 60px;
 }
     
 .site-header {
       width: 100%
       max-width: 1400px;
       background-color: transparent; 
-      padding: 20px 60px;
       position: relative; 
 }
 
 .vertical-buttons {
     position: fixed;
-    font-family: 'Anton';
     top: 20px; 
     right: 20px;
     display: flex;
@@ -52,7 +47,6 @@ body {
     padding: 0;
     z-index: 1000; 
 }
-
 .vertical-buttons li a {
     text-align: right;
     display: block; 
@@ -65,39 +59,24 @@ body {
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;
 }
-
 .vertical-buttons li a:hover {
     text-decoration: underline;
     transform: translateY(-2px);
 }
- 
-.content-wrapper {
-    width: 100%;
-    margin: 0 auto; 
-    margin-top: 10px; 
-    padding: 20px 100px; 
-}
-
     h1, h2 {
     font-family: 'Anton';
     color:  #4c518a;
-    padding: 0px 40px;
+    font-weight: 400;
+    line-height: 1.1;
     }
-    
     h1 {
         font-size: 3em;
-        line-height: 1.1;
         margin-bottom: 15px;
-        font-weight: 400;
     }
-
     h2 {
         font-size: 1.8em;
-        line-height: 1.1; 
-        font-weight:400;
         margin-bottom: 10px;
     }
-
 .circular-photo {
     width: 30%;
     max-width: 400px;
@@ -110,102 +89,180 @@ body {
     object-position: top; /* shifts image upward to keep head in frame */   
     display: block;
 }
-
 .profile-section {
   display: flex;
   align-items: flex-start;
+  max-width: 1000px;
   gap: 0px;
-  margin-bottom: 40px;
+  padding: 20px
   flex-wrap: wrap; /* ensures it stacks on smaller screens */
 }
-
 .profile-section .circular-photo {
   flex-shrink: 0;
   width: 250px; /* adjust as needed */
 }
-
 .profile-text {
   flex: 1;
   min-width: 250px;
 }
-
 a {
-  color: #0e20ed;
+  color: #5965b3;
   text-decoration: none;
 }
-
 a:hover {
-  text-decoration: underline;
+	color: #5965b3;
+	text-decoration: underline;
 }
-
 a:active {
-  color: #4f7874; /* Color when clicked */
+  color: #5965b3; /* Color when clicked */
 }
-
+.hamburger-menu {
+	display: none
+}
+.mobile-nav {
+	display: none
+}
+.section-container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 ;
+	padding: 20px 60px;
+}
+.block-pane {
+  max-width: 100%;
+  background-color: #fffbf780; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 0px; 
+  padding: 20px
+}   
 @media (max-width: 768px) {
-
-*{
+.vertical-buttons {
+	display: none;
+}
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 1001; /* Make sure the hamburger is above other content */
+}
+.hamburger-menu .line {
+    width: 28px;
+    background-color: #4c518a;
+    height: 4px; /*increased from 2 to 4*/
+    border-radius: 1px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+.hamburger-menu.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    position: relative;
+    top: 8px;
+}
+.hamburger-menu.open .line:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+.mobile-nav {
+	display: none;
+	background-color: #FAF9F6;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 20px;
+	text-align: center;
+}
+.mobile-nav a {
+	display: block;
+	color: #4c518a;
+	text-decoration: none;
+	font-family: 'Anton';
+	font-size: 1.5em;
+	padding: 15px;
+}
+.mobile-nav a:hover {
+      background-color: #FAF9F6;
+      text-decoration: underline;
+      transform: translateY(-2px);
+}
+.mobile-nav.open {
+    display: block;
+}
+body, h1, h2, p, table, td, th {
 	margin: 0 !important;
 	padding: 5px !important;
 	box-sizing: border-box;
 }
-
-body, html {
-	margin: 0 !important;
-	padding: 5px !important;
-	overflow-x: hidden;
-	font-family: 'Work Sans';
+.profile-section, .section-container {
+	padding: 5px;
+	max-width: 100%;
 }
-	
-.circular-photo {
-max-width: 50%;
-height: auto;
-}
-
-  .content-wrapper {
-    padding: 20px 0px;
+body, h1, h2 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent; 
+    text-align: left;
   }
-
-  h1 {
+h1 {
     font-size: 1.5em;
     padding: 5px;
   }
-	
-  h2 {
+h2 {
     font-size: 1.1em;
-	  padding: 5px;
+    padding: 5px
   }
-
-    .nav-links {
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px;
-    }
-
-.vertical-buttons {
-	position: fixed;
-}
-}
+	.circular-photo {
+max-width: 50%;
+height: auto;
+	}
+}	
 
 </style>
 </head>
 
 <body>
+<div class="hamburger-menu" id="hamburgerMenu">
+	<div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
+</div>
 
-<header class="site-header">
-	<h1>Dr Ketaki Sharma MBBS MPH FRACP</h1>
-	<h2>Specialist Paediatrician, North Shore Private Hospital</h2>
-</header>
+<nav class="mobile-nav" id="mobileNav">
+		<a href="index.html">About</a>
+		<a href="contact.html">Contact</a>
+		<a href="faqs.html">FAQs</a>
+	</nav>
 
 <nav class="navbar">
-	<ul class="nav-links vertical-buttons">
-		<li><a href="index.html">About</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		<li><a href="faqs.html">FAQs</a></li>
-	</ul>  
-</nav>
+<ul class="nav-links vertical-buttons">
+    <li><a href="index.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    </ul>  
+        </nav>
 
-<main class="content-wrapper">
+<section class="section-container">
+<header class="site-header">
+	<h1>Dr Ketaki Sharma</h1>
+	<h2>Specialist Paediatrician</h2>
+	<h2>North Shore Private Hospital</h2>   
+</header>
+<main>
+<section class="block block-pane">
 
 <div class="profile-section">
   <img class="circular-photo" src="assets/img/adobe.png" alt="Dr Ketaki Sharma - Paediatrician">
@@ -225,6 +282,8 @@ height: auto;
 	</ul>
   </div>
 </div>
+</section>
+<section class="block block-pane">
         <h2>Other Professional Roles</h2>
         <p>Ket also has special interests in public health and clinical vaccinology, and is a Staff Specialist Paediatrician at:
              <ul><li>the <strong>Children’s Hospital at Westmead</strong> (Specialist Immunisation Service), and</li> 
@@ -240,7 +299,19 @@ height: auto;
     <p>Ket obtained her medical degree (MBBS) and a <strong>Master of Public Health</strong> (MPH) at the <strong>University of New South Wales</strong>. She undertook specialist paediatric training through the <strong>Sydney Children’s Hospital Network</strong> and is a Fellow of the <strong>Royal Australasian College of Physicians </strong>(FRACP). 
     <p>Her commitment to evidence-based practice and lifelong learning ensures she stays informed of changes in clinical guidelines. She is an Associate Member of the <strong>Australasian Society for Clinical Immunology and Allergy (ASCIA)</strong> and a member of the <strong>Australian Paediatric Society</strong> and <strong>Australasian Society for Developmental Paediatrics.</strong></p>
         <p>Beyond her professional training, Ket has two children, one of whom has multiple food allergies, eczema, and hayfever. This lived experience informs her empathetic, practical approach to supporting families facing similar challenges.</p>
-
+</section>
+</section>
     </main>
+	<script>
+document.getElementById('hamburgerMenu').addEventListener('click', function() {
+    const mobileNav = document.getElementById('mobileNav');
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    mobileNav.classList.toggle('open');
+    hamburgerMenu.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
   
    
