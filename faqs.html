@@ -259,6 +259,10 @@ a:active {
 	background: #f0f0f0;
 }
 
+.vertical-buttons {
+	display: none;
+}
+	
 .mobile-nav a{
 	text-decoration: none;
 	padding: 5px;
@@ -274,7 +278,7 @@ a:active {
 	
 body, html { 
 	margin: 0 !important
-	padding: 5pm !important;
+	padding: 5px !important;
 	overflow-x: hidden;
 }
 	
@@ -314,10 +318,18 @@ body, html {
 
 <body>
 
+<div class="mobile-wrapper">
+	<nav class="mobile-nav">
+		<a href="index.html">About</a>
+		<a href="contact.html">Contact</a>
+		<a href="faqs.html">FAQs</a>
+  </nav>
+		
 <header class="site-header">
     <h1>FAQs and Resources</h1>
 </header>
-
+</div>
+	
 <section class="block-header">
         <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
 </section>
@@ -331,10 +343,7 @@ body, html {
         </nav>
 
 <nav class="mobile-nav">
-	<a href="index.html">About</a>
-	<a href="contact.html">Contact</a>
-	<a href="faqs.html">FAQs</a>
-  </nav>
+	
 </div>
 
 <main class="content-wrapper">
