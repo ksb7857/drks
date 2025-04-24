@@ -85,7 +85,7 @@ h2 {
         margin-bottom: 10px;
 }
 .block-pane {
-  width: 800px;
+  width: 1000px;
   max-width: 90%;
   background-color: #fffbf780; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
@@ -104,16 +104,13 @@ a:hover {
 	text-decoration: underline;
 }
 a:active {
-  color: #5965b3; /* Color when clicked */
+	color: #5965b3; /* Color when clicked */
 }
 .hamburger-menu {
 	display: none
 }
 .mobile-nav {
 	display: none
-}
-table td, table th {
-	vertical-align: top;
 }
 .map-container {
 	width: 100%;
@@ -125,6 +122,16 @@ table td, table th {
 	border: 0;
 	display: block;
 }
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+table td, table th {
+	vertical-align: top;
+	overflow-wrap: break-word;
+	padding: 5px;
+}
+	
 @media (max-width: 768px) {
 .vertical-buttons {
 	display: none;
@@ -271,7 +278,7 @@ h2 {
 <section class="block block-pane">
 <p>To request an appointment, please contact reception at <a href="tel:+61280524199">(02) 8052 4199</a>, or email a GP referral letter along with your contact details to <a href="mailto:info@drketsharma.com.au?subject=Appointment%20Enquiry&body=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.">
   info@drketsharma.com.au</a> or contact reception at .</p>
-    <table cellpadding="10">
+    <table>
   <tr>
     <td><strong>Phone:</strong></td>
     <td><a href="tel:+61280524199">(02) 8052 4199</a></td>
