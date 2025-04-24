@@ -205,15 +205,11 @@ a:active {
 .site-header-desktop {
 	display: none;
 }
-	
-* { 
+
+*:not(.content-wrapper):not(.mobile-nav):not(.hamburger-menu):not(.line) {
 	margin: 0 !important;
 	padding: 5px !important;
 	box-sizing: border-box;
-}
-
-*:not(.content-wrapper, .mobile-nav) {
-	padding: 5px;
 }
 
 .content-wrapper, .mobile-nav {
