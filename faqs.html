@@ -29,7 +29,7 @@ body {
         margin:0;
         padding: 20px 60px;}
 
-.site-header {
+.site-header-desktop {
       width: 100%;
       max-width: 1400px;
       position: relative;
@@ -276,11 +276,15 @@ a:active {
 	text-align: left;
 }
 
-.site-header {
+.site-header-mobile {
 	padding: 5px;
 	z-index: 5;
 	width: 100%
 	text-align: left;
+}
+
+.site-header-desktop {
+	display: none;
 }
 	
 * {
@@ -331,7 +335,10 @@ body, html {
 </head>
 
 <body>
-
+<header class="site-header-desktop">
+    <h1>FAQs and Resources</h1>
+</header>
+</div>
 <div class="mobile-wrapper">
 	<nav class="mobile-nav">
 		<a href="index.html">About</a>
@@ -339,7 +346,7 @@ body, html {
 		<a href="faqs.html">FAQs</a>
   </nav>
 		
-<header class="site-header">
+<header class="site-header-mobile">
     <h1>FAQs and Resources</h1>
 </header>
 </div>
