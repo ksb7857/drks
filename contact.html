@@ -50,6 +50,7 @@ header {
 }
 .site-header-mobile {
 	display: none;
+	background-color: transparent;
 }
 h1, h2 {
     font-family: 'Anton';
@@ -162,17 +163,19 @@ h1, h2 {
 }
 
 
-
-.mobile-wrapper {
-	display: none;
-}
-
 table td, table th {
 	vertical-align: top;
 }
 
  @media (max-width: 768px) {
-      .vertical-buttons {
+*{
+	margin: 0 !important;
+	padding: 5px !important;
+	box-sizing: border-box;
+	max-width: 100%;
+	overflow-x: hidden;
+}  
+.vertical-buttons {
         display: none;
       }
       .hamburger-menu {
@@ -190,11 +193,7 @@ table td, table th {
 	z-index: 5;
 	text-align: left;
       }
-*:not(.content-wrapper):not(.mobile-nav):not(.hamburger-menu):not(.line) {
-	margin: 0 !important;
-	padding: 5px !important;
-	box-sizing: border-box;
-}
+
 .content-wrapper, .mobile-nav {
 	padding: 0;
 }
