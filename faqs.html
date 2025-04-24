@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+ <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
 <style>
-
  * {
   box-sizing: border-box;
-}
-    
+}    
 body { 
         font-family: 'Work Sans', sans-serif; 
         font-size: 16px;
@@ -27,15 +27,14 @@ body {
         background-attachment: fixed; 
         background-color: #FAF9F6; 
         margin:0;
-        padding: 20px 60px;}
-
-.site-header-desktop {
+}
+.site-header {
       width: 100%;
       max-width: 1400px;
+      background-color: transparent;
       position: relative;
-      padding: 20px 60px
+      margin-bottom: 15px;
     }
-
 .vertical-buttons {
     position: fixed;
     top: 20px; 
@@ -48,7 +47,6 @@ body {
     padding: 0;
     z-index: 1000;
     }
-
 .vertical-buttons li a {
     text-align: right;
     display: block;
@@ -61,37 +59,31 @@ body {
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;
 }
-
 .vertical-buttons li a:hover {
     text-decoration: underline;
-    transform: translateY(-2px);}
- 
-.content-wrapper {
-    width: 100%; 
-    margin: 0 auto; 
-    margin-top: 10px; 
-    padding: 20px 100px; 
+    transform: translateY(-2px);
 }
-
 h1, h2 {
     font-family: 'Anton';
     color:  #4c518a;
-    padding: 0px 40px;
     font-weight: 400;
     line-height: 1.1;
     }
-    
 h1 {
     font-size: 3em;
     margin-bottom: 15px;
     }
-
 h2 {
     font-size: 1.8em;
     margin-bottom: 10px
 }
-    
-ul {
+.section-container {
+	width: 100%
+	max-width: 1200px;
+	margin: 0;
+	padding: 20px 100px;
+}
+/*ul {
     margin-top: 10px;
     padding-left: 20px;
     list-style-type: disc;
@@ -99,7 +91,7 @@ ul {
 
 ul li {
     margin-bottom: 10px;
-    }
+    }*/
 
 summary {
   display: flex;                    /* Use flex to align the contents */
@@ -189,119 +181,117 @@ details[open] > summary.qa-question::after {
 details[open] summary ~ * {
   animation: fadeIn 0.4s ease-in;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-.block-header {
-  width: 800px;
-  max-width: 90%;
-  padding: 20px;
-  position: relative; 
-  background-color: #fffbf780;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border-radius: 0px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .block-pane {
-  width: 800px;
-  max-width: 90%;
+  max-width: 100%;
   background-color: #fffbf780; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-radius: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;  
-  padding: 20px;
+  padding: 20px 40px;
 }   
-
-a {color: #0e20ed;
+a {color: #5965b3;
    text-decoration: none;
 }
-
 a:hover {
+    color: #5965b3;
     text-decoration: underline;
 }
-
 a:active {
-    color:  #4f7874; /* Color when clicked */
+    color: #5965b3; /* Color when clicked */
 }
 
-.mobile-wrapper {
-  display: none;
+.hamburger-menu {
+	display: none
 }
-
 .mobile-nav {
 	display: none
 }
-
-
-@media (max-width: 768px) {
-.mobile-wrapper {
-	display: block;
-	width: 100%
-  }
-
-.mobile-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	font-family: 'Anton';
-	font-size: 1.5em;
-	color: #FAF9F6;
-	padding: 5px;
-	background: #4c518a;
-	z-index: 10;
+.map-container {
+	width: 100%;
+	max-width: 600px;
 }
 
+@media (max-width: 768px) {
 .vertical-buttons {
 	display: none;
 }
-	
-.mobile-nav a{
-	text-decoration: none;
-	color: #FAF9F6
-	background: #4c518a;
-	font-family: 'Anton';
-	padding: 5px;
-	flex: 1;
-	text-align: left;
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 1001; /* Make sure the hamburger is above other content */
 }
-
+.hamburger-menu .line {
+    width: 28px;
+    background-color: #4c518a;
+    height: 2px;
+    border-radius: 1px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+.hamburger-menu.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    position: relative;
+    top: 8px;
+}
+.hamburger-menu.open .line:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+.mobile-nav {
+	display: none;
+	background-color: #FAF9F6;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 20px;
+	text-align: center;
+}
+.mobile-nav a {
+	display: block;
+	color: #4c518a;
+	text-decoration: none;
+	font-family: 'Anton';
+	font-size: 1.5em;
+	padding: 15px;
+}
 .mobile-nav a:hover {
+      background-color: #FAF9F6;
       text-decoration: underline;
       transform: translateY(-2px);
 }
-
-.site-header-mobile {
-	padding: 5px;
-	z-index: 5;
-	width: 100%
-	text-align: left;
+.mobile-nav.open {
+    display: block;
 }
 
-.site-header-desktop {
-	display: none;
-}
-	
-* {
+body, h1, h2, p { 
 	margin: 0 !important;
 	padding: 5px !important;
 	box-sizing: border-box;
+	max-width: 100%
+}
+.section-container {
+	padding: 5px
+		max-width: 100%;
 }
 
-body, html { 
-	margin: 0 !important;
-	padding: 5px !important;
-	overflow-x: hidden;
-	font-family: 'Work Sans';
-}
-	
 .block, .block-header, .block-pane, .full-pane {
 	padding: 5px !important;
 	margin: 0 !important;
@@ -318,7 +308,6 @@ body, html {
   h2 {
 	  font-size: 1.1em;
 	  padding: 5px;
-	  
   }
 }
 
@@ -326,34 +315,36 @@ body, html {
 </head>
 
 <body>
-<header class="site-header-desktop">
-    <h1>FAQs and Resources</h1>
-<section class="block-header">
-        <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
-</section>
-</header>
+
+<div class="hamburger-menu" id="hamburgerMenu">
+	<div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
 </div>
-<div class="mobile-wrapper">
-	<nav class="mobile-nav">
+
+<nav class="mobile-nav" id="mobileNav">
 		<a href="index.html">About</a>
 		<a href="contact.html">Contact</a>
 		<a href="faqs.html">FAQs</a>
-  </nav>
-		
-<header class="site-header-mobile">
-    <h1>FAQs and Resources</h1>
-</header>
-</div>
-	
+	</nav>
+
 <nav class="navbar">
 <ul class="nav-links vertical-buttons">
     <li><a href="index.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="faqs.html">FAQs</a></li>
     </ul>  
-        </nav>	
+        </nav>
+	
+<section class="section-container">
+<header class="site-header">
+    <h1>FAQs and Resources</h1>
+	</header>
+<section class="block block-pane">
+        <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
+</section>
+</section>
 
-<main class="content-wrapper">
 <section class="block block-pane">
 
 <details open>
