@@ -7,12 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-<style>	
+<style>
+	
 * {
   box-sizing: border-box;
 }
+    
 body { 
-	font-family: 'Work Sans', sans-serif; 
+        font-family: 'Work Sans', sans-serif; 
         font-size: 16px;
         line-height: 1.6; 
         letter-spacing: 0.2px;
@@ -20,27 +22,14 @@ body {
         color: #40332F; 
         background-repeat: no-repeat;
         background-image: url('assets/img/blue_shapes.svg');
-	background-size: cover;       
+        background-size: cover;       
         background-position: center;  
         background-attachment: fixed;
         background-color: #FAF9F6; 
         margin: 0;
         padding: 20px 60px;
 }
-a {
-	color: #0e20ed; 
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-a:active {
-	color: #4f7874; /* Color when clicked */
-}
-header {
-	max-width: 1400px;
-	background-color: transparent; 
-}
+    
 .site-header-desktop {
       width: 100%;
       max-width: 1400px;
@@ -48,25 +37,11 @@ header {
       padding: 20px 60px;
       position: relative; 
 }
+
 .site-header-mobile {
 	display: none;
-	background-color: transparent;
 }
-h1, h2 {
-    font-family: 'Anton';
-    color:  #4c518a;
-    paddo
-    font-weight: 400;
-    line-height: 1.1;
-    }
-    h1 {
-        font-size: 3em;
-        margin-bottom: 15px;
-    }
-    h2 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-    }
+
 .vertical-buttons {
     position: fixed;
     top: 20px; 
@@ -75,53 +50,84 @@ h1, h2 {
     flex-direction: column;
     gap: 10px;
     list-style: none;
+    margin: 0;
     padding: 0;
     z-index: 1000; 
 }
+
 .vertical-buttons li a {
-	display: block; 
-	padding: 10px 15px;
-	font-size: 1.7em;
-	font-family: 'Anton';
-	text-decoration: none;
-	color: #4c518a;
-	text-align: right;
+    text-align: right;
+    display: block; 
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1.7em;
+    font-family: 'Anton';
+    text-decoration: none;
+    color: #4c518a;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 .vertical-buttons li a:hover {
     text-decoration: underline;
-    transform: translateY(-2px);
-}
+    transform: translateY(-2px);}
+ 
 .content-wrapper {
+    width: 100%; 
+    margin: 0 auto; 
     margin-top: 10px;
     padding: 20px 100px; /* Adds space inside the container */
 }
+
+    h1, h2 {
+    font-family: 'Anton';
+    color:  #4c518a;
+    padding: 0px 40px;
+    font-weight: 400;
+    line-height: 1.1;
+    }
+    
+    h1 {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+a {
+  color: #0e20ed; 
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+  color: #4f7874; /* Color when clicked */
+}
+
+.mobile-wrapper {
+	display: none;
+}
+	
 .hamburger-menu {
 	display: none
 }
-.mobile-nav {
-	display: none;
-	background-color: #FAF9F6;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	padding: 20px;
-	text-align: center;
-	}
-.mobile-nav a{
+
+table td, table th {
+	vertical-align: top;
+}
+
+@media (max-width: 768px) {
+.mobile-wrapper {
 	display: block;
-	color: #4c518a;
-	text-decoration: none;
-	font-family: 'Anton';
-	font-size: 1.5em;
-	padding: 15px;
+	width: 100%;
 }
-.mobile-nav a:hover {
-      background-color: #FAF9F6;
-      text-decoration: underline;
-      transform: translateY(-2px);
-}
+
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -162,12 +168,52 @@ h1, h2 {
     top: -8px;
 }
 
+.mobile-nav {
+	display: none;
+	background-color: #FAF9F6;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 20px;
+	text-align: center;
+	}
 
-table td, table th {
-	vertical-align: top;
+.vertical-buttons {
+	display: none;
+}
+	
+.mobile-nav a{
+	display: block;
+	color: #4c518a;
+	text-decoration: none;
+	font-family: 'Anton';
+	font-size: 1.5em;
+	padding: 15px;
+}
+	
+.mobile-nav a:hover {
+      background-color: #FAF9F6;
+      text-decoration: underline;
+      transform: translateY(-2px);
 }
 
- @media (max-width: 768px) {
+/* When the menu is open, display it */
+.mobile-nav.open {
+    display: block;
+}
+.site-header-mobile {
+	padding: 5px
+	z-index: 5;
+	width: 100%;
+	text-align: left;
+}
+
+.site-header-desktop {
+	display: none;
+}
+
 *:not(.content-wrapper):not(.mobile-nav):not(.hamburger-menu):not(.line) {
 	margin: 0 !important;
 	padding: 5px !important;
@@ -182,55 +228,36 @@ table td, table th {
     display: block;
     width: 100%;
     max-width: 100%;
-    background-color: transparent; 
+    background-color: #fffbf780; 
     text-align: left;
   }
-.vertical-buttons {
-        display: none;
-      }
-      .hamburger-menu {
-        display: flex;
-      }
-      .mobile-nav.open {
-        display: block;
-      }
-      header.site-header-desktop {
-        display: none;
-      }
-      header.site-header-mobile {
-        display: block;
-        padding: 5px;
-	z-index: 5;
-	text-align: left;
-      }
 
-.content-wrapper, .mobile-nav {
-	padding: 0;
-}
-    }
-body, h1, h2 {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    background-color: #FAF9F6; 
-    text-align: left;
+  h1 {
+    font-size: 1.5em;
+    padding: 5px;
   }
-    @media (min-width: 769px) {
-      .mobile-nav,
-      .site-header-mobile,
-      .hamburger-menu {
-        display: none;
-      }
-      .vertical-buttons {
-        display: flex;
-      }
+
+  h2 {
+    font-size: 1.1em;
+    padding: 5px
+  }
+
+    .nav-links {
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    }
+
+.vertical-buttons {
+	position: fixed;
+}
+
 iframe {
-	max-width: 100%;
+	width: 100%;
 	height: 250px;
 	overflow: hidden;
 }
-    }
-
+	
 </style>
 </head>
 
@@ -238,42 +265,46 @@ iframe {
 <header class="site-header-desktop">
 <h1>Dr Ketaki Sharma MBBS MPH FRACP</h1>
 <h2>Specialist Paediatrician, North Shore Private Hospital</h2>   
-	<nav>
-		<ul class="nav-links vertical-buttons">
-			<li><a href="index.html">About</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			<li><a href="faqs.html">FAQs</a></li>
-		</ul>  
-        </nav>
 </header>
 
-<header class="site-header-mobile">
-	<h1>Dr Ketaki Sharma</h1>
-	<h2>Paediatrician, North Shore Private Hospital</h2>  
 <div class="hamburger-menu" id="hamburgerMenu">
 	<div class="line"></div>
 	<div class="line"></div>
 	<div class="line"></div>
 </div>
+
 <nav class="mobile-nav" id="mobileNav">
 		<a href="index.html">About</a>
 		<a href="contact.html">Contact</a>
 		<a href="faqs.html">FAQs</a>
 	</nav>
+
+<header class="site-header-mobile">
+	<h1>Dr Ketaki Sharma</h1>
+	<h2>Specialist Paediatrician, North Shore Private Hospital</h2>  
 </header>
+</div>
 	
+<nav class="navbar">
+<ul class="nav-links vertical-buttons">
+    <li><a href="index.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    </ul>  
+        </nav>
+
 <main class="content-wrapper">
 
-<p>To request an appointment, please contact reception at contact reception at <a href="tel:+61280524199">(02) 8052 4199</a> or email your GP referral letter along with your contact details to <a href="mailto:info@drketsharma.com.au?subject=Appointment%20Enquiry&body=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.">
-  info@drketsharma.com.au</a>.</p>
+<p>To request an appointment, you can email the referral letter along with your contact details to <a href="mailto:info@drketsharma.com.au?subject=Appointment%20Enquiry&body=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.">
+  info@drketsharma.com.au</a> or contact reception at <a href="tel:+61280524199">(02) 8052 4199</a>.</p>
     <table cellpadding="10">
   <tr>
     <td><strong>Phone:</strong></td>
-    <td><a href="tel:+61280524199">(02) 8052 4199</a></td>
+    <td>(02) 8052 4199</td>
   </tr>
   <tr>
     <td><strong>Fax:</strong></td>
-    <td>(02) 8079 0664</td>
+    <td><a href="tel:+61280524199">(02) 8052 4199</a></td>
   </tr>
   <tr>
     <td><strong>Email:</strong></td>
@@ -315,6 +346,7 @@ document.getElementById('hamburgerMenu').addEventListener('click', function() {
 
 </body>
 </html>
+
 
 
    
