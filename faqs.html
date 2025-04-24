@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
- <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
 <style>
@@ -79,20 +79,10 @@ h2 {
 }
 .section-container {
 	width: 100%
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0;
 	padding: 20px 100px;
 }
-/*ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    list-style-type: disc;
-    }
-
-ul li {
-    margin-bottom: 10px;
-    }*/
-
 summary {
   display: flex;                    /* Use flex to align the contents */
   align-items: center;               /* Vertically align the text */ 
@@ -107,12 +97,10 @@ summary {
   padding-left: 1em;
   overflow: hidden;
 }
-
 summary:hover {
   background-color: rgba(224, 92, 98, 0.05); /* subtle tint */
   cursor: pointer;
 }
-
 .section-subheading {
     font-family: 'Anton';
     font-size: 1.4em;
@@ -121,7 +109,6 @@ summary:hover {
     margin-top: 1.5em;
     cursor: pointer;
     }
-
 .qa-question {
     font-size: 16px;
     font-weight: 500;
@@ -129,7 +116,6 @@ summary:hover {
     margin-top: 1em;
     cursor: pointer;
     }
-
 .qa-answer {
     padding-left: 1em;
     font-size: 1em;
@@ -137,7 +123,6 @@ summary:hover {
     color: #40332F;
     margin-bottom: 1em;
     }
-
 summary.section-subheading,
 summary.qa-question {
   display: flex;
@@ -150,7 +135,6 @@ summary.qa-question {
   margin: 0; /* Remove any default margin that might differ */
   transition: background-color 0.3s ease;
 }
-
 summary.section-subheading::after, 
 summary.qa-question::after {
   content: "▲";
@@ -163,13 +147,11 @@ summary.qa-question::after {
   margin-left: 10px;
   padding-left: 1em; /* Optional space between text and arrow */
 }
-
 summary.section-subheading:hover,
 summary.qa-question:hover {
   background-color: #d9dcfa; 
   cursor: pointer;
 }
-
 details[open] > summary.section-subheading::after, 
 details[open] > summary.qa-question::after {
   content: "▼";
@@ -177,7 +159,6 @@ details[open] > summary.qa-question::after {
   font-size: 16px;
   font-weight: 300;
 }
-
 details[open] summary ~ * {
   animation: fadeIn 0.4s ease-in;
 }
@@ -235,7 +216,7 @@ a:active {
 .hamburger-menu .line {
     width: 28px;
     background-color: #4c518a;
-    height: 2px;
+    height: 4px;
     border-radius: 1px;
     margin: 4px 0;
     transition: all 0.3s ease;
@@ -285,11 +266,11 @@ body, h1, h2, p {
 	margin: 0 !important;
 	padding: 5px !important;
 	box-sizing: border-box;
-	max-width: 100%
+	max-width: 100%;
 }
 .section-container {
-	padding: 5px
-		max-width: 100%;
+	padding: 5px 10px;
+	max-width: 100%;
 }
 
 .block, .block-header, .block-pane, .full-pane {
@@ -299,13 +280,11 @@ body, h1, h2, p {
 	max-width: 100% !important;
 	background: #fffbf780;
   }
-
-  h1 {
+h1 {
 	  font-size: 1.5em;
 	  padding: 5px;
   }
-
-  h2 {
+h2 {
 	  font-size: 1.1em;
 	  padding: 5px;
   }
