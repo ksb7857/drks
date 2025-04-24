@@ -616,7 +616,14 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
+<script>
+document.getElementById('hamburgerMenu').addEventListener('click', function() {
+    const mobileNav = document.getElementById('mobileNav');
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    mobileNav.classList.toggle('open');
+    hamburgerMenu.classList.toggle('open');
+});
+</script>
 
 
 </body>
