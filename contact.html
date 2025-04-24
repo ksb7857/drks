@@ -109,9 +109,9 @@ a:active {
 .mobile-wrapper {
 	display: none;
 }
-
-.mobile-nav {
-	display: none;
+	
+.hamburger-menu {
+	display: none
 }
 
 @media (max-width: 768px) {
@@ -120,36 +120,60 @@ a:active {
 	width: 100%;
 }
 
-.mobile-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	z-index: 10;
-	background: #4c518a;
-	margin-left: -100px;
-	margin-right: -100px;
+.hamburger-menu {
+	display: block;
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999; /* Make sure the hamburger is above other content */
 }
+
+.hamburger-menu .line {
+    width: 100%;
+    height: 4px;
+    background-color: #4c518a;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+	display: none;
+	background-color: #FAF9F6;
+	width: 100%
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 20px;
+	text-align: center;
+	}
 
 .vertical-buttons {
 	display: none;
 }
 	
 .mobile-nav a{
+	display: block;
+	color: #4c518a;
 	text-decoration: none;
-	color: #FAF9F6;
-	background: #4c518a;
 	font-family: 'Anton';
 	font-size: 1.5em;
-	padding: 5px;
-	flex: 1;
+	padding: 15px;
 }
 	
 .mobile-nav a:hover {
+      background-color: #3a4369;
       text-decoration: underline;
       transform: translateY(-2px);
 }
 
+/* When the menu is open, display it */
+.mobile-nav.open {
+    display: block;
+}
 .site-header-mobile {
 	padding: 5px
 	z-index: 5;
@@ -218,8 +242,13 @@ iframe {
 <h2>Specialist Paediatrician, North Shore Private Hospital</h2>   
 </header>
 
-<div class="mobile-wrapper">
-	<nav class="mobile-nav">
+<div class="hamburger-menu" id="hamburgerMenu">
+	<div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
 		<a href="index.html">About</a>
 		<a href="contact.html">Contact</a>
 		<a href="faqs.html">FAQs</a>
@@ -279,6 +308,11 @@ iframe {
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.693726950848!2d151.1866807765525!3d-33.820216016545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aedfe8bb7bf1%3A0x931f014d121613d9!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1745396578203!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </p>
+document.getElementById('hamburgerMenu').addEventListener('click', function() {
+    const mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.toggle('open'); // Toggles the visibility of the nav menu
+});
+
 <!-- In your HTML file -->
 
    
