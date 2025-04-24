@@ -62,7 +62,8 @@ body {
 }
 .vertical-buttons li a:hover {
     text-decoration: underline;
-    transform: translateY(-2px);}
+    transform: translateY(-2px);
+}
 .content-wrapper {
     width: 100%; 
     margin: 0 auto; 
@@ -74,15 +75,26 @@ body {
     color:  #4c518a;
     font-weight: 400;
     line-height: 1.1;
-    }
+}
 h1 {
         font-size: 3em;
         margin-bottom: 15px;
-    }
+}
 h2 {
         font-size: 1.8em;
         margin-bottom: 10px;
-    }
+}
+.block-pane {
+  width: 800px;
+  max-width: 90%;
+  background-color: #fffbf780; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;  
+  padding: 20px;
+}   
 a {
   color: #5965b3; 
   text-decoration: none;
@@ -223,8 +235,9 @@ h2 {
 </head>
 <body>
 <header class="site-header-desktop">
-<h1>Dr Ketaki Sharma</h1>
-<h2>Paediatrician, North Shore Private Hospital</h2>   
+	<h1>Dr Ketaki Sharma</h1>
+	<h2>Paediatrician</h2>
+	<h2>North Shore Private Hospital</h2>   
 </header>
 
 <div class="hamburger-menu" id="hamburgerMenu">
@@ -241,7 +254,8 @@ h2 {
 
 <header class="site-header-mobile">
 	<h1>Dr Ketaki Sharma</h1>
-	<h2>Paediatrician, North Shore Private Hospital</h2>  
+	<h2>Paediatrician</h2>
+	<h2>North Shore Private Hospital</h2>  
 </header>
 </div>
 	
@@ -254,7 +268,7 @@ h2 {
         </nav>
 
 <main class="content-wrapper">
-
+<section class="block block-pane">
 <p>To request an appointment, please contact reception at <a href="tel:+61280524199">(02) 8052 4199</a>, or email a GP referral letter along with your contact details to <a href="mailto:info@drketsharma.com.au?subject=Appointment%20Enquiry&body=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.">
   info@drketsharma.com.au</a> or contact reception at .</p>
     <table cellpadding="10">
@@ -297,6 +311,7 @@ h2 {
 		referrerpolicy="no-referrer-when-downgrade">
 	</iframe>
 </div>
+</section>
 </main>
 
 <script>
