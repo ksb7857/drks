@@ -89,7 +89,6 @@ h2 {
 }
 .profile-section {
 	display: flex;
-	align-self: flex-start;
 	flex-direction: row-reverse;
 	max-width: 1000px;
 	gap: 50px;
@@ -101,6 +100,8 @@ h2 {
 .profile-section .circular-photo {
 	flex-shrink: 0;
 	width: 250px;
+	align-self: flex-start; /* ✅ Key line to force image to align with top of the flex container */
+	margin-top: 0;    
 }
 .profile-text {
   flex: 1;
