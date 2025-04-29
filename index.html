@@ -25,7 +25,7 @@ body {
         background-position: -200px;  
         background-attachment: fixed; /*Optional: makes it stay when scrolling */
         background-color: #e7e7e7; 
-        margin-left: 400px;
+        margin-left: 350px;
 	margin-right: 100px;
 }  
 .site-header {
@@ -34,7 +34,6 @@ body {
       background-color: transparent; 
       position: relative; 
       margin-bottom: 15px;
-      text-align: center;
 }
 .vertical-buttons {
     position: fixed;
@@ -126,16 +125,27 @@ a:active {
 	width: 100%;
 	max-width: 800px;
 	margin: 0 ;
-	padding: 40px;
+	padding: 0px;
 }
 .block-pane {
   max-width: 100%;
   background-color: transparent; 
   /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);*/
   border-radius: 0px; 
-  padding: 20px 40px
-	margin-left: 200px;
+  padding: 0px
 }   
+.footer-credits {
+  text-align: center;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 50px;
+  padding: 10px;
+}
+.footer-credits a {
+  color: #888;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
 .vertical-buttons {
 	display: none;
@@ -298,6 +308,12 @@ height: auto;
 </section>
 </section>
     </main>
+<footer class="footer-credits">
+  Built with resources from 
+  <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>, 
+  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>, and 
+  <a href="https://openai.com/chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT</a>.
+</footer>
 	<script>
 document.getElementById('hamburgerMenu').addEventListener('click', function() {
     const mobileNav = document.getElementById('mobileNav');
