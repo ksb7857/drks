@@ -86,22 +86,21 @@ h2 {
     object-fit: cover;
     object-position: top; /* shifts image upward to keep head in frame */   
     display: block;
-	vertical-align: top;
 }
 .profile-section {
-  display: flex;
-align-items: flex-start;
-flex-direction: row-reverse;
-  max-width: 1000px;
-  gap: 50px;
-  padding: 0px;
-  flex-wrap: wrap; /* ensures it stacks on smaller screens */
+	display: flex;
+	align-self: flex-start;
+	flex-direction: row-reverse;
+	max-width: 1000px;
+	gap: 50px;
+	padding: 0px;
+	flex-wrap: wrap; /* ensures it stacks on smaller screens */
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
 .profile-section .circular-photo {
-  flex-shrink: 0;
-  width: 250px; /* adjust as needed */
+	flex-shrink: 0;
+	width: 250px;
 }
 .profile-text {
   flex: 1;
