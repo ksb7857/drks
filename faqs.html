@@ -21,9 +21,9 @@ body {
         font-weight: 400;   
         color: #40332F; 
         background-repeat: no-repeat;
-        /*background-image: url('assets/img/blue_shapes.svg');*/
+        background-image: url('assets/img/background.png');
         background-size: cover;      
-        background-position: center; 
+        background-position: -200px; 
         background-attachment: fixed; 
         background-color: #e7e7e7; 
         margin:0;
@@ -112,15 +112,15 @@ summary:hover {
 .qa-question {
     font-size: 16px;
     font-weight: 500;
-    color:  #4c518a;
+    color:  #575451;
     margin-top: 1em;
     cursor: pointer;
     }
 .qa-answer {
     padding-left: 1em;
     font-size: 1em;
-    font-weight: 400;
-    color: #40332F;
+    font-weight: 300;
+    color: #575451;
     margin-bottom: 1em;
     }
 summary.section-subheading,
@@ -196,7 +196,17 @@ a:active {
 	width: 100%;
 	max-width: 600px;
 }
-
+.footer-credits {
+  text-align: center;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 50px;
+  padding: 10px;
+}
+.footer-credits a {
+  color: #888;
+  text-decoration: underline;
+}
 @media (max-width: 768px) {
 .vertical-buttons {
 	display: none;
@@ -580,7 +590,12 @@ For more information see <a href="https://www.schn.health.nsw.gov.au/reflux-fact
 </section>
 </section>
     </main>
-
+<footer class="footer-credits">
+  Built with resources from 
+  <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>, 
+  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>, and 
+  <a href="https://openai.com/chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT</a>.
+</footer>
 <script>
   document.querySelectorAll("details").forEach(detail => {
     detail.addEventListener("toggle", () => {
