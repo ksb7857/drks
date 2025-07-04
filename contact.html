@@ -26,7 +26,7 @@ body {
         color: #40332F; 
         background-repeat: no-repeat;
         background-image: url('assets/img/background.png');
-        background-size: cover;       
+        background-size: auto 100%; /* width auto, height 100% of viewport */ 
         background-position: -200px;  
         background-attachment: fixed;
         background-color: #e7e7e7; 
@@ -94,7 +94,7 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-radius: 0px;
   padding: 20px;
-  margin-right: 100px;
+  margin: 40px auto; /* 🔑 this centres it horizontally with vertical spacing */
   margin-top: 40px;
   margin-bottom: 40px;
 }   
