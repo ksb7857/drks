@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Ketaki Sharma — Specialist Paediatrician, Sydney</title>
+  <meta name="description" content="Dr Ketaki Sharma is a specialist paediatrician at North Shore Private Hospital, Sydney, with expertise in food allergy, eczema, hayfever, ADHD and general paediatrics.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="nav-root"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Specialist Paediatrician · Sydney</p>
+      <h1 class="hero-name">Dr Ketaki<br><em>Sharma</em></h1>
+      <p class="hero-title">MBBS &middot; MPH &middot; FRACP &nbsp;&mdash;&nbsp; North Shore Private Hospital</p>
+      <p class="hero-intro">An experienced paediatrician committed to listening carefully, thinking deeply, and supporting families with evidence-based, personalised care.</p>
+      <div class="hero-tags">
+        <span class="hero-tag">Food Allergy</span>
+        <span class="hero-tag">Eczema</span>
+        <span class="hero-tag">Hayfever</span>
+        <span class="hero-tag">ADHD</span>
+        <span class="hero-tag">General Paediatrics</span>
+      </div>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Make an appointment</a>
+        <a href="faqs.html" class="btn-outline">FAQs &amp; Resources</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/img/Ketaki-Sharma_Headshot.jpg" alt="Dr Ketaki Sharma, Paediatrician">
+      <span class="hero-image-caption">St Leonards, Sydney</span>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS STRIP -->
+  <div class="creds-strip">
+    <div class="cred-item">
+      <span class="cred-abbr">FRACP</span>
+      <span class="cred-full">Fellow, Royal Australasian College of Physicians</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-abbr">MPH</span>
+      <span class="cred-full">Master of Public Health, UNSW</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-abbr">USyd</span>
+      <span class="cred-full">Conjoint Clinical Lecturer, University of Sydney</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-abbr">ASCIA</span>
+      <span class="cred-full">Associate Member</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="about-grid">
+      <div>
+        <p class="section-label">About Ket</p>
+        <h2 class="section-title">Family-centred care, grounded in evidence</h2>
+        <div class="about-body">
+          <p>Ket sees children of all ages for general paediatric concerns, and has particular expertise in allergy and immunology — including IgE-mediated food allergy, eczema, hayfever, and clinical vaccinology — as well as neurodevelopmental paediatrics, including ADHD assessment and management.</p>
+          <p>She conducts skin prick testing on-site and can coordinate food challenges and aeroallergen immunotherapy where indicated. She is passionate about providing neuro-affirming, evidence-based care within a holistic framework that takes the whole child — and the whole family — into account.</p>
+          <p>Ket has a personal understanding of living with food allergies, eczema and hayfever in the family, which informs her empathetic and practical approach to supporting families navigating these challenges.</p>
+          <p>She holds a Conjoint Clinical Lecturer appointment at the University of Sydney and has an extensive background in vaccinology research and national immunisation policy, including six years as a Staff Specialist at the National Centre for Immunisation Research and Surveillance (NCIRS). She welcomes referrals involving complex immunisation questions.</p>
+        </div>
+      </div>
+      <div>
+        <p class="section-label">Areas of expertise</p>
+        <div class="interests-grid">
+
+          <div class="interest-card">
+            <div class="interest-card-icon">
+              <!-- leaf/allergy icon -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C6 2 3 8 3 12s3 8 9 10c6-2 9-6 9-10S18 2 12 2z" stroke-linecap="round"/><path d="M12 2v18" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Allergy &amp; Immunology</h3>
+            <p>Food allergy, eczema, hayfever, urticaria. Skin prick testing available on-site.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-card-icon">
+              <!-- brain icon -->
+              <svg viewBox="0 0 24 24"><path d="M9.5 2a4.5 4.5 0 0 1 4.5 4.5v.5h1a3 3 0 0 1 0 6h-1v.5a4.5 4.5 0 0 1-9 0V6.5A4.5 4.5 0 0 1 9.5 2z" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Neurodevelopmental</h3>
+            <p>ADHD assessment &amp; management. Neuro-affirming, holistic approach.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-card-icon">
+              <!-- shield/vaccine icon -->
+              <svg viewBox="0 0 24 24"><path d="M12 3L4 7v6c0 4.4 3.4 8.5 8 9.9 4.6-1.4 8-5.5 8-9.9V7l-8-4z" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Clinical Vaccinology</h3>
+            <p>Complex immunisation needs, vaccine safety concerns, adverse event assessment.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-card-icon">
+              <!-- stethoscope icon -->
+              <svg viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 4 0v6a4 4 0 0 0 8 0v-1a2 2 0 1 1 2 2" stroke-linecap="round"/><circle cx="20" cy="14" r="1" fill="#fff" stroke="#fff" stroke-width="0"/></svg>
+            </div>
+            <h3>General Paediatrics</h3>
+            <p>Infant concerns, growth &amp; feeding, developmental delay, behaviour, and more.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- OTHER ROLES -->
+  <section>
+    <p class="section-label">Other roles</p>
+    <h2 class="section-title" style="max-width:520px;">Committed to equitable, evidence-based care</h2>
+  </section>
+
+  <div class="roles-strip" style="padding-top:0; margin-top:-1px;">
+    <div style="padding: 0 6vw 4rem;">
+      <div class="roles-grid">
+
+        <div class="role-card">
+          <p class="role-card-tag">Rural &amp; Remote</p>
+          <h3>Gilgandra Local Aboriginal Medical Service</h3>
+          <p>Monthly bulk-billed general paediatric clinic and ongoing telehealth support for an Aboriginal Community Controlled Health Organisation in rural NSW.</p>
+        </div>
+
+        <div class="role-card">
+          <p class="role-card-tag">Telehealth</p>
+          <h3>Cub Care — Regional ADHD Services</h3>
+          <p>ADHD assessment and management via telehealth in a shared-care model with local GPs, serving children and families in regional and rural Australia.</p>
+        </div>
+
+        <div class="role-card">
+          <p class="role-card-tag">Academic</p>
+          <h3>University of Sydney</h3>
+          <p>Conjoint Clinical Lecturer in the Discipline of Child and Adolescent Health, contributing to undergraduate and postgraduate medical teaching and research.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div id="footer-root"></div>
+<script src="shared.js"></script>
+</body>
+</html>
 
