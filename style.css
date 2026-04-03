@@ -91,8 +91,7 @@ nav {
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  padding-top: 0.8rem;
+  top: calc(100% + 0.8rem);
   left: 0;
   background: var(--warm-white);
   border: 1px solid var(--cream-dark);
@@ -521,74 +520,70 @@ section + section { padding-top: 0; }
 }
 
 /* ── FAQs PAGE ────────────────────────────────────────────── */
-.faq-layout {
-  display: flex;
-  gap: 4rem;
-  align-items: flex-start;
+
+/* page-switcher pills */
+.page-nav-links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.page-nav-link {
+  font-size: 0.78rem; font-weight: 500; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--stone); text-decoration: none;
+  border: 1.5px solid var(--stone-light); padding: 0.45rem 1.1rem;
+  border-radius: 2px; transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.page-nav-link:hover { color: var(--forest); border-color: var(--forest); }
+.page-nav-link.current {
+  color: var(--warm-white); border-color: var(--forest);
+  background: var(--forest);
 }
 
-.faq-nav {
-  width: 190px;
-  flex-shrink: 0;
-  position: sticky;
-  top: calc(var(--nav-h) + 2rem);
-  max-height: calc(100vh - var(--nav-h) - 4rem);
-  overflow-y: auto;
+/* single merged notice */
+.faq-notice {
+  background: #EAE4DA;
+  border-left: 4px solid var(--terracotta);
+  padding: 1rem 1.4rem;
+  border-radius: 0 3px 3px 0;
+  font-size: 0.875rem;
+  color: #5A5248;
+  margin-bottom: 3rem;
+  line-height: 1.7;
 }
 
-.faq-content {
-  flex: 1;
-  min-width: 0;
+/* category blocks */
+.faq-category {
+  margin-bottom: 0;
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--forest);
+  background: var(--warm-white);
 }
 
-.faq-nav-title {
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--stone);
-  margin-bottom: 1rem;
-}
-
-.faq-nav ul { list-style: none; }
-
-.faq-nav li + li { margin-top: 0.2rem; }
-
-.faq-nav a {
-  font-size: 0.88rem;
-  color: var(--stone);
-  text-decoration: none;
-  display: block;
-  padding: 0.3rem 0 0.3rem 0.8rem;
-  border-left: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
-}
-
-.faq-nav a:hover, .faq-nav a.active {
-  color: var(--forest);
-  border-left-color: var(--forest);
-}
-
-.faq-category { margin-bottom: 3rem; }
+.faq-category:nth-child(2) { border-left-color: var(--terracotta); }
+.faq-category:nth-child(3) { border-left-color: #7A9E8E; }
+.faq-category:nth-child(4) { border-left-color: #B8935A; }
+.faq-category:nth-child(5) { border-left-color: #6B7FA3; }
+.faq-category:nth-child(6) { border-left-color: var(--forest); }
+.faq-category:nth-child(7) { border-left-color: var(--terracotta); }
 
 .faq-category-title {
   font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 500;
   color: var(--forest);
   margin-bottom: 1.2rem;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid var(--cream-dark);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
-.faq-item { margin-bottom: 0; border-bottom: 1px solid var(--cream-dark); }
+/* items */
+.faq-item { border-bottom: 1px solid var(--cream-dark); }
+.faq-item:last-child { border-bottom: none; }
 
 .faq-question {
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 500;
   color: var(--charcoal);
-  padding: 1rem 0;
+  padding: 1.1rem 0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -596,51 +591,54 @@ section + section { padding-top: 0; }
   gap: 1rem;
   user-select: none;
   list-style: none;
+  transition: color 0.15s;
 }
-
+.faq-question:hover { color: var(--forest); }
 .faq-question::-webkit-details-marker { display: none; }
 
 .faq-arrow {
-  width: 18px; height: 18px; flex-shrink: 0;
-  border: 1px solid var(--stone-light);
+  width: 22px; height: 22px; flex-shrink: 0;
+  background: var(--cream-dark);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  transition: transform 0.25s, border-color 0.2s;
+  transition: transform 0.25s, background 0.2s;
 }
-
-.faq-arrow svg { width: 8px; height: 8px; stroke: var(--stone); stroke-width: 2; fill: none; }
-
-details[open] .faq-arrow { transform: rotate(180deg); border-color: var(--forest); }
-details[open] .faq-arrow svg { stroke: var(--forest); }
+.faq-arrow svg { width: 9px; height: 9px; stroke: var(--forest); stroke-width: 2.5; fill: none; }
+details[open] .faq-arrow { transform: rotate(180deg); background: var(--forest); }
+details[open] .faq-arrow svg { stroke: #fff; }
+details[open] .faq-question { color: var(--forest); }
 
 .faq-answer {
-  font-size: 0.95rem;
-  line-height: 1.8;
+  font-size: 0.97rem;
+  line-height: 1.85;
   color: #3A3530;
-  padding: 0 0 1.2rem;
+  padding: 0.2rem 0 1.4rem;
 }
-
-.faq-answer p + p { margin-top: 0.8rem; }
-.faq-answer ul { padding-left: 1.3rem; margin: 0.5rem 0; }
-.faq-answer li { margin-bottom: 0.4rem; }
+.faq-answer p + p { margin-top: 0.9rem; }
+.faq-answer ul { padding-left: 1.4rem; margin: 0.6rem 0; }
+.faq-answer li { margin-bottom: 0.5rem; }
 .faq-answer strong { color: var(--charcoal); font-weight: 500; }
 .faq-answer a { color: var(--forest); text-underline-offset: 3px; }
 
-.faq-disclaimer {
-  background: var(--cream-dark);
-  border-left: 3px solid var(--terracotta);
-  padding: 1rem 1.3rem;
-  border-radius: 0 3px 3px 0;
-  font-size: 0.85rem;
-  color: var(--stone);
-  margin-bottom: 2.5rem;
-  line-height: 1.65;
+/* resources section at bottom */
+.resources-section {
+  margin-top: 1.5rem;
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 4px;
+  background: var(--warm-white);
+  border-left: 4px solid var(--stone-light);
 }
-
-@media (max-width: 780px) {
-  .faq-layout { flex-direction: column; }
-  .faq-nav { display: none; }
-  .faq-content { width: 100%; }
+.resources-section h2 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--forest);
+  margin-bottom: 0.8rem;
+}
+.resources-section p {
+  font-size: 0.92rem;
+  color: var(--stone);
+  line-height: 1.7;
 }
 
 /* ── PAGE HEADER (inner pages) ────────────────────────────── */
