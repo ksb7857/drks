@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make an Appointment — Dr Ketaki Sharma</title>
+  <meta name="description" content="Make an appointment with Dr Ketaki Sharma, Specialist Paediatrician. North Shore Private Hospital, Cub Care telehealth, and Gilgandra AMS.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .appt-section {
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .appt-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .appt-tag {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.5rem;
+    }
+    .appt-title {
+      font-family: var(--serif); font-size: 1.8rem; font-weight: 400;
+      color: var(--forest); margin-bottom: 0.8rem; line-height: 1.2;
+    }
+    .appt-desc {
+      font-size: 0.97rem; color: #3A3530; line-height: 1.8;
+      max-width: 600px; margin-bottom: 1.8rem;
+    }
+    .appt-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .appt-grid-single {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-detail {
+      display: flex; align-items: baseline; gap: 1rem;
+      margin-bottom: 1rem; font-size: 0.95rem;
+    }
+    .contact-label {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--stone); min-width: 70px;
+    }
+    .contact-value { color: var(--charcoal); }
+    .contact-value a { color: var(--forest); text-decoration: none; }
+    .contact-value a:hover { text-decoration: underline; }
+    .referral-box {
+      background: var(--forest); color: rgba(255,255,255,0.9);
+      padding: 1.5rem 1.8rem; border-radius: 3px; margin-top: 1.5rem;
+    }
+    .referral-box h3 {
+      font-family: var(--serif); font-size: 1.2rem; font-weight: 400;
+      color: #fff; margin-bottom: 0.6rem;
+    }
+    .referral-box p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.8); }
+    .referral-box a { color: rgba(255,255,255,0.9); }
+    .map-placeholder {
+      width: 100%; aspect-ratio: 4/3;
+      background: var(--cream-dark); border-radius: 3px;
+      overflow: hidden; border: 1px solid var(--cream-dark);
+    }
+    .map-placeholder iframe { width: 100%; height: 100%; border: none; display: block; }
+    .cta-button {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--warm-white); background: var(--forest);
+      padding: 0.85rem 2rem; border-radius: 2px;
+      text-decoration: none; transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .cta-button:hover { background: var(--forest-light); }
+    @media (max-width: 780px) {
+      .appt-grid, .appt-grid-single { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-root"></div>
+
+<main>
+
+  <div class="page-header">
+    <p class="section-label">Get in touch</p>
+    <h1>Make an Appointment</h1>
+  </div>
+
+  <section>
+
+    <!-- NORTH SHORE PRIVATE -->
+    <div class="appt-section">
+      <div class="appt-grid">
+        <div>
+          <p class="appt-tag">Private Practice · St Leonards · Sydney</p>
+          <h2 class="appt-title">North Shore Private Hospital</h2>
+          <p class="appt-desc">Ket sees patients for all general paediatric referrals at North Shore Private Hospital, with particular expertise in allergy and immunology, eczema, hayfever, ADHD, and clinical vaccinology. A GP or specialist referral is required.</p>
+
+          <div class="contact-detail">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value"><a href="tel:+61280524199">(02) 8052 4199</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Fax</span>
+            <span class="contact-value">(02) 8079 0664</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Email</span>
+            <span class="contact-value"><a href="mailto:info@drketsharma.com.au">info@drketsharma.com.au</a></span>
+          </div>
+          <div class="contact-detail" style="align-items:flex-start;">
+            <span class="contact-label">Address</span>
+            <span class="contact-value">Suite 3, Level 5<br>North Shore Private Hospital<br>3 Westbourne Street<br>St Leonards NSW 2065</span>
+          </div>
+          <div class="contact-detail" style="align-items:flex-start;">
+            <span class="contact-label">Parking</span>
+            <span class="contact-value">Available at the P2 multi-storey car park. <a href="https://www.northshoreprivate.com.au/For-Visitors/Parking" target="_blank" rel="noopener">More information</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Transport</span>
+            <span class="contact-value">Walking distance from St Leonards train station</span>
+          </div>
+
+          <div class="referral-box">
+            <h3>For GPs &amp; referring doctors</h3>
+            <p>Please email or fax referral letters and relevant clinical information directly to the practice. Families will need to call reception on <a href="tel:+61280524199">(02) 8052 4199</a> to arrange a booking time.</p>
+          </div>
+        </div>
+
+        <div style="position:sticky; top:calc(var(--nav-h) + 2rem);">
+          <p class="section-label" style="margin-bottom:1rem;">Location</p>
+          <div class="map-placeholder">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.0!2d151.195!3d-33.824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12af5e6b3c6e6b%3A0x5017d681632ccc0!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1680000000000"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="North Shore Private Hospital location">
+            </iframe>
+          </div>
+          <p style="margin-top:1rem; font-size:0.82rem; color:var(--stone); line-height:1.6;">
+            North Shore Private Hospital is located in St Leonards, approximately 5km north of the Sydney CBD. Walking distance from St Leonards train station.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUB CARE -->
+    <div class="appt-section">
+      <p class="appt-tag">Telehealth · Australia-wide</p>
+      <h2 class="appt-title">Cub Care — ADHD &amp; Neurodevelopment</h2>
+      <p class="appt-desc">For families outside of Sydney who are unable to travel for an initial ADHD assessment, Ket offers appointments via Cub Care's Behaviour, Attention and Hyperactivity Clinic. Consultations are conducted by video and are available Australia-wide, in a shared-care model with your local GP.</p>
+      <p class="appt-desc" style="margin-top:-0.8rem;">A GP referral is required, and should include your child's height, weight, blood pressure and heart rate.</p>
+      <a href="https://cubcare.com.au/clinician/dr-ket-sharma-KB3" target="_blank" rel="noopener" class="cta-button">Book via Cub Care &rarr;</a>
+    </div>
+
+    <!-- GILGANDRA -->
+    <div class="appt-section">
+      <p class="appt-tag">Bulk Billed · Rural NSW</p>
+      <h2 class="appt-title">Gilgandra Local Aboriginal Medical Service</h2>
+      <p class="appt-desc">Ket provides a monthly bulk-billed general paediatric clinic at the Gilgandra Local Aboriginal Medical Service, an Aboriginal Community Controlled Health Organisation. To make an appointment, please contact the AMS directly.</p>
+
+      <div class="contact-detail">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value"><a href="tel:0268375111">(02) 6837 5111</a></span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Fax</span>
+        <span class="contact-value">(02) 8322 8053</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:admin@glams.net.au">admin@glams.net.au</a></span>
+      </div>
+      <div class="contact-detail" style="align-items:flex-start;">
+        <span class="contact-label">Address</span>
+        <span class="contact-value">140 Warren Road<br>Gilgandra NSW 2827</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Hours</span>
+        <span class="contact-value">Mon–Fri, 8:30am–5:00pm</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Billing</span>
+        <span class="contact-value">Bulk billed (Medicare card required)</span>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<div id="footer-root"></div>
+<script src="shared.js"></script>
+</body>
+</html>
