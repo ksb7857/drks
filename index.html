@@ -16,21 +16,29 @@
   <!-- HERO -->
   <section class="hero" style="padding:0;">
     <div class="hero-content">
-      <p class="hero-eyebrow">Specialist Paediatrician · Sydney</p>
+      <p class="hero-eyebrow">Specialist Paediatrician · North Shore Private Hospital, Sydney</p>
       <h1 class="hero-name">Dr Ketaki Sharma</h1>
-      <p class="hero-title">MBBS &middot; MPH &middot; FRACP &nbsp;&mdash;&nbsp; North Shore Private Hospital</p>
-      <p class="hero-intro">An experienced paediatrician committed to listening carefully and supporting families with evidence-based, personalised care.</p>
+      <p class="hero-title">MBBS &middot; MPH &middot; FRACP &nbsp;&mdash;&nbsp;</p>
+      <p class="hero-intro">An experienced paediatrician, committed to listening carefully and providing personalised care. Ket approaches every appointment with curiosity about the whole child, not just the presenting issue.</p>
       <div class="hero-tags">
         <span class="hero-tag">Food Allergy</span>
         <span class="hero-tag">Eczema</span>
         <span class="hero-tag">Hayfever</span>
         <span class="hero-tag">ADHD</span>
+        <span class="hero-tag">Development</span>
         <span class="hero-tag">General Paediatrics</span>
       </div>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn-primary">Make an appointment</a>
-        <a href="faqs.html" class="btn-outline">FAQs &amp; Resources</a>
-      </div>
+<div class="hero-actions">
+  <a href="appointments.html" class="btn-primary">Make an appointment</a>
+  <div style="position:relative; display:inline-block;">
+    <a href="faqs-general.html" class="btn-outline" onclick="event.preventDefault(); document.getElementById('hero-faq-menu').style.display = document.getElementById('hero-faq-menu').style.display === 'block' ? 'none' : 'block';">FAQs &amp; Resources &#9662;</a>
+    <div id="hero-faq-menu" style="display:none; position:absolute; top:100%; left:0; background:var(--warm-white); border:1px solid var(--cream-dark); border-radius:3px; padding:0.5rem 0; min-width:220px; z-index:200; margin-top:0.5rem;">
+      <a href="faqs-general.html" style="display:block; padding:0.5rem 1.2rem; font-size:0.85rem; color:var(--stone); text-decoration:none;">General Paediatrics</a>
+      <a href="faqs-allergy.html" style="display:block; padding:0.5rem 1.2rem; font-size:0.85rem; color:var(--stone); text-decoration:none;">Allergy &amp; Eczema</a>
+      <a href="faqs-adhd.html" style="display:block; padding:0.5rem 1.2rem; font-size:0.85rem; color:var(--stone); text-decoration:none;">ADHD &amp; Neurodevelopment</a>
+    </div>
+  </div>
+</div>
     </div>
     <div class="hero-image">
       <img src="assets/img/Ketaki-Sharma_Headshot.jpg" alt="Dr Ketaki Sharma, Paediatrician">
@@ -38,28 +46,28 @@
   </section>
 
   <!-- CREDENTIALS STRIP -->
-  <div class="creds-strip">
-    <div class="cred-item">
-      <span class="cred-abbr">FRACP</span>
-      <span class="cred-full">Fellow, Royal Australasian College of Physicians</span>
-    </div>
-    <div class="cred-item">
-      <span class="cred-abbr">MPH</span>
-      <span class="cred-full">Master of Public Health, UNSW</span>
-    </div>
-    <div class="cred-item">
-      <span class="cred-abbr">USyd</span>
-      <span class="cred-full">Conjoint Clinical Lecturer, University of Sydney</span>
-    </div>
-    <div class="cred-item">
-      <span class="cred-abbr">ASCIA</span>
-      <span class="cred-full">Associate Member</span>
-    </div>
-      <div class="cred-item">
-      <span class="cred-abbr">ASDP & Neurodiversity Special Interest Group</span>
-      <span class="cred-full">Full Member</span>
-    </div>
+<div class="creds-strip">
+  <div class="cred-item">
+    <span class="cred-abbr">FRACP</span>
+    <span class="cred-full">Fellow, Royal Australasian College of Physicians</span>
   </div>
+  <div class="cred-item">
+    <span class="cred-abbr">MPH</span>
+    <span class="cred-full">Master of Public Health, UNSW</span>
+  </div>
+  <div class="cred-item">
+    <span class="cred-abbr">USyd</span>
+    <span class="cred-full">Conjoint Clinical Lecturer, <a href="https://www.sydney.edu.au" target="_blank" rel="noopener" style="color:var(--stone); text-underline-offset:3px;">University of Sydney</a></span>
+  </div>
+  <div class="cred-item">
+    <span class="cred-abbr">ASCIA</span>
+    <span class="cred-full">Associate Member, <a href="https://www.allergy.org.au" target="_blank" rel="noopener" style="color:var(--stone); text-underline-offset:3px;">Australasian Society of Clinical Immunology and Allergy</a></span>
+  </div>
+  <div class="cred-item">
+    <span class="cred-abbr">ASDP</span>
+    <span class="cred-full">Member, Neurodiversity Special Interest Group, <a href="https://www.asdp.org.au" target="_blank" rel="noopener" style="color:var(--stone); text-underline-offset:3px;">Australasian Society for Developmental Paediatrics</a></span>
+  </div>
+</div>
 
   <!-- ABOUT -->
   <section>
