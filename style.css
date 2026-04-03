@@ -292,7 +292,8 @@ main { padding-top: var(--nav-h); }
 
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; max-height: none; }
-  .hero-image { height: 360px; }
+  .hero-image { height: 420px; }
+  .hero-image img { object-position: center 15%; }
   .hero-content { padding: 4rem 6vw; }
 }
 
