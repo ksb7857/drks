@@ -1,359 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sydney Paediatrician, Contact</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Contact Dr Ketaki Sharma, Specialist Paediatrician at North Shore Private Hospital, Sydney. Appointment enquiries and referral details.">
-    <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-<style>
-* {
-  box-sizing: border-box;
-}    
-html, body {
-	overflow-x: hidden;
-	width: 100%;
-}
-body { 
-        font-family: 'Work Sans', sans-serif; 
-        font-size: 16px;
-        line-height: 1.6; 
-        letter-spacing: 0.2px;
-        font-weight: 400;    
-        color: #40332F; 
-        background-repeat: no-repeat;
-        background-image: url('assets/img/background.png');
-        background-size: auto 100%; /* width auto, height 100% of viewport */ 
-        background-position: -200px;  
-        background-attachment: fixed;
-        background-color: #e7e7e7; 
-        margin-left: 400px;
-        margin-right: 100px;
-}
-.site-header {
-      width: 100%;
-      max-width: 1400px;
-      background-color: transparent; 
-      position: relative; 
-      margin-bottom: 15px;
-}
-.vertical-buttons {
-    position: fixed;
-    top: 20px; 
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: 1000; 
-}
-.vertical-buttons li a {
-    text-align: right;
-    display: block; 
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-size: 1.7em;
-    font-family: 'Antonio';
-    text-decoration: none;
-    color: #575451;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
-}
-.vertical-buttons li a:hover {
-    text-decoration: underline;
-    transform: translateY(-2px);
-}
-h1, h2 {
-    font-family: 'Antonio';
-    color:  #575451;
-    font-weight: 400;
-    line-height: 1.1;
-}
-h1 {
-        font-size: 3em;
-        margin-bottom: 15px;
-}
-h2 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-}
-.section-container {
-	width: 100%;
-	max-width: calc(100vw-500px);
-	margin: 0 ;
-	padding: 0px;
-}
-.block-pane {
-  max-width: 900px;
-  background-color: #fffbf780; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border-radius: 0px;
-  padding: 20px;
-  /*margin: 40px auto; /* 🔑 this centres it horizontally with vertical spacing */
-  margin-top: 40px;
-  margin-bottom: 40px;
-}   
-a {
-  color: #5965b3; 
-  text-decoration: none;
-}
-a:hover {
-	color: #5965b3;
-	text-decoration: underline;
-}
-a:active {
-	color: #5965b3; /* Color when clicked */
-}
-.hamburger-menu {
-	display: none
-}
-.mobile-nav {
-	display: none
-}
-.map-container {
-	width: 100%;
-	max-width: 600px;
-}
-.responsive-map {
-	width: 100%;
-	height: 450px;
-	border: 0;
-	display: block;
-}
-table {
-	width: 100%;
-	border-collapse: collapse; 
-}
-table td, table th {
-	vertical-align: top;
-	padding: 5px;
-}
-.footer-credits {
-  text-align: center;
-  font-size: 0.8em;
-  color: #888;
-  margin-top: 50px;
-  padding: 10px;
-}
-.footer-credits a {
-  color: #888;
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-.vertical-buttons {
-	display: none;
-}
-.hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 25px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    z-index: 1001; /* Make sure the hamburger is above other content */
-}
-.hamburger-menu .line {
-    width: 28px;
-    background-color: #575451;
-    height: 2px;
-    border-radius: 1px;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-.hamburger-menu.open .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    position: relative;
-    top: 8px;
-}
-.hamburger-menu.open .line:nth-child(2) {
-    opacity: 0;
-}
-.hamburger-menu.open .line:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -8px;
-}
-.mobile-nav {
-	display: none;
-	background-color: #e7e7e7;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	padding: 20px;
-	text-align: center;
-}
-.mobile-nav a {
-	display: block;
-	color: #575451;
-	text-decoration: none;
-	font-family: 'Antonio';
-	font-size: 1.5em;
-	padding: 15px;
-}
-.mobile-nav a:hover {
-      background-color: #e7e7e7;
-      text-decoration: underline;
-      transform: translateY(-2px);
-}
-.mobile-nav.open {
-    display: block;
-}
-body, h1, h2, p, table, td, th {
-	margin: 0 !important;
-	padding: 5px !important;
-	box-sizing: border-box;
-	background-color: #e7e7e7;
-	background-image: none;
-}
-table td:nth-child(2) {
-  overflow-wrap: break-word; /* or word-break: break-word; */
-  word-break: break-word;
-}
-.section-container {
-	padding: 0px 0px;
-	width: 100%;
-        box-sizing: border-box;
-}
-.block-pane {
-	max-width: 100%;
-	padding: 5px;
-	box-sizing: border-box;
-	background-color: #e7e7e7;
-}	
-
-h1 {
-    font-size: 1.5em;
-    padding: 5px;
-  }
-h2 {
-    font-size: 1.1em;
-    padding: 5px
-  }
-.responsive-map{
-	width: 100%;
-	height: 250px;
-	max-width: 100vw;
-	border: 0;
-	display: block;
-}
-.map-container {
-	max-width: 100%;
-	width: 100%;
-	overflow-x: hidden;
-	box-sizing: border-box;
-}
-}	
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Dr Ketaki Sharma</title>
+  <meta name="description" content="Contact Dr Ketaki Sharma, Specialist Paediatrician at North Shore Private Hospital, St Leonards, Sydney.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .practice-block {
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    .practice-block:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+    .practice-tag {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.4rem;
+    }
+    .practice-name {
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 400;
+      color: var(--forest); margin-bottom: 1.2rem; line-height: 1.25;
+    }
+    .practice-desc {
+      font-size: 0.92rem; color: var(--stone); line-height: 1.7; margin-bottom: 1.2rem;
+    }
+  </style>
 </head>
 <body>
 
-<div class="hamburger-menu" id="hamburgerMenu">
-	<div class="line"></div>
-	<div class="line"></div>
-	<div class="line"></div>
-</div>
+<div id="nav-root"></div>
 
-<nav class="mobile-nav" id="mobileNav">
-		<a href="index.html">About</a>
-		<a href="contact.html">Contact</a>
-		<a href="faqs.html">FAQs</a>
-	</nav>
-
-<nav class="navbar">
-<ul class="nav-links vertical-buttons">
-    <li><a href="index.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="faqs.html">FAQs</a></li>
-    </ul>  
-        </nav>
-	
-<section class="section-container">
-<header class="site-header">
-	<h1>Dr Ketaki Sharma</h1>
-	<h2>Specialist Paediatrician, North Shore Private Hospital</h2>   
-</header>
 <main>
-<section class="block block-pane">
-<p>To arrange an appointment, kindly contact reception by phone. You are welcome to fax or email a referral and any other relevant information ahead of your appointment.</p>
 
-    <table>
-  <tr>
-    <td><strong>Phone:</strong></td>
-    <td><a href="tel:+61280524199">(02) 8052 4199</a></td>
-  </tr>
-  <tr>
-    <td><strong>Fax:</strong></td>
-    <td>(02) 8079 0664</td>
-  </tr>
-  <tr>
-    <td><strong>Email:</strong></td>
-    <td><a href="mailto:info@drketsharma.com.au?subject=Appointment%20Enquiry&body=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.">
-  info@drketsharma.com.au</a></td>
-  </tr>
-  <tr>
-    <td><strong>Address:</strong></td>
-    <td><p>Suite 3, Level 5<br>
-			North Shore Private Hospital<br>
-			3 Westbourne Street<br>
-			St Leonards NSW 2065<br>
-</td>
-  </tr>
-<tr>
-    <td><strong>Parking:</strong></td>
-    <td>Parking is available at the P2 multi-storey car park. <a href="https://www.northshoreprivate.com.au/For-Visitors/Parking">More information here</a></td>
-  </tr>
-  <tr>
-    <td><strong>Transport:</strong></td>
-    <td>North Shore Private Hospital is walking distance from St Leonards train station </td>
-  </tr>
-</table>
-</section>
-	<section class="block block-pane">
-<h2>Map</h2>
+  <div class="page-header">
+    <p class="section-label">Get in touch</p>
+    <h1>Contact &amp; Appointments</h1>
+  </div>
 
-<div class="map-container">
-	<iframe class="responsive-map" 
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.693726950848!2d151.1866807765525!3d-33.820216016545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aedfe8bb7bf1%3A0x931f014d121613d9!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1745396578203!5m2!1sen!2sau"
-		allowfullscreen
-		loading="lazy"
-		referrerpolicy="no-referrer-when-downgrade">
-	</iframe>
-</div>
-</section>
-</section>
+  <section>
+    <div class="contact-grid">
+
+      <!-- Left: all three practices -->
+      <div>
+
+        <!-- North Shore Private -->
+        <div class="practice-block">
+          <p class="practice-tag">Private Practice · St Leonards</p>
+          <h2 class="practice-name">North Shore Private Hospital</h2>
+          <div class="contact-detail">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value"><a href="tel:+61280524199">(02) 8052 4199</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Fax</span>
+            <span class="contact-value">(02) 8079 0664</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Email</span>
+            <span class="contact-value"><a href="mailto:info@drketsharma.com.au">info@drketsharma.com.au</a></span>
+          </div>
+          <div class="contact-detail" style="align-items:flex-start;">
+            <span class="contact-label">Address</span>
+            <span class="contact-value">Suite 3, Level 5<br>North Shore Private Hospital<br>3 Westbourne Street<br>St Leonards NSW 2065</span>
+          </div>
+          <div class="contact-detail" style="align-items:flex-start;">
+            <span class="contact-label">Parking</span>
+            <span class="contact-value">Available at the P2 multi-storey car park. <a href="https://www.northshoreprivate.com.au/For-Visitors/Parking" target="_blank" rel="noopener">More information</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Transport</span>
+            <span class="contact-value">Walking distance from St Leonards train station</span>
+          </div>
+          <div class="referral-box" style="margin-top:1.5rem;">
+            <h3>Referrals</h3>
+            <p>A GP or specialist referral is required. You are welcome to fax or email referral letters and relevant clinical information ahead of your appointment. Please contact reception by phone to arrange a booking.</p>
+          </div>
+        </div>
+
+        <!-- Cub Care -->
+        <div class="practice-block">
+          <p class="practice-tag">Telehealth · Australia-wide</p>
+          <h2 class="practice-name">Cub Care — Behaviour, Attention and Hyperactivity Clinic</h2>
+          <p class="practice-desc">Ket sees patients via Cub Care's ADHD Focused Pathway — a comprehensive assessment, diagnosis and management service for children and teens delivered by video appointment Australia-wide, in a shared-care model with your local GP.</p>
+          <div class="contact-detail">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value"><a href="tel:1800312611">1800 312 611</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Website</span>
+            <span class="contact-value"><a href="https://cubcare.com.au" target="_blank" rel="noopener">cubcare.com.au</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Format</span>
+            <span class="contact-value">Video telehealth, Australia-wide</span>
+          </div>
+          <div class="contact-detail" style="align-items:flex-start;">
+            <span class="contact-label">Referral</span>
+            <span class="contact-value">GP referral required, including your child's height, weight, blood pressure and heart rate.</span>
+          </div>
+        </div>
+
+        <!-- Gilgandra LAMS -->
+        <div class="practice-block">
+          <p class="practice-tag">Bulk Billed · Rural NSW</p>
+          <h2 class="practice-name">Gilgandra Local Aboriginal Medical Service</h2>
+          <p class="practice-desc">Ket provides a monthly bulk-billed general paediatric clinic and ongoing telehealth support at this Aboriginal Community Controlled Health Organisation in rural NSW.</p>
+          <div class="contact-detail">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value"><a href="tel:0268375111">(02) 6837 5111</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Fax</span>
+            <span class="contact-value">(02) 8322 8053</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Email</span>
+            <span class="contact-value"><a href="mailto:admin@glams.net.au">admin@glams.net.au</a></span>
+          </div>
+          <div class="contact-detail" style="align-items:flex-start;">
+            <span class="contact-label">Address</span>
+            <span class="contact-value">140 Warren Road<br>Gilgandra NSW 2827</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Hours</span>
+            <span class="contact-value">Mon–Fri, 8:30am–5:00pm</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Billing</span>
+            <span class="contact-value">Bulk billed (Medicare card required)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: map (sticky) -->
+      <div style="position:sticky; top:calc(var(--nav-h) + 2rem);">
+        <p class="section-label" style="margin-bottom:1rem;">North Shore Private Hospital</p>
+        <div class="map-placeholder">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.0!2d151.195!3d-33.824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12af5e6b3c6e6b%3A0x5017d681632ccc0!2sNorth%20Shore%20Private%20Hospital!5e0!3m2!1sen!2sau!4v1680000000000"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="North Shore Private Hospital location">
+          </iframe>
+        </div>
+        <p style="margin-top:1rem; font-size:0.82rem; color:var(--stone); line-height:1.6;">
+          North Shore Private Hospital is located in St Leonards, approximately 5km north of the Sydney CBD. Walking distance from St Leonards train station.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
 </main>
-<footer class="footer-credits">
-  Built with resources from 
-  <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>, 
-  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>, and 
-  <a href="https://openai.com/chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT</a>.
-</footer>
-<script>
-document.getElementById('hamburgerMenu').addEventListener('click', function() {
-    const mobileNav = document.getElementById('mobileNav');
-    const hamburgerMenu = document.getElementById('hamburgerMenu');
-    mobileNav.classList.toggle('open');
-    hamburgerMenu.classList.toggle('open');
-});
-</script>
 
+<div id="footer-root"></div>
+<script src="shared.js"></script>
 </body>
 </html>
-
-
-
-   
