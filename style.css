@@ -441,11 +441,9 @@ section + section { padding-top: 0; }
   background: var(--cream-dark);
   padding: 3rem 6vw;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem 4rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }
-
 .cred-item { display: flex; align-items: baseline; gap: 0.7rem; }
 
 .cred-abbr {
