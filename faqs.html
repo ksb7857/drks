@@ -1,650 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Paediatric FAQs and Resources</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-
-<style>
- * {
-  box-sizing: border-box;
-}    
-body { 
-        font-family: 'Work Sans', sans-serif; 
-        font-size: 18px;
-        line-height: 1.6; 
-        letter-spacing: 0.2px;
-        font-weight: 400;   
-        color: #40332F; 
-        background-repeat: no-repeat;
-        background-image: url('assets/img/background.png');
-    background-size: auto 100%; /* width auto, height 100% of viewport */
-        background-position: -200px;
-        background-attachment: fixed; 
-        background-color: #e7e7e7; 
-	margin-left: 400px;
-	margin-right: 150px;
-}
-.site-header {
-      width: 100%;
-      max-width: 1400px;
-      background-color: transparent;
-      position: relative;
-      margin-bottom: 15px;
-    }
-.vertical-buttons {
-    position: fixed;
-    top: 20px; 
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: 1000;
-    }
-.vertical-buttons li a {
-    text-align: right;
-    display: block;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-size: 1.7em;
-    font-family: 'Antonio';
-    text-decoration: none;
-    color: #575451;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
-}
-.vertical-buttons li a:hover {
-    text-decoration: underline;
-    transform: translateY(-2px);
-}
-h1, h2 {
-    font-family: 'Antonio';
-    color:  #575451;
-    font-weight: 400;
-    line-height: 1.1;
-    }
-h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
-    }
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px
-}
-.section-container {
-	width: 100%
-	max-width: 1400px;
-	margin: 0;
-	padding: 0px;
-}
-summary {
-  display: flex;                    /* Use flex to align the contents */
-  align-items: center;               /* Vertically align the text */ 
-  justify-content: space-between; 
-  border: none;                      /* Remove default border */
-  border-radius: 5px;                /* Optional rounded corners */
-  cursor: pointer;                  /* Make it clear it's clickable */
-  font-size: 1.2em;                  /* Increase the font size */
-  font-weight: 500;                  /* Weight of the font */
-  transition: background-color 0.3s ease; /* Smooth transition for color change */
-  padding-right: 1em;
-  padding-left: 1em;
-  overflow: hidden;
-}
-summary:hover {
-  background-color: rgba(224, 92, 98, 0.05); /* subtle tint */
-  cursor: pointer;
-}
-.section-subheading {
-    font-family: 'Antonio';
-    font-size: 1.4em;
-    font-weight: 500;
-    color:  #575451;
-    margin-top: 1.5em;
-    cursor: pointer;
-    }
-.qa-question {
-    font-size: 18px;
-    color:  #575451;
-    margin-top: 1em;
-    cursor: pointer;
-    border-left: 3px solid #e0dbd8;
-    padding-left: 1.2em;
-    }
-.qa-answer {
-    padding-left: 1em;
-    font-size: 18px;
-    font-weight: 300;
-    color: #6d6a67;
-    margin-bottom: 1em;
-    }
-summary.section-subheading,
-summary.qa-question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75em 1em; /* Consistent padding around the text */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0; /* Remove any default margin that might differ */
-  transition: background-color 0.3s ease;
-}
-summary.section-subheading::after, 
-summary.qa-question::after {
-  content: "▲";
-  font-family: 'Work Sans';
-  font-size: 16px;
-  font-weight: 300;
-  display: inline-block;
-  min-width: 1em;
-  text-align: right;
-  margin-left: 10px;
-  padding-left: 1em; /* Optional space between text and arrow */
-}
-summary.section-subheading:hover,
-summary.qa-question:hover {
-  background-color: #e0dbd866; 
-  cursor: pointer;
-}
-details[open] > summary.section-subheading::after, 
-details[open] > summary.qa-question::after {
-  content: "▼";
-  font-family: 'Work Sans';
-  font-size: 16px;
-  font-weight: 300;
-}
-details[open] summary ~ * {
-  animation: fadeIn 0.4s ease-in;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.block-pane {
-  max-width: 900px;
-  background-color: #fffbf780; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border-radius: 0px;
-  padding: 20px 40px;
-  /*margin: 40px auto; /* 🔑 this centres it horizontally with vertical spacing */
-  margin-top: 40px;
-  margin-bottom: 40px;
-}   
-a {color: #5965b3;
-   text-decoration: none;
-}
-a:hover {
-    color: #5965b3;
-    text-decoration: underline;
-}
-a:active {
-    color: #5965b3; /* Color when clicked */
-}
-
-.hamburger-menu {
-	display: none
-}
-.mobile-nav {
-	display: none
-}
-.map-container {
-	width: 100%;
-	max-width: 600px;
-}
-.footer-credits {
-  text-align: center;
-  font-size: 0.8em;
-  color: #888;
-  margin-top: 50px;
-  padding: 10px;
-}
-.footer-credits a {
-  color: #888;
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-.vertical-buttons {
-	display: none;
-}
-.hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 25px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    z-index: 1001; /* Make sure the hamburger is above other content */
-}
-.hamburger-menu .line {
-    width: 28px;
-    background-color: #4c518a;
-    height: 4px;
-    border-radius: 1px;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-.hamburger-menu.open .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    position: relative;
-    top: 8px;
-}
-.hamburger-menu.open .line:nth-child(2) {
-    opacity: 0;
-}
-.hamburger-menu.open .line:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -8px;
-}
-.mobile-nav {
-	display: none;
-	background-color: #FAF9F6;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	padding: 20px;
-	text-align: center;
-}
-.mobile-nav a {
-	display: block;
-	color: #4c518a;
-	text-decoration: none;
-	font-family: 'Anton';
-	font-size: 1.5em;
-	padding: 15px;
-}
-.mobile-nav a:hover {
-      background-color: #FAF9F6;
-      text-decoration: underline;
-      transform: translateY(-2px);
-}
-.mobile-nav.open {
-    display: block;
-}
-
-body, h1, h2, p { 
-	margin: 0 !important;
-	padding: 5px !important;
-	box-sizing: border-box;
-	max-width: 100%;
-}
-.section-container {
-	padding: 5px 10px;
-	max-width: 100%;
-}
-
-.block, .block-header, .block-pane, .full-pane {
-	padding: 5px !important;
-	margin: 0 !important;
-	width: 100% !important;
-	max-width: 100% !important;
-	background: #fffbf780;
-  }
-h1 {
-	  font-size: 1.5em;
-	  padding: 5px;
-  }
-h2 {
-	  font-size: 1.1em;
-	  padding: 5px;
-  }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs &amp; Resources — Dr Ketaki Sharma</title>
+  <meta name="description" content="Paediatric FAQs and trusted resources covering allergies, eczema, hayfever, ADHD, immunisation, constipation, reflux and more.">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="hamburger-menu" id="hamburgerMenu">
-	<div class="line"></div>
-	<div class="line"></div>
-	<div class="line"></div>
-</div>
+<div id="nav-root"></div>
 
-<nav class="mobile-nav" id="mobileNav">
-		<a href="index.html">About</a>
-		<a href="contact.html">Contact</a>
-		<a href="faqs.html">FAQs</a>
-	</nav>
+<main>
 
-<nav class="navbar">
-<ul class="nav-links vertical-buttons">
-    <li><a href="index.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="faqs.html">FAQs</a></li>
-    </ul>  
-        </nav>
-	
-<section class="section-container">
-<header class="site-header">
-    <h1>FAQs and Resources</h1>
-	</header>
-<section class="block block-pane">
-        <p>This page addresses some commonly asked questions and provides links to detailed information from trusted sources. Please note this content is general in nature and is not a substitute for individualised medical advice. This information is valid as of April 2025.</p>
-</section>
+  <div class="page-header">
+    <p class="section-label">Trusted information for families</p>
+    <h1>FAQs &amp; Resources</h1>
+  </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Allergies & intolerances</summary>
-    
-    <details>
-      <summary class="qa-question">What is the difference between a food allergy and an intolerance?</summary>
-      <div class="qa-answer">
-          <p>Terminology about food reactions can be confusing, since reactions with very different causes are often referred to using the same words. The main types of reactions are:
-          <ul><li><strong>Immediate allergic</strong> reactions, which occur within minutes-to-hours after eating a food and involve an immune molecule called "IgE". These are considered "true allergies". Symptoms vary and can include hives, vomiting, or lip swelling. Anaphylaxis is the most severe type of immediate reaction. 
-              <li><strong>Delayed reactions</strong> which begin hours-to-days after ingesting a food, and which are caused by the immune system, but not by IgE. Examples include coeliac disease and cow's milk protein 'intolerance/allergy', both of which cause delayed gastrointestinal symptoms. These are often called "non-IgE allergies" but they do not cause any immediate symptoms and cannot cause anaphylaxis.</li>
-              <li><strong>Intolerances</strong>, which occur if there is a problem digesting a food, and which do not involve the immune system at all. These are therefore not allergies. An example is lactose intolerance, which happens when there is not enough of a particular enzyme (lactase) in the gut. Allergy testing is not useful for intolerances</li>
-          </ul>
-          <p>For more detail about different types of reactions to foods, refer to <a href="https://www.allergy.org.au/patients/food-other-adverse-reactions/food-intolerance">this ASCIA page</a>.</p>
-      </div>
-  </details>
+  <section>
 
-  <details>
-    <summary class="qa-question">If my baby has mucus or blood in their nappies does that mean they have an allergy?</summary>
-    <div class="qa-answer">
-      <p>Small amounts of mucus in the stool in a well infant is normal. This mucus may be produced by healthy gut bacteria and may play a role in helping stool pass smoothly.</p> 
-            <p>Large amounts of mucus and/or any blood in the nappies would make us think about other causes, such as infection. Mucusy stool with fresh blood in a healthy, thriving baby is commonly due to a delayed reaction by the immune system to a food protein (often cow's milk). Although sometimes called cow's milk protein allergy, this condition is not a 'true allergy' (see above), and does not cause immediate symptoms like hives, or anaphylaxis. Other less common causes of mucus or blood in nappies should also be considered and a thorough assessment by a GP or paediatrician is always warranted.</p>
+    <div class="faq-disclaimer">
+      This page addresses commonly asked questions and links to information from trusted sources. Content is general in nature and is not a substitute for individualised medical advice. Information is valid as of April 2025.
     </div>
-  </details>
 
-<details>
-    <summary class="qa-question">What is lactose intolerance and do babies get it?</summary>
-        <div class="qa-answer">
-          <p>Lactose is a sugar found in milk (including breastmilk and cow's milk), and its digestion involves an enzyme called lactase. Lactose intolerance occurs when there is not enough of the lactase enzyme in the gut, leading to symptoms such as tummy pain, bloating and diarrhoea.</p> 
-            <p>In infants and young children, lactose intolerance is usually a <strong>temporary</strong> problem after a viral illness like gastroenteritis, and it resolves within weeks. It is extremely rare for babies to be born with lactose intolerance, and much more common for it to develop in older children and adults.</p>
+    <div class="faq-layout">
+
+      <!-- Sidebar nav -->
+      <nav class="faq-nav" aria-label="FAQ categories">
+        <p class="faq-nav-title">Categories</p>
+        <ul>
+          <li><a href="#allergies">Allergies &amp; intolerances</a></li>
+          <li><a href="#bedwetting">Bedwetting</a></li>
+          <li><a href="#constipation">Constipation</a></li>
+          <li><a href="#eczema">Eczema</a></li>
+          <li><a href="#hayfever">Hayfever</a></li>
+          <li><a href="#immunisation">Immunisation</a></li>
+          <li><a href="#feeding">Infant feeding</a></li>
+          <li><a href="#reflux">Reflux</a></li>
+          <li><a href="#tonguetie">Tongue tie</a></li>
+        </ul>
+      </nav>
+
+      <!-- FAQ content -->
+      <div class="faq-content">
+
+        <!-- ALLERGIES -->
+        <div class="faq-category" id="allergies">
+          <h2 class="faq-category-title">Allergies &amp; intolerances</h2>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                What is the difference between a food allergy and an intolerance?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Terminology about food reactions can be confusing, since reactions with very different causes are often referred to using the same words. The main types are:</p>
+                <ul>
+                  <li><strong>Immediate allergic reactions</strong> occur within minutes to hours after eating a food and involve an immune molecule called IgE. These are considered "true allergies." Symptoms vary and can include hives, vomiting, or lip swelling. Anaphylaxis is the most severe type.</li>
+                  <li><strong>Delayed reactions</strong> begin hours to days after ingesting a food, and are caused by the immune system but not by IgE. Examples include coeliac disease and cow's milk protein intolerance/allergy. These are often called "non-IgE allergies" but do not cause anaphylaxis.</li>
+                  <li><strong>Intolerances</strong> occur when there is a problem digesting a food, and do not involve the immune system. An example is lactose intolerance. Allergy testing is not useful for intolerances.</li>
+                </ul>
+                <p>For more detail, refer to <a href="https://www.allergy.org.au/patients/food-other-adverse-reactions/food-intolerance" target="_blank" rel="noopener">this ASCIA page on food intolerance</a>.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                If my baby has mucus or blood in their nappies does that mean they have an allergy?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Small amounts of mucus in the stool of a well infant is normal and may play a role in helping stool pass smoothly.</p>
+                <p>Large amounts of mucus and/or any blood in the nappies would make us think about other causes, such as infection. Mucusy stool with fresh blood in a healthy, thriving baby is commonly due to a delayed immune reaction to a food protein (often cow's milk). Although sometimes called cow's milk protein allergy, this condition does not cause immediate symptoms like hives or anaphylaxis. Other less common causes should also be considered, and a thorough assessment by a GP or paediatrician is always warranted.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                What is lactose intolerance and do babies get it?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Lactose is a sugar found in milk (including breastmilk and cow's milk), and its digestion requires an enzyme called lactase. Lactose intolerance occurs when there is not enough lactase in the gut, leading to tummy pain, bloating and diarrhoea.</p>
+                <p>In infants and young children, lactose intolerance is usually a <strong>temporary</strong> problem after a viral illness like gastroenteritis, and resolves within weeks. It is extremely rare for babies to be born with lactose intolerance — this is much more commonly a condition that develops in older children and adults.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                How are allergies diagnosed?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>The most important part of allergy diagnosis is the history — the description of symptoms linked to exposure to an allergen. If an immediate-type allergy is suspected, a skin prick test, blood test, or oral food challenge can help to confirm the diagnosis.</p>
+                <ul>
+                  <li>A <strong>skin prick test</strong> involves pricking the skin with food extracts and looking for a wheal (swelling).</li>
+                  <li>A <strong>blood test</strong> measures IgE antibodies targeting specific foods.</li>
+                  <li>An <strong>oral food challenge</strong> involves eating small amounts of a food under close medical supervision.</li>
+                </ul>
+                <p>The decision to carry out allergy testing requires careful consideration, as interpreting these tests is not straightforward. For delayed reactions or food intolerances, skin prick testing is not useful.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                How can I introduce allergens into my baby's diet?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Common food allergens include cow's milk, egg, soy, tree nuts, peanut, sesame, wheat, fish and shellfish. Food allergens should be introduced from around 6–12 months of age along with other solids. Each allergen should be introduced by itself first, and during the day, so that any reaction can be detected.</p>
+                <p>Peanut and tree nuts should always be given as crushed or paste form (e.g. nut butters) to infants and young children. Once introduced, try to keep giving allergenic foods regularly (e.g. twice a week) to maintain tolerance.</p>
+                <p>For further information, see <a href="https://preventallergies.org.au/feeding-your-baby/" target="_blank" rel="noopener">preventallergies.org.au</a>.</p>
+              </div>
+            </details>
+          </div>
         </div>
-</details>
 
-<details>
-    <summary class="qa-question">How are allergies diagnosed?</summary>
-    <div class="qa-answer">
-        <p>The most important part of allergy diagnosis is the history, i.e. the description of symptoms linked to exposure to an allergy-causing substance (allergen). If an immediate-type allergy is suspected, a skin prick test, blood test or oral food challenge can help to confirm the diagnosis. A skin prick test involves pricking the skin with food extracts and looking for a wheal (swelling). Blood tests measure an immune molecule (IgE) that is targetting the food(s) of interest. A food challenge involves eating small amounts of a food under close medical supervision. The decision to carry out allergy testing requires careful consideration, since interpreting these tests is not straight-forward.</p>
-        <p>For delayed reactions or food intolerances, skin prick testing will not be useful. Other tests may be helpful depending on the condition, such as trialling elimination and reintroduction of the food, a formal oral food challenge, or specific testing for coeliac disease.</p>
-    </div>
-  </details>
+        <!-- BEDWETTING -->
+        <div class="faq-category" id="bedwetting">
+          <h2 class="faq-category-title">Bedwetting</h2>
 
-<details>
-    <summary class="qa-question">How can I introduce allergens into my baby's diet?</summary>
-    <div class="qa-answer">
-        <p>Allergens are substances that can cause allergic reactions in susceptible people. Common food allergens include cow's milk, egg, soy, tree nuts, peanut, sesame , wheat, fish and shellfish. Food allergens should be introduced from around 6-12 months of age along with other solids. Each allergen should be introduced by itself at first, and during the day, so that you can detect any symptoms of allergy in the rare instance that they occur.
-Peanut and tree nuts should always be crushed or given as pastes (e.g. nut butters) to infants and young children. Once introduced, try to keep giving allergenic foods regularly (e.g. twice a week) to maintain tolerance.
-For further information, look at <a href="https://preventallergies.org.au/feeding-your-baby/">this website</a>.</p>
-</details>
-</details>
-</section>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Is bedwetting a concern in a school-aged child?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Bedwetting is developmentally normal in young children. Young children often don't produce enough ADH (a hormone that helps retain fluids overnight), and deep sleepers may not be woken by the urge to urinate. In an otherwise healthy child, bedwetting often doesn't need treatment until at least 6–7 years of age. Medical review should be considered at this age, particularly if bedwetting is causing distress.</p>
+                <p>Rarely, bedwetting can be associated with another medical condition. A medical review should be sought if there are unusual daytime symptoms, or if a child who was previously dry at night for at least six months has started bedwetting again.</p>
+                <p>For more information, see <a href="https://www.schn.health.nsw.gov.au/bedwetting-factsheet" target="_blank" rel="noopener">this factsheet from the Sydney Children's Hospital Network</a>.</p>
+              </div>
+            </details>
+          </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Bedwetting</summary>
-    
-    <details>
-        <summary class="qa-question">Is bedwetting a concern in a school aged child?</summary>
-    <div class="qa-answer">
-        <p>Bedwetting is developmentally normal in young children. Part of the reason is that our bodies produce a hormone (called ADH) that helps us retain fluids overnight, and young children often don't make enough of this hormone. Deep sleepers may also not be woken by the urge to urinate. In an otherwise healthy child, bedwetting often doesn't need any treatment until at least 6-7 years of age. A medical review should be considered at this age, particularly if the bedwetting is causing distress to the child or family.</p>
-        <p>Rarely, bedwetting can be associated with another medical condition. A medical review should be sought if there are any concerning daytime symptoms such as unusual frequency of urination or daytime wetting in a child that was previously dry, or if a child who was previously dry at night for at least six months has started bedwetting again.</p> 
-        <p>For more information read <a href="https://www.schn.health.nsw.gov.au/bedwetting-factsheet">this factsheet</a> from the Sydney Children's Hospital Network.</p>
-    </div>
-  </details>
-          
-<details>
-    <summary class="qa-question">How is bedwetting usually treated?</summary>
-    <div class="qa-answer">
-      <p>If bedwetting is associated with another medical condition, such as constipation, this should be treated first. Behavioural strategies like a bedwetting alarm are highly successful as treatment for bedwetting, but they must be used consistently for several weeks. It is rare to require further treatment such as medication for uncomplicated bedwetting.</p>
-    </div>
-  </details>
-</details>
-</section>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                How is bedwetting usually treated?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>If bedwetting is associated with another medical condition such as constipation, this should be treated first. Behavioural strategies like a bedwetting alarm are highly successful when used consistently for several weeks. It is rare to require medication for uncomplicated bedwetting.</p>
+              </div>
+            </details>
+          </div>
+        </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Constipation</summary>
-<details>
-    <summary class="qa-question">Why do young children get constipated?</summary>
-    <div class="qa-answer">
-      <p>The most common cause of constipation in young children is 'functional' constipation, which happens in toddlers and young children who may ignore the urge to defecate and then develop anxiety after having a painful bowel movement. Continued avoidance leads to stool building up in the rectum and large bowel.</p>
-<p>Investigations (e.g. blood test, X-ray) are not needed to diagnose functional constipation, but may be required if other less common medical causes of constipation are suspected. For this reason, a careful medical assessment is always recommended.</p>
-    </div>
-</details>
+        <!-- CONSTIPATION -->
+        <div class="faq-category" id="constipation">
+          <h2 class="faq-category-title">Constipation</h2>
 
-<details>
-    <summary class="qa-question">How is constipation treated?</summary>
-    <div class="qa-answer">
-      <p>Functional constipation is usually treated with a combination of strategies which may include diet and behaviour modification and medications such as stool softeners and laxatives. A common reason for treatment failure is stopping laxatives too early. It can take many months for the bowel to fully heal and resume normal functioning, so treatment often needs to be prolonged and tapered down gradually.</p> <p>For further information, read <a href="https://https://www.schn.health.nsw.gov.au/constipation-factsheet">this factsheet</a> from the Sydney Children's Hospital Network.</p>
-    </div>
-  </details>
-</details>
-</section>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Why do young children get constipated?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>The most common cause of constipation in young children is 'functional' constipation — toddlers and young children may ignore the urge to defecate, then develop anxiety after a painful bowel movement. Continued avoidance leads to stool building up in the rectum and large bowel.</p>
+                <p>Investigations are not needed to diagnose functional constipation, but may be required if other less common medical causes are suspected. A careful medical assessment is always recommended.</p>
+              </div>
+            </details>
+          </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Eczema</summary>
-<details>
-<summary class="qa-question">Tips on managing eczema</summary>
-<div class="qa-answer">
-    <p>For children with eczema, a good rule of thumb is to keep the skin 'cool, clean and moisturised', i.e.:
-<ul><li>Cool: Avoid hot baths or showers or hot itchy clothing</li>
-<li>Clean: Wash daily to remove bacteria from the skin; bleach baths can be considered if needed</li>
-<li>Moisturised: To prevent flares, apply moisturiser twice daily, even when skin appears healthy. Avoid products which contain:
-<li>Fragrances, which may irritate the skin</li>
-<li>Food substances (e.g. almond oil, coconut oil, milk, etc.), as this can increase the risk of developing of allergy to those foods, especially in infants with eczema.</li></ul></p>
-</div>
-</details>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                How is constipation treated?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Functional constipation is usually treated with a combination of diet and behaviour modification and medications such as stool softeners and laxatives. A common reason for treatment failure is stopping laxatives too early — the bowel can take many months to fully heal, so treatment often needs to be prolonged and tapered gradually.</p>
+                <p>For further information, see <a href="https://www.schn.health.nsw.gov.au/constipation-factsheet" target="_blank" rel="noopener">this factsheet from the Sydney Children's Hospital Network</a>.</p>
+              </div>
+            </details>
+          </div>
+        </div>
 
-<details>
-    <summary class="qa-question">Can food or vaccines trigger an eczema flare?
-</summary>
-    <div class="qa-answer">
-      <p>Eczema can flare in reaction to many different substances, including allergens like foods or dustmites, chemicals like chlorine or soap, and after a viral illness. Although rare, some people have reported a flare of eczema after a vaccine.</p> 
-<p>It can be impractical (or impossible) to avoid certain triggers, and in some cases there are potential harms in strictly avoiding a trigger. For example, a strict restrictive diet may lead to nutritional imbalances, while avoiding vaccination increases the risk of serious infections.</p>
-<p>Maintaining excellent baseline care of eczema can help to minimise flares while allowing more flexibility in diet and lifestyle</p>
-    </div>
-  </details>
-    
-<details>
-    <summary class="qa-question">Is it safe to use steroids in eczema?</summary>
-    <div class="qa-answer">
-      <p>Topical steroids (i.e. ointments or creams) are safe to use in children with eczema and should not be applied "sparingly" but in ample amounts to the affected areas. They can be stopped when the skin has healed, and regular moisturisers should be continued.
-Side effects are rare but are more likely with long term use of very strong steroids over large areas of skin.</p> 
-<p>In recent years concerns have increased about 'topical steroid withdrawal', a condition that is not very well understood. A British dermatology expert group has released <a href="https://eczema.org/wp-content/uploads/Topical_Steroid_Topical_Withdrawal_Joint_Statement_Feb_2024.pdf">this statement</a> acknowledging that more needs to be learnt about this rare condition, but emphasising that topical steroids should continue to be used as needed.</p>
-    </div>
-  </details>
-</details>
-</section>
+        <!-- ECZEMA -->
+        <div class="faq-category" id="eczema">
+          <h2 class="faq-category-title">Eczema</h2>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Hayfever</summary>
-<details>
-    <summary class="qa-question">Is hayfever a significant problem in children?</summary>
-    <div class="qa-answer">
-      <p>Hayfever is an allergic reaction to environmental substances such as house dust mite, pollens, grasses and moulds. Symptoms include sneezing, runny nose and itchy eyes. It is also called 'allergic rhinitis'. Hayfever is uncommon under 2 years of age and gradually becomes more common, affecting about 1 in 3 adolescents.</p>
-<p>The impacts of hayfever are often underrecognised. It can cause troublesome daytime symptoms, and can significantly impact sleep quality which in turn can affect daytime function, including attention and behaviour.</p>
-    </div>
-  </details>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Tips on managing eczema
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>A good rule of thumb for children with eczema is to keep the skin <strong>cool, clean and moisturised</strong>:</p>
+                <ul>
+                  <li><strong>Cool:</strong> Avoid hot baths, showers or hot itchy clothing.</li>
+                  <li><strong>Clean:</strong> Wash daily to remove bacteria from the skin; bleach baths can be considered if needed.</li>
+                  <li><strong>Moisturised:</strong> Apply moisturiser twice daily, even when skin appears healthy. Avoid products containing fragrances or food substances (e.g. almond oil, coconut oil, milk), as these can increase the risk of developing an allergy to those foods — especially in infants with eczema.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
 
-<details>
-    <summary class="qa-question">How is hayfever diagnosed?</summary>
-    <div class="qa-answer">
-      <p>Hayfever can be diagnosed based on symptoms and examination findings. Testing is not needed to confirm the diagnosis, but can help to identify triggers, e.g. by skin prick testing.</p>
-    </div>
-</details>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Can food or vaccines trigger an eczema flare?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Eczema can flare in response to many triggers, including food allergens, dustmites, chemicals like chlorine or soap, and after viral illness. Although rare, some people have reported a flare after a vaccine.</p>
+                <p>It can be impractical (or inadvisable) to avoid certain triggers. For example, strict dietary restriction may cause nutritional imbalances, while avoiding vaccination increases the risk of serious infection. Maintaining excellent baseline skin care helps minimise flares while allowing more flexibility in diet and lifestyle.</p>
+              </div>
+            </details>
+          </div>
 
-<details>
-    <summary class="qa-question">Useful links</summary>
-    <div class="qa-answer">
-<ul><li>A <a href="https://www.schn.health.nsw.gov.au/house-dust-mite-allergy-factsheet">simple factsheet</a> on house dust mite allergy from the Sydney Children's Hospital Network</li>
-<li>More detailed <a href="https://www.allergy.org.au/patients/allergy-treatments/allergen-minimisation">ASCIA advice</a> on reducing exposure to dust mites and other triggers
-</li></ul>
-    </div>
-</details>
-</details>
-</section>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Is it safe to use steroids on eczema?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Topical steroids (creams or ointments) are safe to use in children with eczema and should be applied in ample amounts to the affected areas — not sparingly. They can be stopped when the skin has healed, and regular moisturisers should be continued. Side effects are rare and more likely only with long-term use of very strong steroids over large skin areas.</p>
+                <p>There are increasing concerns about 'topical steroid withdrawal', which is not yet well understood. A British dermatology expert group has released <a href="https://eczema.org/wp-content/uploads/Topical_Steroid_Topical_Withdrawal_Joint_Statement_Feb_2024.pdf" target="_blank" rel="noopener">a statement</a> acknowledging that more needs to be learnt, but emphasising that topical steroids should continue to be used as needed.</p>
+              </div>
+            </details>
+          </div>
+        </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Immunisation</summary>
-<details>
-    <summary class="qa-question">Where I can find trustworthy information about vaccine safety concerns?</summary>
-    <div class="qa-answer">
-      <p><ul><li><a href="https://skai.org.au/">Sharing Knowledge About Immunisation</a>a> is an Australian website containing simple, reliable information about vaccines, and addressing common vaccine safety concerns</li></ul>
-        <li><a href="https://ausvaxsafety.org.au/vaccine-safety-data/national-immunisation-program-schedule-vaccines">AusVaxSafety</a> is a system that monitors the safety of vaccines and includes accessible, up-to-date Australian data on common side effects after routine infant vaccines</li>
-        <li><a href="https://www.letstalkshots.org/main/library/MKT20710/">Let's talk shots</a> is a video library created by the Johns Hopkins Institute for Vaccine Safety which include videos explaining how vaccines work and addressing common misconceptions</li></p>
-    </div>
-  </details>
+        <!-- HAYFEVER -->
+        <div class="faq-category" id="hayfever">
+          <h2 class="faq-category-title">Hayfever</h2>
 
-<details>
-    <summary class="qa-question">What additional vaccines should I consider for my child, on top of those in the routine Australian schedule?</summary>
-    <div class="qa-answer">
-      <p><p>
-    The national schedule covers at least 15 diseases, but there are some additional vaccines that you might choose to purchase to provide additional protection for your family, e.g.:
-  </p>
-  <ul>
-    <li>
-      <strong>The meningococcal B vaccine (Bexsero)</strong> is strongly recommended for all infants (and is funded for Aboriginal and Torres Strait Islander infants). Meningococcal infection is a rare but serious illness. The vaccine can be given on the same day as other routine vaccines.
-    </li>
-    <li>
-      <strong>The national schedule includes one dose of chickenpox vaccine</strong> at 18 months of age. A second dose is recommended for all children, but must be purchased privately. The second dose is often given at 4 years of age, for convenience.
-    </li>
-    <li>
-      <strong>An annual flu vaccine</strong> is free for all children aged 6 months to 4 years of age, but is recommended for all children (and adults!).
-    </li>
-    <li>
-      <strong>Additional vaccines</strong> may be recommended based on your child's medical risk factors or your family's travel plans. These can be discussed with your GP.
-    </li>
-  </ul></p>
-    </div>
-  </details>
-</details>        
-</section>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Is hayfever a significant problem in children?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Hayfever (allergic rhinitis) is an allergic reaction to environmental substances such as house dust mite, pollens, grasses and moulds, causing sneezing, runny nose and itchy eyes. It is uncommon under 2 years of age and gradually becomes more common, affecting about 1 in 3 adolescents.</p>
+                <p>The impacts of hayfever are often underrecognised. It can cause troublesome daytime symptoms, significantly impact sleep quality, and in turn affect daytime function including attention and behaviour.</p>
+              </div>
+            </details>
+          </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Infant feeding</summary>
-<details>
-    <summary class="qa-question">Where can I find guidance on infant feeding, growth and nutrition?</summary>
-    <div class="qa-answer">
-      <p><ul>
-          <li>This <a href="https://www.schn.health.nsw.gov.au/kids-health-hub/nutrition/infant-and-baby-nutrition">Infant and baby nutrition</a> fact sheet contains guidance on breastfeeding, formula feeding and introducing solids from the Sydney Children's Hospital Network
-          </li>
-<li>This <a href="https://www.schn.health.nsw.gov.au/infant-formula-factsheet">infant formula factsheet</a> explains the different categories of infant formula, and is also from the Sydney Children's Hospital Network
-</li>
-          <li>The <a href="https://www.tresillian.org.au/baby/development/baby-weight/">Monitoring weight and growth</a> guideline from Tresillian provides advice on how to monitor your baby's growth and when to seek input from a health professional.
-          </li>
-      </ul>
-</p>
-    </div>
-  </details>
-</details>
-</section>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                How is hayfever diagnosed and managed?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Hayfever can be diagnosed based on symptoms and examination findings. Testing is not needed to confirm the diagnosis but can help identify specific triggers, for example by skin prick testing.</p>
+                <p>Useful resources:</p>
+                <ul>
+                  <li><a href="https://www.schn.health.nsw.gov.au/house-dust-mite-allergy-factsheet" target="_blank" rel="noopener">House dust mite allergy factsheet</a> from the Sydney Children's Hospital Network</li>
+                  <li><a href="https://www.allergy.org.au/patients/allergy-treatments/allergen-minimisation" target="_blank" rel="noopener">ASCIA advice on reducing allergen exposure</a></li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Reflux</summary>
-<details>
-    <summary class="qa-question">Why do so many babies get reflux?</summary>
-    <div class="qa-answer">
-      <p>Reflux (gastroesophageal reflux) is when the contents of the stomach come back up the foodpipe (oesophagus), sometimes into the mouth. All young babies have reflux, sometimes called 'posseting' or 'spilling' when the food is spat or vomited out. This occurs since the ring of muscle that separates the foodpipe from the stomach is weak in young babies, and since they are fed lying down. Reflux naturally improves from about 4 months of age, as the ring of muscle becomes stronger, and as they start to spend more time upright. 
-</p>
-    </div>
-  </details>
+        <!-- IMMUNISATION -->
+        <div class="faq-category" id="immunisation">
+          <h2 class="faq-category-title">Immunisation</h2>
 
-<details>
-    <summary class="qa-question">When does reflux need treatment?</summary>
-    <div class="qa-answer">
-        <p>Most babies do not need any treatment for reflux, since it naturally improves over time. Treatment may be considered if there are concerning features such as signs of pain during feeding, feed refusal, poor weight gain or vomiting blood. If such features are present, the term 'gastroesophageal reflux disease' is used. Treatment options include positioning, feed thickeners and medication. 
-For more information see <a href="https://www.schn.health.nsw.gov.au/reflux-factsheet">fact sheet</a> on reflux from the Sydney Children's Hospital Network.</p>
-</details>
-</details>
-</section>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Where can I find trustworthy information about vaccine safety?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <ul>
+                  <li><a href="https://skai.org.au/" target="_blank" rel="noopener">Sharing Knowledge About Immunisation (SKAI)</a> — an Australian website with simple, reliable information about vaccines and common safety concerns.</li>
+                  <li><a href="https://ausvaxsafety.org.au/vaccine-safety-data/national-immunisation-program-schedule-vaccines" target="_blank" rel="noopener">AusVaxSafety</a> — monitors vaccine safety and includes accessible, up-to-date Australian data on common side effects.</li>
+                  <li><a href="https://www.letstalkshots.org/main/library/MKT20710/" target="_blank" rel="noopener">Let's Talk Shots</a> — a video library from Johns Hopkins Institute for Vaccine Safety explaining how vaccines work and addressing common misconceptions.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
 
-<section class="block block-pane">
-<details open>
-<summary class="section-subheading">Tongue Tie</summary>
-<details>
-    <summary class="qa-question">What is tongue tie?</summary>
-    <div class="qa-answer">
-      <p>'Tongue tie' is when the tissue that connects the tongue to the bottom of the mouth, called the lingual frenulum, is too short or tight, and may limit tongue mobility. Tongue mobility is important for breastfeeding babies, since the tongue plays an important role in drawing milk from the breast. However, most babies with tongue can successfully breastfeed without any intervention
- </p>
-    </div>
-  </details>
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                What additional vaccines should I consider beyond the routine schedule?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>The national schedule covers at least 15 diseases, but there are some additional vaccines worth considering:</p>
+                <ul>
+                  <li><strong>Meningococcal B vaccine (Bexsero)</strong> is strongly recommended for all infants (and is funded for Aboriginal and Torres Strait Islander infants). Meningococcal infection is rare but serious. It can be given on the same day as other routine vaccines.</li>
+                  <li><strong>A second chickenpox dose</strong> is recommended for all children but must be purchased privately — it is often given at 4 years of age.</li>
+                  <li><strong>Annual influenza vaccine</strong> is free for children aged 6 months to 4 years, and recommended for all children.</li>
+                  <li><strong>Additional vaccines</strong> may be recommended based on your child's medical risk factors or your family's travel plans. Discuss these with your GP.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
 
-<details>
-    <summary class="qa-question">When does tongue tie need treatment?</summary>
-    <div class="qa-answer">
-      <p>Severe tongue tie can affect a baby's latch when breastfeeding. This can cause nipple pain, though it is worth noting that there are many other causes of nipple pain, most commonly incorrect positioning/latching. In rare cases, tongue tie can cause speech difficulties later in childhood.</p> <p>Severe cases of tongue tie can be managed by cutting the restrictive tissue (frenotomy). This procedure should only be considered after a careful assessment of latching by an experienced health professional.</p>
-    </div>
-  </details>
-</details>
-</section>
-</section>
-    </main>
-<footer class="footer-credits">
-  Built with resources from 
-  <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>, 
-  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>, and 
-  <a href="https://openai.com/chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT</a>.
-</footer>
+        <!-- INFANT FEEDING -->
+        <div class="faq-category" id="feeding">
+          <h2 class="faq-category-title">Infant feeding</h2>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Where can I find guidance on infant feeding, growth and nutrition?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <ul>
+                  <li><a href="https://www.schn.health.nsw.gov.au/kids-health-hub/nutrition/infant-and-baby-nutrition" target="_blank" rel="noopener">Infant and baby nutrition</a> from the Sydney Children's Hospital Network — guidance on breastfeeding, formula feeding and introducing solids.</li>
+                  <li><a href="https://www.schn.health.nsw.gov.au/infant-formula-factsheet" target="_blank" rel="noopener">Infant formula factsheet</a> — explains the different categories of infant formula.</li>
+                  <li><a href="https://www.tresillian.org.au/baby/development/baby-weight/" target="_blank" rel="noopener">Monitoring weight and growth</a> from Tresillian — advice on monitoring your baby's growth and when to seek support.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- REFLUX -->
+        <div class="faq-category" id="reflux">
+          <h2 class="faq-category-title">Reflux</h2>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                Why do so many babies get reflux?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Reflux (gastroesophageal reflux) is when the contents of the stomach come back up the oesophagus — sometimes into the mouth. All young babies have some degree of reflux ('posseting' or 'spilling'), because the ring of muscle separating the oesophagus from the stomach is weak in young babies, and because they are fed lying down. Reflux naturally improves from about 4 months of age.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                When does reflux need treatment?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Most babies do not need treatment for reflux, as it naturally improves over time. Treatment may be considered if there are concerning features such as signs of pain during feeding, feed refusal, poor weight gain, or vomiting blood — this is called 'gastroesophageal reflux disease' (GORD). Treatment options include positioning, feed thickeners and medication.</p>
+                <p>For more information, see the <a href="https://www.schn.health.nsw.gov.au/reflux-factsheet" target="_blank" rel="noopener">Sydney Children's Hospital Network reflux factsheet</a>.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- TONGUE TIE -->
+        <div class="faq-category" id="tonguetie">
+          <h2 class="faq-category-title">Tongue tie</h2>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                What is tongue tie?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Tongue tie is when the lingual frenulum — the tissue connecting the tongue to the bottom of the mouth — is too short or tight, limiting tongue mobility. Most babies with tongue tie can successfully breastfeed without any intervention.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary class="faq-question">
+                When does tongue tie need treatment?
+                <span class="faq-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Severe tongue tie can affect a baby's latch when breastfeeding, causing nipple pain — though many other factors can also cause nipple pain, most commonly incorrect positioning. In rare cases, tongue tie can affect speech later in childhood.</p>
+                <p>Severe cases can be managed by cutting the restrictive tissue (frenotomy). This procedure should only be considered after careful assessment by an experienced health professional.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div><!-- end faq content -->
+    </div><!-- end faq-layout -->
+  </section>
+
+</main>
+
+<div id="footer-root"></div>
+<script src="shared.js"></script>
 <script>
-  document.querySelectorAll("details").forEach(detail => {
-    detail.addEventListener("toggle", () => {
-      if (detail.open) {
-        const children = [...detail.children];
-        children.forEach(el => {
-          if (el !== detail.querySelector("summary")) {
-            el.style.animation = "none";
-            el.offsetHeight; // trigger reflow
-            el.style.animation = "fadeIn 0.4s ease-in";
-          }
-        });
-      }
-    });
+// Highlight active FAQ nav link on scroll
+const cats = document.querySelectorAll('.faq-category');
+const navLinks = document.querySelectorAll('.faq-nav a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const link = document.querySelector(`.faq-nav a[href="#${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
   });
+}, { rootMargin: '-20% 0px -60% 0px' });
+cats.forEach(c => observer.observe(c));
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const allDetails = document.querySelectorAll('details');
-
-  allDetails.forEach((detail) => {
-    detail.addEventListener('toggle', function () {
-      if (detail.open) {
-        // Only close siblings at the same nesting level
-        const parent = detail.parentElement;
-
-        // Find sibling <details> in the same parent
-        const siblings = Array.from(parent.children).filter(
-          el => el.tagName === 'DETAILS' && el !== detail
-        );
-
-        siblings.forEach(sibling => sibling.removeAttribute('open'));
-      }
-    });
-  });
-});
-</script>
-<script>
-document.getElementById('hamburgerMenu').addEventListener('click', function() {
-    const mobileNav = document.getElementById('mobileNav');
-    const hamburgerMenu = document.getElementById('hamburgerMenu');
-    mobileNav.classList.toggle('open');
-    hamburgerMenu.classList.toggle('open');
-});
-</script>
-
-
 </body>
 </html>
